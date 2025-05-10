@@ -67,10 +67,10 @@ export default function Index() {
                   Work & Education
                 </div>
               </Link>
-              <Link to="/work-and-education">
+              <Link to="/projects">
                 <div className="flex hover:border hover:border-white cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-md text-[14px]">
                   <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/setting.svg" alt="person" />
-                  Projects
+                  <h1>Projects</h1>
                 </div>
               </Link>
             </div>
@@ -81,7 +81,7 @@ export default function Index() {
 
           <div className="bg-white bg-opacity-10 m-2 rounded-lg p-1 h-[100%]">
             <h1 className="text-white text-lg font-bold mt-2">Web Development</h1>
-            <div className="flex flex-wrap text-white gap-2">
+            <div className="flex flex-wrap sticky top-0 text-white gap-2">
               <Link to={"https://react.dev/"} target="_blank">
                 <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
                   <img className="h-6 pr-2" src="/app/img/react.svg" alt="react" />
