@@ -274,6 +274,12 @@ export default function Index() {
                   CloudPanel
                 </div>
               </Link>
+              <Link to={"https://render.com/"} target="_blank">
+                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                  <img className="h-4 mr-1 bg-white" src="/app/img/render.svg" alt="cloudpanel" />
+                  Render
+                </div>
+              </Link>
             </div>
 
           </div>
