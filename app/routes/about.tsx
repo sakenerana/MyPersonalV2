@@ -2,7 +2,7 @@ export default function About() {
     return (
         <div>
             <h1><b>Charls Dave Erana</b></h1>
-            <p className="italic">(“Web Designer | IT Personnel | Software Developer | Travel Lover | Music Lover”)</p>
+            <p className="italic">(“Web Designer | IT Personnel | Software/Web Developer | Travel Lover | Music Lover”)</p>
             
             <h1 className="pt-3"><b>Who I Am</b></h1>
             <p className="italic">“Hi, I’m Charls Dave Erana, a Software Developer/IT Personnel passionate about Web Development and designs. I help clients achieve their needs and expectations through my skills and knowledge.”</p>
