@@ -80,206 +80,208 @@ export default function Index() {
           </div>
 
           <div className="bg-white bg-opacity-10 m-2 rounded-lg p-1 h-[100%]">
-            <h1 className="text-white text-lg font-bold mt-2">Web Development</h1>
-            <div className="flex flex-wrap sticky top-0 text-white gap-2">
-              <Link to={"https://react.dev/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-6 pr-2" src="/app/img/react.svg" alt="react" />
-                  React
-                </div>
-              </Link>
-              <Link to={"https://angular.dev/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/angular.svg" alt="angular" />
-                  Angular
-                </div>
-              </Link>
-              <Link to={"https://nodejs.org/en"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/nodejs.svg" alt="nodejs" />
-                  Node JS
-                </div>
-              </Link>
-              <Link to={"https://ant.design/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/antd.svg" alt="ant design" />
-                  Ant Design
-                </div>
-              </Link>
-              <Link to={"https://tailwindcss.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/tailwind.svg" alt="tailwind" />
-                  Tailwind
-                </div>
-              </Link>
-              <Link to={"https://vite.dev/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/vite.svg" alt="vite" />
-                  Vite
-                </div>
-              </Link>
-              <Link to={"https://wordpress.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/wordpress.svg" alt="wordpress" />
-                  Wordpress
-                </div>
-              </Link>
-              <Link to={"https://www.shopify.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/shopify.svg" alt="shopify" />
-                  Shopify
-                </div>
-              </Link>
-              <Link to={"https://nextjs.org/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/nextjs.svg" alt="nextjs" />
-                  NextJS
-                </div>
-              </Link>
-              <Link to={"https://nestjs.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/nestjs.svg" alt="nestjs" />
-                  NestJS
-                </div>
-              </Link>
-              <Link to={"https://supabase.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/supabase.svg" alt="supabase" />
-                  Supabase
-                </div>
-              </Link>
-              <Link to={"https://remix.run/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px hover:border hover:border-white]">
-                  <img className="h-5 pr-2" src="/app/img/remix.svg" alt="remix" />
-                  Remix
-                </div>
-              </Link>
-              <Link to={"https://www.atlassian.com/software/jira"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/jira.svg" alt="jira" />
-                  Jira
-                </div>
-              </Link>
-              <Link to={"https://vuejs.org/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/vue.svg" alt="vue" />
-                  VueJS
-                </div>
-              </Link>
-              <Link to={"https://dotnet.microsoft.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/dotnet.svg" alt=".net" />
-                  .NET
-                </div>
-              </Link>
-            </div>
+            <div className="sticky top-0">
+              <h1 className="text-white text-lg font-bold mt-2">Web Development</h1>
+              <div className="flex flex-wrap text-white gap-2">
+                <Link to={"https://react.dev/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-6 pr-2" src="/app/img/react.svg" alt="react" />
+                    React
+                  </div>
+                </Link>
+                <Link to={"https://angular.dev/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/angular.svg" alt="angular" />
+                    Angular
+                  </div>
+                </Link>
+                <Link to={"https://nodejs.org/en"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/nodejs.svg" alt="nodejs" />
+                    Node JS
+                  </div>
+                </Link>
+                <Link to={"https://ant.design/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/antd.svg" alt="ant design" />
+                    Ant Design
+                  </div>
+                </Link>
+                <Link to={"https://tailwindcss.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/tailwind.svg" alt="tailwind" />
+                    Tailwind
+                  </div>
+                </Link>
+                <Link to={"https://vite.dev/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/vite.svg" alt="vite" />
+                    Vite
+                  </div>
+                </Link>
+                <Link to={"https://wordpress.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/wordpress.svg" alt="wordpress" />
+                    Wordpress
+                  </div>
+                </Link>
+                <Link to={"https://www.shopify.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/shopify.svg" alt="shopify" />
+                    Shopify
+                  </div>
+                </Link>
+                <Link to={"https://nextjs.org/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/nextjs.svg" alt="nextjs" />
+                    NextJS
+                  </div>
+                </Link>
+                <Link to={"https://nestjs.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/nestjs.svg" alt="nestjs" />
+                    NestJS
+                  </div>
+                </Link>
+                <Link to={"https://supabase.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/supabase.svg" alt="supabase" />
+                    Supabase
+                  </div>
+                </Link>
+                <Link to={"https://remix.run/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px hover:border hover:border-white]">
+                    <img className="h-5 pr-2" src="/app/img/remix.svg" alt="remix" />
+                    Remix
+                  </div>
+                </Link>
+                <Link to={"https://www.atlassian.com/software/jira"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/jira.svg" alt="jira" />
+                    Jira
+                  </div>
+                </Link>
+                <Link to={"https://vuejs.org/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/vue.svg" alt="vue" />
+                    VueJS
+                  </div>
+                </Link>
+                <Link to={"https://dotnet.microsoft.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/dotnet.svg" alt=".net" />
+                    .NET
+                  </div>
+                </Link>
+              </div>
 
-            <h1 className="text-white text-lg font-bold mt-2">Operating System</h1>
-            <div className="flex flex-wrap text-white gap-2">
-              <Link to={"https://www.microsoft.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/windows.svg" alt="windows" />
-                  Windows
-                </div>
-              </Link>
-              <Link to={"https://ubuntu.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/ubuntu.svg" alt="ubuntu" />
-                  Ubuntu
-                </div>
-              </Link>
-              <Link to={"https://www.linux.org/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/linux.svg" alt="linux" />
-                  Linux
-                </div>
-              </Link>
-              <Link to={"https://www.apple.com/ph/mac/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/apple.svg" alt="mac" />
-                  Mac
-                </div>
-              </Link>
-            </div>
+              <h1 className="text-white text-lg font-bold mt-2">Operating System</h1>
+              <div className="flex flex-wrap text-white gap-2">
+                <Link to={"https://www.microsoft.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/windows.svg" alt="windows" />
+                    Windows
+                  </div>
+                </Link>
+                <Link to={"https://ubuntu.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/ubuntu.svg" alt="ubuntu" />
+                    Ubuntu
+                  </div>
+                </Link>
+                <Link to={"https://www.linux.org/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/linux.svg" alt="linux" />
+                    Linux
+                  </div>
+                </Link>
+                <Link to={"https://www.apple.com/ph/mac/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/apple.svg" alt="mac" />
+                    Mac
+                  </div>
+                </Link>
+              </div>
 
-            <h1 className="text-white text-lg font-bold mt-2">Version Control</h1>
-            <div className="flex flex-wrap text-white gap-2">
-              <Link to={"https://github.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/github.svg" alt="github" />
-                  Github
-                </div>
-              </Link>
-              <Link to={"http://gitlab.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/gitlab.svg" alt="gitlab" />
-                  Gitlab
-                </div>
-              </Link>
-              <Link to={"https://git-scm.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/git.svg" alt="git" />
-                  Git
-                </div>
-              </Link>
-            </div>
+              <h1 className="text-white text-lg font-bold mt-2">Version Control</h1>
+              <div className="flex flex-wrap text-white gap-2">
+                <Link to={"https://github.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/github.svg" alt="github" />
+                    Github
+                  </div>
+                </Link>
+                <Link to={"http://gitlab.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/gitlab.svg" alt="gitlab" />
+                    Gitlab
+                  </div>
+                </Link>
+                <Link to={"https://git-scm.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/git.svg" alt="git" />
+                    Git
+                  </div>
+                </Link>
+              </div>
 
-            <h1 className="text-white text-lg font-bold mt-2">Open Source</h1>
-            <div className="flex flex-wrap text-white gap-2">
-              <Link to={"https://snipeitapp.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 mr-1 bg-white" src="/app/img/snipeit.svg" alt="snipeit" />
-                  SnipeIT
-                </div>
-              </Link>
-              <Link to={"https://wazuh.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-3 mt-1 mr-1 bg-white" src="/app/img/wazuh.svg" alt="wazuh" />
-                  Wazuh
-                </div>
-              </Link>
-              <Link to={"https://www.zabbix.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-3 mt-1 mr-1 bg-white" src="/app/img/zabbix.svg" alt="zabbix" />
-                  Zabbix
-                </div>
-              </Link>
-              <Link to={"https://www.apachefriends.org/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 mr-1 bg-white " src="/app/img/xampp.svg" alt="xampp" />
-                  Xampp
-                </div>
-              </Link>
-              <Link to={"https://phpmyadmin.net/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-4 mt-1 mr-1 bg-white " src="/app/img/phpmyadmin.svg" alt="phpmyadmin" />
-                  phpMyAdmin
-                </div>
-              </Link>
-              <Link to={"https://openvpn.net/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2" src="/app/img/openvpn.svg" alt="openvpn" />
-                  openVPN
-                </div>
-              </Link>
-              <Link to={"https://www.docker.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-5 pr-2 rounded-full" src="/app/img/docker.svg" alt="docker" />
-                  Docker
-                </div>
-              </Link>
-              <Link to={"https://www.cloudpanel.io/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-4 pr-2" src="/app/img/cloudpanel.svg" alt="cloudpanel" />
-                  CloudPanel
-                </div>
-              </Link>
-              <Link to={"https://render.com/"} target="_blank">
-                <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                  <img className="h-4 mr-1 bg-white" src="/app/img/render.svg" alt="cloudpanel" />
-                  Render
-                </div>
-              </Link>
+              <h1 className="text-white text-lg font-bold mt-2">Open Source</h1>
+              <div className="flex flex-wrap text-white gap-2">
+                <Link to={"https://snipeitapp.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 mr-1 bg-white" src="/app/img/snipeit.svg" alt="snipeit" />
+                    SnipeIT
+                  </div>
+                </Link>
+                <Link to={"https://wazuh.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-3 mt-1 mr-1 bg-white" src="/app/img/wazuh.svg" alt="wazuh" />
+                    Wazuh
+                  </div>
+                </Link>
+                <Link to={"https://www.zabbix.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-3 mt-1 mr-1 bg-white" src="/app/img/zabbix.svg" alt="zabbix" />
+                    Zabbix
+                  </div>
+                </Link>
+                <Link to={"https://www.apachefriends.org/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 mr-1 bg-white " src="/app/img/xampp.svg" alt="xampp" />
+                    Xampp
+                  </div>
+                </Link>
+                <Link to={"https://phpmyadmin.net/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-4 mt-1 mr-1 bg-white " src="/app/img/phpmyadmin.svg" alt="phpmyadmin" />
+                    phpMyAdmin
+                  </div>
+                </Link>
+                <Link to={"https://openvpn.net/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/openvpn.svg" alt="openvpn" />
+                    openVPN
+                  </div>
+                </Link>
+                <Link to={"https://www.docker.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2 rounded-full" src="/app/img/docker.svg" alt="docker" />
+                    Docker
+                  </div>
+                </Link>
+                <Link to={"https://www.cloudpanel.io/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-4 pr-2" src="/app/img/cloudpanel.svg" alt="cloudpanel" />
+                    CloudPanel
+                  </div>
+                </Link>
+                <Link to={"https://render.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-4 mr-1 bg-white" src="/app/img/render.svg" alt="cloudpanel" />
+                    Render
+                  </div>
+                </Link>
+              </div>
             </div>
 
           </div>
