@@ -25,6 +25,7 @@ export default defineConfig({
             route("skills", "routes/skills.tsx", { index: true });
             route("work-and-education", "routes/work_and_educ.tsx", { index: true });
             route("projects", "routes/projects.tsx", { index: true });
+            route("vibe-coding", "routes/vibe_coding.tsx", { index: true });
           });
         })
       }

@@ -57,20 +57,26 @@ export default function Index() {
               </Link>
               <Link to="/skills">
                 <div className="flex hover:border hover:border-white cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-md text-[14px]">
-                  <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/skills.svg" alt="person" />
+                  <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/skills.svg" alt="skills" />
                   Skills
                 </div>
               </Link>
               <Link to="/work-and-education">
                 <div className="flex hover:border hover:border-white cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-md text-[14px]">
-                  <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/work.svg" alt="person" />
+                  <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/work.svg" alt="work" />
                   Work & Education
                 </div>
               </Link>
               <Link to="/projects">
                 <div className="flex hover:border hover:border-white cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-md text-[14px]">
-                  <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/setting.svg" alt="person" />
+                  <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/setting.svg" alt="setting" />
                   <h1>Projects</h1>
+                </div>
+              </Link>
+              <Link to="/vibe-coding">
+                <div className="flex hover:border hover:border-white cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-md text-[14px]">
+                  <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/ai.svg" alt="ai" />
+                  <h1>Vibe Coding</h1>
                 </div>
               </Link>
             </div>
@@ -119,12 +125,6 @@ export default function Index() {
                     Vite
                   </div>
                 </Link>
-                <Link to={"https://wordpress.com/"} target="_blank">
-                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
-                    <img className="h-5 pr-2" src="/app/img/wordpress.svg" alt="wordpress" />
-                    Wordpress
-                  </div>
-                </Link>
                 <Link to={"https://www.shopify.com/"} target="_blank">
                   <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
                     <img className="h-5 pr-2" src="/app/img/shopify.svg" alt="shopify" />
@@ -171,6 +171,42 @@ export default function Index() {
                   <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
                     <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/dotnet.svg" alt=".net" />
                     .NET
+                  </div>
+                </Link>
+                <Link to={"https://prettier.io/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/prettier.svg" alt="prettier" />
+                    Prettier
+                  </div>
+                </Link>
+                <Link to={"https://www.npmjs.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-4 mt-1 pr-2" src="/app/img/npm.svg" alt="npm" />
+                    NPM
+                  </div>
+                </Link>
+                <Link to={"https://eslint.org/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/eslint.svg" alt="eslint" />
+                    ESLint
+                  </div>
+                </Link>
+                <Link to={"https://www.figma.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/figma.svg" alt="figma" />
+                    Figma
+                  </div>
+                </Link>
+                <Link to={""} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/html5.svg" alt="html5" />
+                    HTML
+                  </div>
+                </Link>
+                <Link to={""} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/css3.svg" alt="css3" />
+                    CSS
                   </div>
                 </Link>
               </div>
@@ -279,6 +315,46 @@ export default function Index() {
                   <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
                     <img className="h-4 mr-1 bg-white" src="/app/img/render.svg" alt="cloudpanel" />
                     Render
+                  </div>
+                </Link>
+              </div>
+
+              <h1 className="text-white text-lg font-bold mt-2">Vibe Coding</h1>
+              <div className="flex flex-wrap text-white gap-2">
+                <Link to={"https://wordpress.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/wordpress.svg" alt="wordpress" />
+                    Wordpress
+                  </div>
+                </Link>
+                <Link to={"https://lovable.dev/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/lovable.svg" alt="lovable" />
+                    Lovable
+                  </div>
+                </Link>
+                <Link to={"https://wix.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/wix.svg" alt="wix" />
+                    Wix Studio
+                  </div>
+                </Link>
+                <Link to={"https://webflow.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/webflow.svg" alt="webflow" />
+                    Webflow
+                  </div>
+                </Link>
+                <Link to={"https://chatgpt.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/chatgpt.svg" alt="chatgpt" />
+                    ChatGPT
+                  </div>
+                </Link>
+                <Link to={"https://chatgpt.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/deepseek.svg" alt="deepseek" />
+                    DeepSeek
                   </div>
                 </Link>
               </div>
