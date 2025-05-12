@@ -12,9 +12,9 @@ export default function About() {
                 After I Graduated in college at University of Cebu – Banilad, after a week I started my first job as Junior Software Developer for 4 years, and then jump to being IT Personnel for another years to enhance my skills not just as developer but also to have knowledge in servers and technical. But before that I used to be a Service Crew in a fast foods chain which is Jollibee and a Software Application Tester back in my OJT days for quality assurance of their application.
                 I started this for my personal growth and achieve my goals.
             </p>
-            <p className="italic pt-2 flex"><img className="h-6 mr-1" src="/app/img/correct.svg" alt="mail_at" /><b>Motto 1:</b> It does not matter how slowly you go so long as you do not stop.</p>
-            <p className="italic pt-2 flex"><img className="h-6 mr-1" src="/app/img/correct.svg" alt="mail_at" /><b>Motto 2:</b> Simplicity is beauty.</p>
-            <h1 className="pt-3 pb-5 flex"><img className="h-6 mr-1" src="/app/img/correct.svg" alt="correct" /><b>My Values: </b><p className="italic">&nbsp; Honesty, creativity, and sustainability drive my work.</p></h1>
+            <p className="italic pt-2 flex"><img className="h-6 mr-1" src="/app/img/correct.svg" alt="mail_at" />Motto 1: It does not matter how slowly you go so long as you do not stop.</p>
+            <p className="italic pt-2 flex"><img className="h-6 mr-1" src="/app/img/correct.svg" alt="mail_at" />Motto 2: Simplicity is beauty.</p>
+            <h1 className="pt-3 pb-5 flex italic"><img className="h-6 mr-1" src="/app/img/correct.svg" alt="correct" />My Values: Honesty, creativity, and sustainability drive my work.</h1>
 
             <h1 className="pt-3 pb-3 flex"><img className="h-6 mr-1" src="/app/img/files.svg" alt="files" /><b>My Expertise</b></h1>
             <div className="italic pb-5">

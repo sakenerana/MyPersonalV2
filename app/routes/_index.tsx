@@ -3,17 +3,18 @@ import { Link, Outlet } from "@remix-run/react";
 export default function Index() {
   return (
     <div className="flex h-full inset-ring-4 justify-center bg-[url(/app/img/meteor.gif)] bg-no-repeat bg-cover">
-      <div className="m-10 h-auto rounded-xl w-[75%] bg-black bg-opacity-10">
-        <div className="grid grid-cols-3 gap-4">
-          <div className="col-span-2 bg-white bg-opacity-10 m-2 rounded-lg p-1 h-[100%]">
-            <div className="flex flex-wrap gap-8 m-3">
-              <div className="xs: 24, sm: 32, md: 40, lg: 64, xl: 80, xxl: 100">
-                <img className="rounded-full h-28 w-28 border-2 border-white" src="/app/img/myself.jpg" alt="mypp" />
-              </div>
+      <div className="md:m-10 lg:m-10 xl:m-10 2xl:m-10 h-auto rounded-xl xs:w-full sm:w-full lg:w-full xl:w-[75%] 2xl:w-[75%] bg-black bg-opacity-10 sm:justify-center">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 lg:gap-4 xl:gap-4 2xl:gap-4 sm:gap-0">
+
+          <div className="col-span-2 bg-white bg-opacity-10 md:m-2 lg:m-2 xl:m-2 2xl:m-2 rounded-lg p-1 h-[100%]">
+            <div className="flex flex-wrap gap-8 m-3 text-center 2xl:text-start">
               <div className="pt-5 text-white">
-                <h1 className="text-lg">CHARLS DAVE M. ERANA</h1>
+                <div className="flex justify-center md:justify-center md:justify-center lg:justify-center 2xl:float-left 2xl:pr-6">
+                  <img className="rounded-full h-28 w-28 border-2 border-white" src="/app/img/myself.jpg" alt="mypp" />
+                </div>
+                <h1 className="text-lg mt-4">CHARLS DAVE M. ERANA</h1>
                 <p>“Web Designer | IT Personnel | Software/Web Developer | Travel Lover | Music Lover”.</p>
-                <div className="flex gap-2 pt-4">
+                <div className="flex gap-2 pt-4 justify-center 2xl:justify-start">
                   <Link to="https://www.facebook.com/sakenerana" target='_blank'>
                     <img className="h-6 mr-1 cursor-pointer hover:border-2 hover:border-black" src="/app/img/facebook.svg" alt="person" />
                   </Link>
@@ -33,7 +34,7 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-6 justify-end pr-2">
+            <div className="flex flex-wrap gap-6 justify-center 2xl:justify-end 2xl:mr-2">
               <p className="flex   text-white bg-black p-4 rounded-md text-[14px]">
                 <img className="h-5 p-1 mr-1 bg-white rounded-full" src="/app/img/phone.svg" alt="person" />
                 +639553713233
@@ -46,8 +47,8 @@ export default function Index() {
               </Link>
             </div>
 
-            <h1 className="text-white text-xl font-bold mt-2 pb-1">Suggestions</h1>
-            <div className="flex text-white gap-2">
+            <h1 className="text-white text-xl font-bold mt-2 pb-1 text-center 2xl:text-start">Suggestions</h1>
+            <div className="flex flex-wrap text-white gap-2">
               <Link to="/">
                 <div className="flex hover:border hover:border-white cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-md text-[14px]">
                   <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/person.svg" alt="person" />
@@ -79,13 +80,13 @@ export default function Index() {
                 </div>
               </Link>
             </div>
-            <div className="bg-white text-white bg-opacity-10 m-2 rounded-lg p-1">
+            <div className="bg-white text-white bg-opacity-10 rounded-lg">
               <Outlet />
             </div>
           </div>
 
-          <div className="bg-white bg-opacity-10 m-2 rounded-lg p-1 h-[100%]">
-            <div className="sticky top-0">
+          <div className="col-span-2 md:col-span-1 lg:col-span-1 xl:col-span-1 2xl:col-span-1 bg-white bg-opacity-10 mt-2 md:m-2 md:mt-5 lg:m-2 xl:m-2 2xl:m-2 rounded-lg p-1 h-[100%]">
+            <div className="sticky top-0 m-2">
               <h1 className="text-white text-lg font-bold mt-2">Web Development</h1>
               <div className="flex flex-wrap text-white gap-2">
                 <Link to={"https://react.dev/"} target="_blank">
@@ -208,6 +209,12 @@ export default function Index() {
                     CSS
                   </div>
                 </Link>
+                <Link to={"https://firebase.google.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/firebase.svg" alt="firebase" />
+                    Firebase
+                  </div>
+                </Link>
               </div>
 
               <h1 className="text-white text-lg font-bold mt-2">Operating System</h1>
@@ -316,6 +323,12 @@ export default function Index() {
                     Render
                   </div>
                 </Link>
+                <Link to={"https://cpanel.net/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 mr-1" src="/app/img/cpanel.svg" alt="cpanel" />
+                    cPanel
+                  </div>
+                </Link>
               </div>
 
               <h1 className="text-white text-lg font-bold mt-2">Vibe Coding</h1>
@@ -354,6 +367,12 @@ export default function Index() {
                   <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
                     <img className="h-5 pr-2" src="/app/img/deepseek.svg" alt="deepseek" />
                     DeepSeek
+                  </div>
+                </Link>
+                <Link to={"https://studio.firebase.google.com/"} target="_blank">
+                  <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                    <img className="h-5 pr-2" src="/app/img/firebasestudio.svg" alt="firebasestudio" />
+                    Firebase Studio
                   </div>
                 </Link>
               </div>

@@ -3,8 +3,8 @@ import { Link } from "@remix-run/react";
 export default function () {
     return (
         <div>
-            <div className="col-span-full">
-                <h1><b>Saint Isidore Chorale Ensemble</b></h1>
+            <div className="col-span-full m-2">
+                <h1 className="pt-3"><b>Saint Isidore Chorale Ensemble</b></h1>
                 <div className="mt-2">
                     <p className="italic">- Integrate inventory for easy monitoring of item</p>
                     <p className="italic">- Integrate inventory for easy monitoring of item</p>
