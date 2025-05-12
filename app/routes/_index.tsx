@@ -2,7 +2,7 @@ import { Link, Outlet } from "@remix-run/react";
 
 export default function Index() {
   return (
-    <div className="flex h-full inset-ring-4 justify-center bg-[url(./img/meteor.gif)] bg-no-repeat bg-cover">
+    <div className="flex h-full inset-ring-4 justify-center bg-[url(app/img/meteor.gif)] bg-no-repeat bg-cover">
       <div className="md:m-10 lg:m-10 xl:m-10 2xl:m-10 h-auto rounded-xl xs:w-full sm:w-full lg:w-full xl:w-[75%] 2xl:w-[75%] bg-black bg-opacity-10 sm:justify-center">
         <div className="grid sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 lg:gap-4 xl:gap-4 2xl:gap-4 sm:gap-0">
 
