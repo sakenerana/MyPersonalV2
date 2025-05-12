@@ -10,7 +10,7 @@ export default function Index() {
             <div className="flex flex-wrap gap-8 m-3 text-center 2xl:text-start">
               <div className="pt-5 text-white">
                 <div className="flex justify-center md:justify-center md:justify-center lg:justify-center 2xl:float-left 2xl:pr-6">
-                  <img className="rounded-full h-28 w-28 border-2 border-white" src="/app/img/myself.jpg" alt="mypp" />
+                  <img className="rounded-full h-28 w-28 border-2 border-white" src="/public/img/myself.jpg" alt="mypp" />
                 </div>
                 <h1 className="text-lg mt-4">CHARLS DAVE M. ERANA</h1>
                 <p>“Web Designer | IT Personnel | Software/Web Developer | Travel Lover | Music Lover”.</p>
