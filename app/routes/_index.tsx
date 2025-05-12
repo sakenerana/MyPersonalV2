@@ -12,7 +12,7 @@ export default function Index() {
               </div>
               <div className="pt-5 text-white">
                 <h1 className="text-lg">CHARLS DAVE M. ERANA</h1>
-                <p>I love Web Development.</p>
+                <p>“Web Designer | IT Personnel | Software/Web Developer | Travel Lover | Music Lover”.</p>
                 <div className="flex gap-2 pt-4">
                   <Link to="https://www.facebook.com/sakenerana" target='_blank'>
                     <img className="h-6 mr-1 cursor-pointer hover:border-2 hover:border-black" src="/app/img/facebook.svg" alt="person" />
@@ -31,22 +31,21 @@ export default function Index() {
                   </Link>
                 </div>
               </div>
-              <div className="">
-
-                <p className="flex   text-white bg-black p-4 rounded-md text-[14px]">
-                  <img className="h-5 p-1 mr-1 bg-white rounded-full" src="/app/img/phone.svg" alt="person" />
-                  +639553713233
-                </p>
-              </div>
-              <div className="">
-                <Link to={"https://docs.google.com/document/d/1Izh0zT_kFA8zF3xgnbGq9Sy0a7Bt7vWDaAxyayhXp7I/edit?tab=t.0"} target="_blank">
-                  <p className="flex hover:border-4 hover:border-black cursor-pointer text-black bg-white p-4 rounded-md text-[14px]">
-                    <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/download.svg" alt="person" />
-                    Resume
-                  </p>
-                </Link>
-              </div>
             </div>
+
+            <div className="flex flex-wrap gap-6 justify-end pr-2">
+              <p className="flex   text-white bg-black p-4 rounded-md text-[14px]">
+                <img className="h-5 p-1 mr-1 bg-white rounded-full" src="/app/img/phone.svg" alt="person" />
+                +639553713233
+              </p>
+              <Link to={"https://docs.google.com/document/d/1Izh0zT_kFA8zF3xgnbGq9Sy0a7Bt7vWDaAxyayhXp7I/edit?tab=t.0"} target="_blank">
+                <p className="flex hover:border-4 hover:border-black cursor-pointer text-black bg-white p-4 rounded-md text-[14px]">
+                  <img className="h-5 mr-1 bg-white rounded-full" src="/app/img/download.svg" alt="person" />
+                  Resume
+                </p>
+              </Link>
+            </div>
+
             <h1 className="text-white text-xl font-bold mt-2 pb-1">Suggestions</h1>
             <div className="flex text-white gap-2">
               <Link to="/">
