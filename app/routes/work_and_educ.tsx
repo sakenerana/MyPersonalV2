@@ -5,7 +5,7 @@ export default function WorkAndEducation() {
         <div className="m-2">
             <h1 className="pt-3 pb-3 flex"><img className="h-6 mr-2" src="./img/work2.svg" alt="work2" /><b>Work History</b></h1>
 
-            <div className="flex flex-wrap gap-8 m-3 justify-center text-center">
+            <div className="flex gap-8 m-3 justify-start text-start">
                 <img className=" h-40 w-40" src="./img/jollibee.svg" alt="jollibee" />
                 <div className="pt-5 text-white">
                     <h1 className="text-lg">Jollibee, Banilad, Cebu City - Crew (Working Student)</h1>
@@ -15,7 +15,7 @@ export default function WorkAndEducation() {
             </div>
             <div className="border-t border-gray-200 my-4"></div>
 
-            <div className="flex flex-wrap gap-8 m-3 justify-center text-center">
+            <div className="flex gap-8 m-3 justify-start text-start">
                 <img className=" h-40 w-40" src="./img/avega.svg" alt="avega" />
                 <div className="pt-5 text-white">
                     <h1 className="text-lg">Avega Bros. Shipping Corp.,J. De Veyra, Cebu City - Software Tester (Internship/OJT)</h1>
@@ -25,7 +25,7 @@ export default function WorkAndEducation() {
             </div>
             <div className="border-t border-gray-200 my-4"></div>
 
-            <div className="flex flex-wrap gap-8 m-3 justify-center text-center">
+            <div className="flex gap-8 m-3 justify-start text-start">
                 <img className="h-40 w-40" src="./img/elfstation.svg" alt="elfstation" />
                 <div className="pt-5 text-white">
                     <h1 className="text-lg">Elf Station Inc. , General Maxilom Avenue, Cebu City - (Software/Web Developer)</h1>
@@ -35,7 +35,7 @@ export default function WorkAndEducation() {
             </div>
             <div className="border-t border-gray-200 my-4"></div>
 
-            <div className="flex flex-wrap gap-8 m-3 justify-center text-center">
+            <div className="flex gap-8 m-3 justify-start text-start">
                 <img className="h-40 w-40 bg-white rounded-full" src="./img/cficoop.svg" alt="cficoop" />
                 <div className="pt-5 text-white">
                     <h1 className="text-lg">Cebu CFI Community Cooperative, Capitol Compound, Cebu City - (IT Personnel/Current Job)</h1>
@@ -47,7 +47,7 @@ export default function WorkAndEducation() {
 
             <h1 className="pt-3 pb-3 flex"><img className="h-6 mr-1" src="./img/education.svg" alt="education" /><b>Education</b></h1>
 
-            <div className="flex flex-wrap gap-8 m-3 justify-center text-center">
+            <div className="flex gap-8 m-3 justify-start text-start">
                 <img className="h-40 w-40 bg-white rounded-full" src="./img/bacayan.svg" alt="bacayan" />
                 <div className="pt-5 text-white">
                     <h1 className="text-lg">Bacayan Elementary School</h1>
@@ -57,7 +57,7 @@ export default function WorkAndEducation() {
             </div>
             <div className="border-t border-gray-200 my-4"></div>
 
-            <div className="flex flex-wrap gap-8 m-3 justify-center text-centter">
+            <div className="flex gap-8 m-3 justify-start text-start">
                 <img className="h-40 w-40 bg-white rounded-full" src="./img/pitos.svg" alt="pitos" />
                 <div className="pt-5 text-white">
                     <h1 className="text-lg">Pit-os National Highschool</h1>
@@ -67,7 +67,7 @@ export default function WorkAndEducation() {
             </div>
             <div className="border-t border-gray-200 my-4"></div>
 
-            <div className="flex flex-wrap gap-8 m-3 justify-center text-center">
+            <div className="flex gap-8 m-3 justify-start text-start">
                 <img className="h-40 w-40 bg-white rounded-full" src="./img/uc.svg" alt="uc" />
                 <div className="pt-5 text-white">
                     <h1 className="text-lg">University of Cebu Banilad</h1>

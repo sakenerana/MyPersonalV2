@@ -93,10 +93,10 @@ export default function () {
                 <h1><b>Clevermasters - Website/Mobile (Self Made) - Year 2019</b></h1>
                 <div className="mt-2">
                     <ul className="list-disc ml-5">
-                        <li><p className="italic ">Real-time stock level monitoring</p></li>
-                        <li><p className="italic">SKU (Stock Keeping Unit) management</p></li>
-                        <li><p className="italic">Role-based access control</p></li>
-                        <li><p className="italic">Inventory valuation reports</p></li>
+                        <li><p className="italic ">Job Seek for General Services</p></li>
+                        <li><p className="italic">Less Hassle</p></li>
+                        <li><p className="italic">Flexibility</p></li>
+                        <li><p className="italic">Effiency</p></li>
                     </ul>
                 </div>
                 <h1 className="mt-2"><b>Tech Used</b></h1>
@@ -140,6 +140,34 @@ export default function () {
                 </div>
                 <h1 className="mt-2"><b>User Interface</b></h1>
                 <img className="h-fit mt-2 w-100vw hover:border-2 hover:border-black" src="./img/clevermasters.png" alt="clevermasters" />
+                <div className="border-t border-gray-200 my-4"></div>
+            </div>
+
+            {/* 3rd Row */}
+
+            <div className="col-span-full">
+                <h1><b>Saint Isidore Chorale Ensemble - Website/Mobile (Self Made) - Year 2025</b></h1>
+                <div className="mt-2">
+                    <ul className="list-disc ml-5">
+                        <li><p className="italic ">Centralized Information Hub</p></li>
+                        <li><p className="italic">News & Updates</p></li>
+                        <li><p className="italic">Audience Interaction & Performance Calendar</p></li>
+                        <li><p className="italic">Testimonials & Reviews</p></li>
+                        <li><p className="italic">Open for members to join or donate</p></li>
+                    </ul>
+                </div>
+                <h1 className="mt-2"><b>Tech Used</b></h1>
+                <div className="flex flex-wrap gap-2 mt-1">
+                    <Link to={"https://wordpress.com/"} target="_blank">
+                        <div className="flex cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-2xl text-[14px] hover:border hover:border-white">
+                            <img className="h-5 pr-2" src="./img/wordpress.svg" alt="wordpress" />
+                            Wordpress
+                        </div>
+                    </Link>
+                    
+                </div>
+                <h1 className="mt-2"><b>User Interface</b></h1>
+                <img className="h-fit mt-2 w-100vw hover:border-2 hover:border-black" src="./img/sice.png" alt="clevermasters" />
                 <div className="border-t border-gray-200 my-4"></div>
             </div>
 

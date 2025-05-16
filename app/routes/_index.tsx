@@ -73,12 +73,12 @@ export default function Index() {
                   <h1>Projects</h1>
                 </div>
               </Link>
-              <Link to="/vibe-coding">
+              {/* <Link to="/vibe-coding">
                 <div className="flex hover:border hover:border-white cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-md text-[14px]">
                   <img className="h-5 mr-1 bg-white rounded-full" src="./img/ai.svg" alt="ai" />
                   <h1>Vibe Coding</h1>
                 </div>
-              </Link>
+              </Link> */}
             </div>
             <div className="bg-white text-white bg-opacity-10 rounded-lg">
               <Outlet />
