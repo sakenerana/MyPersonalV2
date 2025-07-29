@@ -109,8 +109,45 @@ export default function Index() {
               </div>
             </div>
 
+<<<<<<< HEAD
             {/* Content Outlet */}
             <div className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 min-h-[400px] transition-all hover:border-purple-500 duration-300">
+=======
+            <h1 className="text-white text-xl font-bold mt-2 pb-1 text-center 2xl:text-start">Suggestions</h1>
+            <div className="flex flex-wrap text-white gap-2">
+              <Link to="/">
+                <div className="flex hover:border hover:border-white cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-md text-[14px]">
+                  <img className="h-5 mr-1 bg-white rounded-full" src="./img/person.svg" alt="person" />
+                  About Me
+                </div>
+              </Link>
+              <Link to="/skills">
+                <div className="flex hover:border hover:border-white cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-md text-[14px]">
+                  <img className="h-5 mr-1 bg-white rounded-full" src="./img/skills.svg" alt="skills" />
+                  Skills
+                </div>
+              </Link>
+              <Link to="/work-and-education">
+                <div className="flex hover:border hover:border-white cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-md text-[14px]">
+                  <img className="h-5 mr-1 bg-white rounded-full" src="./img/work.svg" alt="work" />
+                  Work & Education
+                </div>
+              </Link>
+              <Link to="/projects">
+                <div className="flex hover:border hover:border-white cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-md text-[14px]">
+                  <img className="h-5 mr-1 bg-white rounded-full" src="./img/setting.svg" alt="setting" />
+                  <h1>Projects</h1>
+                </div>
+              </Link>
+              {/* <Link to="/vibe-coding">
+                <div className="flex hover:border hover:border-white cursor-pointer bg-black pr-3 pl-3 pt-1 pb-1 rounded-md text-[14px]">
+                  <img className="h-5 mr-1 bg-white rounded-full" src="./img/ai.svg" alt="ai" />
+                  <h1>Vibe Coding</h1>
+                </div>
+              </Link> */}
+            </div>
+            <div className="bg-white text-white bg-opacity-10 rounded-lg">
+>>>>>>> 231ec780755a3f7d2d6a1246d997c7a001b31049
               <Outlet />
             </div>
           </div>
