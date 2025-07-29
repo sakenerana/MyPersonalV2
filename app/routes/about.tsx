@@ -2,69 +2,151 @@ import { Link } from "@remix-run/react";
 
 export default function About() {
     return (
-        <div className="m-2">
+        <div className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 p-8 hover:border-purple-500 transition-all duration-300">
+            {/* The Person I Am */}
+            <section className="mb-10">
+                <div className="flex items-center mb-6">
+                    <div className="bg-purple-500 p-2 rounded-lg mr-3">
+                        <img className="h-5 w-5" src="./img/person2.svg" alt="person" />
+                    </div>
+                    <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-300 bg-clip-text text-transparent">
+                        The Person I Am
+                    </h1>
+                </div>
+                <blockquote className="text-gray-200 text-lg italic pl-4 border-l-4 border-purple-500 mb-6 leading-relaxed">
+                    "Hi, I'm Charls Dave Erana, a Software Developer/IT Personnel passionate about Web Development and designs. I help clients achieve their needs and expectations through my skills and knowledge."
+                </blockquote>
+            </section>
 
-            <h1 className="pt-3 pb-3 flex"><img className="h-6 mr-1" src="./img/person2.svg" alt="person2" /><b>The Person I Am</b></h1>
-            <p className="italic pb-5">“Hi, I’m Charls Dave Erana, a Software Developer/IT Personnel passionate about Web Development and designs. I help clients achieve their needs and expectations through my skills and knowledge.”</p>
+            {/* My Journey */}
+            <section className="mb-10">
+                <div className="flex items-center mb-6">
+                    <div className="bg-purple-500 p-2 rounded-lg mr-3">
+                        <img className="h-5 w-5" src="./img/magnify.svg" alt="journey" />
+                    </div>
+                    <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-300 bg-clip-text text-transparent">
+                        My Journey
+                    </h1>
+                </div>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                    After graduating from the University of Cebu – Banilad, I began my career as a Junior Software Developer, where I spent four years honing my skills. I then transitioned to an IT Personnel role to expand my expertise beyond development into server management and technical operations. My professional journey began with roles as a Service Crew at Jollibee and later as a Software Application Tester during my OJT, focusing on quality assurance.
+                </p>
+                <div className="space-y-4 mb-6">
+                    <div className="flex items-start">
+                        <div className="bg-gray-700 p-1.5 rounded-full mr-3 mt-0.5 flex-shrink-0">
+                            <img className="h-4 w-4" src="./img/correct.svg" alt="motto" />
+                        </div>
+                        <p className="text-gray-300 italic">Motto 1: It does not matter how slowly you go so long as you do not stop.</p>
+                    </div>
+                    <div className="flex items-start">
+                        <div className="bg-gray-700 p-1.5 rounded-full mr-3 mt-0.5 flex-shrink-0">
+                            <img className="h-4 w-4" src="./img/correct.svg" alt="motto" />
+                        </div>
+                        <p className="text-gray-300 italic">Motto 2: Simplicity is beauty.</p>
+                    </div>
+                    <div className="flex items-start">
+                        <div className="bg-gray-700 p-1.5 rounded-full mr-3 mt-0.5 flex-shrink-0">
+                            <img className="h-4 w-4" src="./img/correct.svg" alt="values" />
+                        </div>
+                        <p className="text-gray-300 italic">My Values: Honesty, creativity, and sustainability drive my work.</p>
+                    </div>
+                </div>
+            </section>
 
-            <h1 className="pt-3 pb-3 flex"><img className="h-6 mr-1" src="./img/magnify.svg" alt="mail_at" /><b>What happened to me</b></h1>
-            <p className="italic">
-                After I Graduated in college at University of Cebu – Banilad, after a week I started my first job as Junior Software Developer for 4 years, and then jump to being IT Personnel for another years to enhance my skills not just as developer but also to have knowledge in servers and technical. But before that I used to be a Service Crew in a fast foods chain which is Jollibee and a Software Application Tester back in my OJT days for quality assurance of their application.
-                I started this for my personal growth and achieve my goals.
-            </p>
-            <p className="italic pt-2 flex"><img className="h-6 mr-1" src="./img/correct.svg" alt="mail_at" />Motto 1: It does not matter how slowly you go so long as you do not stop.</p>
-            <p className="italic pt-2 flex"><img className="h-6 mr-1" src="./img/correct.svg" alt="mail_at" />Motto 2: Simplicity is beauty.</p>
-            <h1 className="pt-3 pb-5 flex italic"><img className="h-6 mr-1" src="./img/correct.svg" alt="correct" />My Values: Honesty, creativity, and sustainability drive my work.</h1>
-
-            <h1 className="pt-3 pb-3 flex"><img className="h-6 mr-1" src="./img/files.svg" alt="files" /><b>My Expertise</b></h1>
-            <div className="italic pb-5">
-                <ul className="list-disc ml-5">
-                    <li>I design WordPress websites for small businesses or personal interest.</li>
-                    <li>Troubleshooting and setup of Computers, Laptops and Printers.</li>
-                    <li>Can install CCTVs.</li>
-                    <li>Implement Web Application for client needs(UI/UX) using Angular, WordPress, React etc.</li>
-                    <li>Test application for better performance.</li>
+            {/* My Expertise */}
+            <section className="mb-10">
+                <div className="flex items-center mb-6">
+                    <div className="bg-purple-500 p-2 rounded-lg mr-3">
+                        <img className="h-5 w-5" src="./img/files.svg" alt="expertise" />
+                    </div>
+                    <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-300 bg-clip-text text-transparent">
+                        My Expertise
+                    </h1>
+                </div>
+                <ul className="text-gray-300 space-y-3 pl-2">
+                    {[
+                        "Designing WordPress websites for small businesses or personal projects",
+                        "Troubleshooting and setting up computers, laptops, and printers",
+                        "CCTV installation and configuration",
+                        "Developing web applications to meet client needs (UI/UX) using Angular, WordPress, React, and other technologies",
+                        "Application testing for optimal performance and quality assurance"
+                    ].map((item, index) => (
+                        <li key={index} className="flex items-start">
+                            <div className="bg-purple-500 rounded-full w-2 h-2 mt-2.5 mr-3 flex-shrink-0"></div>
+                            <span>{item}</span>
+                        </li>
+                    ))}
                 </ul>
-            </div>
+            </section>
 
-            <h1 className="pt-3 pb-3 flex"><img className="h-6 mr-1" src="./img/funfact.svg" alt="funcfact" /><b>Fun Facts</b></h1>
-            <p className="italic">Hobbies: I do play in band as a drummer since I love music. I can still play guitar and bass since this is where it all started. I do play a lot of video games with my ps5, I also play Mobile Legends during my breaktime.</p>
-            <p className="italic pb-5">Favorites: Black Coffee, Travel different places. Music Lover.</p>
+            {/* Fun Facts */}
+            <section className="mb-10">
+                <div className="flex items-center mb-6">
+                    <div className="bg-purple-500 p-2 rounded-lg mr-3">
+                        <img className="h-5 w-5" src="./img/funfact.svg" alt="fun facts" />
+                    </div>
+                    <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-300 bg-clip-text text-transparent">
+                        Fun Facts
+                    </h1>
+                </div>
+                <div className="bg-gray-700 bg-opacity-50 rounded-xl p-5 mb-4">
+                    <h3 className="text-purple-300 font-semibold mb-2">Hobbies:</h3>
+                    <p className="text-gray-300 leading-relaxed">
+                        I'm a passionate drummer and enjoy playing in bands. My musical journey began with guitar and bass, and I continue to enjoy making music. When I'm not coding, you can find me gaming on my PS5 or playing Mobile Legends during breaks.
+                    </p>
+                </div>
+                <div className="bg-gray-700 bg-opacity-50 rounded-xl p-5">
+                    <h3 className="text-purple-300 font-semibold mb-2">Favorites:</h3>
+                    <p className="text-gray-300 leading-relaxed">
+                        Black coffee, traveling to new places, and all kinds of music.
+                    </p>
+                </div>
+            </section>
 
-            <h1 className="pt-3 pb-3 flex"><img className="h-6 mr-1" src="./img/mail-at.svg" alt="mail_at" /><b>Let's Connect@</b></h1>
-            <p className="italic">Call-to-action (CTA):</p>
-            <p className="italic pb-2">“Want to collaborate? follow me on social medias: ”</p>
-            <p className="italic flex">
-                <Link to="https://www.facebook.com/sakenerana" target='_blank'>
-                    <img className="h-6 mr-1 cursor-pointer hover:border-2 hover:border-black" src="./img/facebook.svg" alt="person" />
-                </Link>
-                Facebook: Charls Dave Erana
-            </p>
-            <p className="italic flex">
-                <Link to={"mailto:sakenerana@gmail.com"}>
-                    <img className="h-5 mt-1 mr-1 cursor-pointer hover:border-2 hover:border-black" src="./img/gmail.svg" alt="person" />
-                </Link>
-                Gmail: sakenerana@gmail.com
-            </p>
-            <p className="italic flex">
-                <Link to={"https://github.com/"} target="_blank">
-                    <img className="h-5 mr-1 bg-white rounded-full" src="./img/github.svg" alt="github" />
-                </Link>
-                Github: sakenerana
-            </p>
-            <p className="italic flex">
-                <Link to={"https://www.instagram.com/charlsdaveerana/"} target="_blank">
-                    <img className="h-6 mr-1 cursor-pointer hover:border hover:border-black" src="./img/instagram.svg" alt="person" />
-                </Link>
-                Instagram: @charlsdaveerana
-            </p>
-            <p className="italic flex">
-                <Link to={"https://www.linkedin.com/in/charls-dave-erana-39b8b6180/"} target="_blank">
-                    <img className="h-6 mr-1 cursor-pointer hover:border hover:border-black" src="./img/linkedin.svg" alt="person" />
-                </Link>
-                LinkedIn: Charls Dave Erana
-            </p>
-
+            {/* Let's Connect */}
+            <section>
+                <div className="flex items-center mb-6">
+                    <div className="bg-purple-500 p-2 rounded-lg mr-3">
+                        <img className="h-5 w-5" src="./img/mail-at.svg" alt="contact" />
+                    </div>
+                    <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-300 bg-clip-text text-transparent">
+                        Let's Connect
+                    </h1>
+                </div>
+                <p className="text-gray-300 mb-6 italic leading-relaxed">
+                    "Want to collaborate or just say hello? Reach out through any of these channels:"
+                </p>
+                <div className="space-y-3">
+                    {[
+                        { icon: "facebook.svg", text: "Charls Dave Erana", url: "https://www.facebook.com/sakenerana" },
+                        { icon: "gmail.svg", text: "sakenerana@gmail.com", url: "mailto:sakenerana@gmail.com" },
+                        { icon: "github.svg", text: "sakenerana", url: "https://github.com/" },
+                        { icon: "instagram.svg", text: "@charlsdaveerana", url: "https://www.instagram.com/charlsdaveerana/" },
+                        { icon: "linkedin.svg", text: "Charls Dave Erana", url: "https://www.linkedin.com/in/charls-dave-erana-39b8b6180/" }
+                    ].map((contact, index) => (
+                        <Link
+                            key={index}
+                            to={contact.url}
+                            target="_blank"
+                            className="flex items-center group transition-all hover:-translate-y-0.5"
+                        >
+                            <div className="flex items-center bg-gray-700 group-hover:bg-gray-600 w-full p-4 rounded-xl transition-all border border-gray-600 group-hover:border-purple-500 shadow-sm group-hover:shadow-md">
+                                <div className="bg-gray-600 p-2 rounded-lg mr-4">
+                                    <img
+                                        className="h-5 w-5 object-contain"
+                                        src={`./img/${contact.icon}`}
+                                        alt={contact.icon.split('.')[0]}
+                                    />
+                                </div>
+                                <span className="text-gray-200 group-hover:text-white font-medium">{contact.text}</span>
+                                <svg className="w-4 h-4 ml-auto text-gray-400 group-hover:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </section>
         </div>
     );
 }

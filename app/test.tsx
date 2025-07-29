@@ -2,28 +2,21 @@ import { Link, Outlet } from "@remix-run/react";
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-      {/* Animated Background */}
-      <div className="fixed inset-0 overflow-hidden opacity-20">
-        <div className="absolute inset-0 bg-[url(/app/img/dot-grid.png)] bg-[length:40px_40px] opacity-30"></div>
-        <div className="absolute inset-0 bg-gradient-radial from-transparent to-black"></div>
-      </div>
-
+    <div className="min-h-screen bg-[url(/app/img/meteor.gif)] bg-no-repeat bg-cover">
       {/* Main Container */}
-      <div className="container mx-auto px-4 py-8 relative z-10">
+      <div className="container mx-auto px-4 py-8">
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
           {/* Left Column - Profile Section */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-6">
             {/* Profile Card */}
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-2xl border border-gray-700 hover:border-purple-500 transition-all duration-300 group">
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-                {/* Profile Image with Glow Effect */}
-                <div className="shrink-0 relative">
-                  <div className="absolute inset-0 rounded-full bg-purple-500 blur-md opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white border-opacity-20">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+                {/* Profile Image */}
+                <div className="shrink-0">
                   <img
-                    className="relative rounded-full h-36 w-36 border-4 border-white border-opacity-20 object-cover shadow-xl group-hover:border-opacity-40 transition-all duration-300"
+                    className="rounded-full h-32 w-32 border-4 border-white border-opacity-30 object-cover shadow-md"
                     src="./img/myself.jpg"
                     alt="Charls Dave Erana"
                   />
@@ -31,15 +24,13 @@ export default function Index() {
 
                 {/* Profile Info */}
                 <div className="text-center md:text-left">
-                  <h1 className="text-3xl font-bold text-white bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">
-                    CHARLS DAVE M. ERANA
-                  </h1>
-                  <p className="text-white text-opacity-80 mt-3 text-lg italic font-light">
+                  <h1 className="text-2xl font-bold text-white">CHARLS DAVE M. ERANA</h1>
+                  <p className="text-white text-opacity-80 italic mt-2">
                     "Web Designer | IT Personnel | Software/Web Developer | Travel Lover | Music Lover"
                   </p>
 
                   {/* Social Links */}
-                  <div className="flex justify-center md:justify-start gap-4 mt-6">
+                  <div className="flex justify-center md:justify-start gap-3 mt-4">
                     {[
                       { icon: "facebook.svg", url: "https://www.facebook.com/sakenerana" },
                       { icon: "instagram.svg", url: "https://www.instagram.com/charlsdaveerana/" },
@@ -51,15 +42,13 @@ export default function Index() {
                         key={index}
                         to={social.url}
                         target="_blank"
-                        className="transition-all hover:scale-110 hover:brightness-125"
+                        className="transition-transform hover:scale-110"
                       >
-                        <div className="bg-gray-800 p-2 rounded-lg hover:bg-purple-900 transition-colors">
-                          <img
-                            className="h-6 w-6 object-contain"
-                            src={`./img/${social.icon}`}
-                            alt={social.icon.split('.')[0]}
-                          />
-                        </div>
+                        <img
+                          className="h-6 w-6 object-contain"
+                          src={`./img/${social.icon}`}
+                          alt={social.icon.split('.')[0]}
+                        />
                       </Link>
                     ))}
                   </div>
@@ -67,8 +56,8 @@ export default function Index() {
               </div>
 
               {/* Contact Buttons */}
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <div className="flex items-center bg-gray-800 hover:bg-gray-700 px-5 py-2.5 rounded-lg text-white text-sm transition-all border border-gray-700 hover:border-purple-500">
+              <div className="flex flex-wrap justify-center gap-4 mt-6">
+                <div className="flex items-center bg-black bg-opacity-50 px-4 py-2 rounded-full text-white text-sm">
                   <img className="h-5 w-5 mr-2" src="./img/phone.svg" alt="phone" />
                   +639553713233
                 </div>
@@ -76,7 +65,7 @@ export default function Index() {
                 <Link
                   to="https://docs.google.com/document/d/1Izh0zT_kFA8zF3xgnbGq9Sy0a7Bt7vWDaAxyayhXp7I/edit?tab=t.0"
                   target="_blank"
-                  className="flex items-center bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 px-5 py-2.5 rounded-lg text-white text-sm font-medium transition-all hover:shadow-lg"
+                  className="flex items-center bg-white text-black px-4 py-2 rounded-full text-sm font-medium transition-all hover:bg-opacity-90 hover:shadow-md"
                 >
                   <img className="h-5 w-5 mr-2" src="./img/download.svg" alt="download" />
                   Download Resume
@@ -85,38 +74,40 @@ export default function Index() {
             </div>
 
             {/* Navigation */}
-            <div className="bg-gray-800 backdrop-blur-sm rounded-xl p-1 shadow-lg border border-gray-700 max-w-2xl mx-auto">
-              <div className="flex flex-wrap justify-center gap-1">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white border-opacity-20">
+              <h2 className="text-xl font-bold text-white mb-4">Navigation</h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
                 {[
-                  { icon: "person.svg", label: "About", path: "/" },
+                  { icon: "person.svg", label: "About Me", path: "/" },
                   { icon: "skills.svg", label: "Skills", path: "/skills" },
-                  { icon: "work.svg", label: "Experience", path: "/work-and-education" },
+                  { icon: "work.svg", label: "Work & Education", path: "/work-and-education" },
                   { icon: "setting.svg", label: "Projects", path: "/projects" },
+                  { icon: "ai.svg", label: "Vibe Coding", path: "/vibe-coding" }
                 ].map((item, index) => (
                   <Link
                     key={index}
                     to={item.path}
-                    className="flex items-center justify-center px-5 py-3 rounded-xl hover:bg-gray-700 hover:text-purple-300 transition-all duration-200 text-white font-medium text-sm"
+                    className="flex flex-col items-center justify-center bg-black bg-opacity-50 hover:bg-opacity-70 rounded-lg p-3 transition-all cursor-pointer border border-white border-opacity-10"
                   >
                     <img
-                      className="h-5 w-5 mr-2 brightness-0 invert opacity-80"
+                      className="h-6 w-6 mb-1"
                       src={`./img/${item.icon}`}
                       alt={item.label}
                     />
-                    <span>{item.label}</span>
+                    <span className="text-white text-xs text-center">{item.label}</span>
                   </Link>
                 ))}
               </div>
             </div>
 
             {/* Content Outlet */}
-            <div className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 min-h-[400px] transition-all hover:border-purple-500 duration-300">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white border-opacity-20 min-h-[300px]">
               <Outlet />
             </div>
           </div>
 
           {/* Right Column - Skills Section */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {/* Skills Categories */}
             {[
               {
@@ -192,28 +183,23 @@ export default function Index() {
             ].map((category, index) => (
               <div
                 key={index}
-                className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300"
+                className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white border-opacity-20"
               >
-                <h2 className="text-xl font-bold text-white mb-5 flex items-center">
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
-                    {category.title}
-                  </span>
-                </h2>
-                <div className="flex flex-wrap gap-3">
+                <h2 className="text-lg font-bold text-white mb-4">{category.title}</h2>
+                <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill, skillIndex) => (
                     <Link
                       key={skillIndex}
                       to={skill.url}
                       target="_blank"
-                      className="flex items-center bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded-lg text-white text-sm transition-all border border-gray-600 hover:border-purple-500 hover:shadow-md hover:-translate-y-0.5"
-                      title={skill.name}
+                      className="flex items-center bg-black bg-opacity-50 hover:bg-opacity-70 px-3 py-1 rounded-full text-white text-sm transition-all border border-white border-opacity-10"
                     >
                       <img
-                        className="h-5 w-5 mr-2 object-contain"
+                        className="h-4 w-4 mr-2 object-contain"
                         src={`./img/${skill.icon}`}
                         alt={skill.name}
                       />
-                      <span>{skill.name}</span>
+                      {skill.name}
                     </Link>
                   ))}
                 </div>
@@ -221,12 +207,6 @@ export default function Index() {
             ))}
           </div>
         </div>
-
-        {/* Footer */}
-        <footer className="mt-12 text-center text-gray-400 text-sm">
-          <p>© {new Date().getFullYear()} Charls Dave Erana. All rights reserved.</p>
-          <p className="mt-1">Built with Remix and Tailwind CSS</p>
-        </footer>
       </div>
     </div>
   );
