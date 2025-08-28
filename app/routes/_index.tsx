@@ -31,7 +31,7 @@ export default function Index() {
 
                 {/* Profile Info */}
                 <div className="text-center md:text-left">
-                  <h1 className="text-3xl font-bold text-white bg-clip-text bg-gradient-to-r from-purple-400 to-pink-300">
+                  <h1 className="text-3xl font-bold text-white bg-clip-text bg-gradient-to-r from-blue-400 to-blue-300">
                     CHARLS DAVE M. ERANA
                   </h1>
                   <p className="text-white text-opacity-80 mt-3 text-lg italic font-light">
@@ -69,14 +69,14 @@ export default function Index() {
               {/* Contact Buttons */}
               <div className="flex flex-wrap justify-center gap-4 mt-8">
                 <div className="flex items-center bg-gray-800 hover:bg-gray-700 px-5 py-2.5 rounded-lg text-white text-sm transition-all border border-gray-700 hover:border-purple-500">
-                  <img className="h-5 w-5 mr-2" src="./img/phone.svg" alt="phone" />
+                  <img className="h-5 w-5 mr-2 brightness-0 invert opacity-80" src="./img/phone.svg" alt="phone" />
                   +639553713233
                 </div>
 
                 <Link
                   to="https://docs.google.com/document/d/1Izh0zT_kFA8zF3xgnbGq9Sy0a7Bt7vWDaAxyayhXp7I/edit?tab=t.0"
                   target="_blank"
-                  className="flex items-center bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 px-5 py-2.5 rounded-lg text-white text-sm font-medium transition-all hover:shadow-lg"
+                  className="flex items-center bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 px-5 py-2.5 rounded-lg text-white text-sm font-medium transition-all hover:shadow-lg"
                 >
                   <img className="h-5 w-5 mr-2" src="./img/download.svg" alt="download" />
                   Download Resume
@@ -192,10 +192,10 @@ export default function Index() {
             ].map((category, index) => (
               <div
                 key={index}
-                className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-700 hover:border-purple-500 transition-all duration-300"
+                className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300"
               >
                 <h2 className="text-xl font-bold text-white mb-5 flex items-center">
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                  <span className="bg-clip-text text-white">
                     {category.title}
                   </span>
                 </h2>
@@ -205,7 +205,7 @@ export default function Index() {
                       key={skillIndex}
                       to={skill.url}
                       target="_blank"
-                      className="flex items-center bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded-lg text-white text-sm transition-all border border-gray-600 hover:border-purple-500 hover:shadow-md hover:-translate-y-0.5"
+                      className="flex items-center bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded-lg text-white text-sm transition-all border border-gray-600 hover:border-blue-500 hover:shadow-md hover:-translate-y-0.5"
                       title={skill.name}
                     >
                       <img
