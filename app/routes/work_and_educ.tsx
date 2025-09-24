@@ -91,7 +91,7 @@ export default function WorkAndEducation() {
                 <div key={sectionIndex} className="mb-12 last:mb-0">
                     {/* Section Header */}
                     <div className="flex items-center mb-8">
-                        <div className={`p-3 rounded-xl mr-4 ${section.type === 'work' ? 'bg-gradient-to-br from-blue-500 to-cyan-500' : 'bg-gradient-to-br from-purple-500 to-pink-500'}`}>
+                        <div className={`p-3 rounded-xl mr-4 ${section.type === 'work' ? 'bg-gradient-to-br from-blue-500 to-cyan-500' : 'bg-gradient-to-br from-blue-500 to-blue-500'}`}>
                             <img className="h-7 w-7" src={`./img/${section.icon}`} alt={section.title} />
                         </div>
                         <div>
@@ -111,10 +111,10 @@ export default function WorkAndEducation() {
                             {section.items.map((item, itemIndex) => (
                                 <div key={itemIndex} className="relative pl-14 group">
                                     {/* Timeline dot */}
-                                    <div className={`absolute left-0 top-0 h-5 w-5 rounded-full border-4 ${section.type === 'work' ? 'border-blue-500/50 bg-blue-400' : 'border-purple-500/50 bg-purple-400'} transform translate-x-1/2 group-hover:scale-125 transition-all z-10`}></div>
+                                    <div className={`absolute left-0 top-0 h-5 w-5 rounded-full border-4 ${section.type === 'work' ? 'border-blue-500/50 bg-blue-400' : 'border-blue-500/50 bg-blue-400'} transform translate-x-1/2 group-hover:scale-125 transition-all z-10`}></div>
 
                                     {/* Timeline content */}
-                                    <div className={`bg-gray-700/50 hover:bg-gray-700/70 rounded-xl p-6 border ${section.type === 'work' ? 'border-blue-500/30 hover:border-blue-500/50' : 'border-purple-500/30 hover:border-purple-500/50'} transition-all duration-300 hover:shadow-lg`}>
+                                    <div className={`bg-gray-700/50 hover:bg-gray-700/70 rounded-xl p-6 border ${section.type === 'work' ? 'border-blue-500/30 hover:border-blue-500/50' : 'border-blue-500/30 hover:border-blue-500/50'} transition-all duration-300 hover:shadow-lg`}>
                                         <div className="flex flex-col md:flex-row gap-6">
                                             {/* Company Logo */}
                                             <div className="flex-shrink-0 flex items-center justify-center">
@@ -161,7 +161,7 @@ export default function WorkAndEducation() {
                                                     <ul className="space-y-2">
                                                         {item.highlights.map((highlight, highlightIndex) => (
                                                             <li key={highlightIndex} className="flex items-start">
-                                                                <div className={`rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0 ${section.type === 'work' ? 'bg-blue-400' : 'bg-purple-400'}`}></div>
+                                                                <div className={`rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0 ${section.type === 'work' ? 'bg-blue-400' : 'bg-blue-400'}`}></div>
                                                                 <span className="text-gray-300">{highlight}</span>
                                                             </li>
                                                         ))}

@@ -10,7 +10,7 @@ export default function Skills() {
                 "Open Office",
                 "Microsoft 365 Copilot"
             ],
-            color: "from-purple-500 to-indigo-500"
+            color: "from-green-500 to-lime-500"
         },
         {
             title: "Programming & Development",
@@ -24,7 +24,7 @@ export default function Skills() {
                 "Tailwind, Ant Design",
                 "Vite, WordPress"
             ],
-            color: "from-amber-500 to-orange-500"
+            color: "from-purple-500 to-indigo-500"
         },
         {
             title: "Databases",
@@ -35,7 +35,7 @@ export default function Skills() {
                 "Serverless architectures",
                 "Traditional server-based systems"
             ],
-            color: "from-emerald-500 to-teal-500"
+            color: "from-purple-500 to-indigo-500"
         },
         {
             title: "DevOps & Tools",
@@ -62,7 +62,7 @@ export default function Skills() {
                 "UTP cable crimping",
                 "RJ45 installation"
             ],
-            color: "from-red-500 to-pink-500"
+            color: "from-blue-500 to-cyan-500"
         },
         {
             title: "Operating Systems",
@@ -73,7 +73,7 @@ export default function Skills() {
                 "Linux",
                 "Mac OS"
             ],
-            color: "from-violet-500 to-fuchsia-500"
+            color: "from-blue-500 to-cyan-500"
         },
         {
             title: "Other Technical Skills",
@@ -85,7 +85,20 @@ export default function Skills() {
                 "Pritunl, Yeastar",
                 "Unifi Network Server",
                 "40+ WPM typing speed",
-                "Proficient internet/email use"
+                "Proficient internet/email use",
+                "Cloudfare management",
+                "Canva, Figma basics",
+                "SEO basics",
+                "Basic photo/video editing",
+                "Computer troubleshooting",
+                "Video conferencing setup (Zoom, Google Meet)",
+                "Knowledge of AI tools (ChatGPT, MidJourney)",
+                "Basic knowledge of IoT (Internet of Things)",
+                "Basic knowledge of Cybersecurity principles",
+                "Basic knowledge of Cloud Computing platforms (AWS, Azure, Google Cloud)",
+                "Knowledge of Agile and Scrum methodologies",
+                "Understanding of UI/UX design principles",
+                "Knowledge of API integration and development"
             ],
             color: "from-green-500 to-lime-500"
         }
@@ -95,7 +108,7 @@ export default function Skills() {
         <div className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 p-8">
             {/* Header */}
             <div className="flex items-center mb-8">
-                <div className="bg-gradient-to-r from-purple-600 to-pink-500 p-3 rounded-xl mr-4">
+                <div className="bg-gradient-to-r from-blue-600 to-blue-500 p-3 rounded-xl mr-4">
                     <img className="h-7 w-7" src="./img/skills2.svg" alt="skills" />
                 </div>
                 <div>

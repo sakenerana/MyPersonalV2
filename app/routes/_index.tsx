@@ -17,11 +17,11 @@ export default function Index() {
           {/* Left Column - Profile Section */}
           <div className="lg:col-span-2 space-y-8">
             {/* Profile Card */}
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-2xl border border-gray-700 hover:border-purple-500 transition-all duration-300 group">
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-2xl border border-gray-700 hover:border-blue-500 transition-all duration-300 group">
               <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
                 {/* Profile Image with Glow Effect */}
                 <div className="shrink-0 relative">
-                  <div className="absolute inset-0 rounded-full bg-purple-500 blur-md opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+                  <div className="absolute inset-0 rounded-full bg-blue-500 blur-md opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
                   <img
                     className="relative rounded-full h-36 w-36 border-4 border-white border-opacity-20 object-cover shadow-xl group-hover:border-opacity-40 transition-all duration-300"
                     src="./img/myself.jpg"
@@ -53,7 +53,7 @@ export default function Index() {
                         target="_blank"
                         className="transition-all hover:scale-110 hover:brightness-125"
                       >
-                        <div className="bg-gray-800 p-2 rounded-lg hover:bg-purple-900 transition-colors">
+                        <div className="bg-gray-800 p-2 rounded-lg hover:bg-blue-900 transition-colors">
                           <img
                             className="h-6 w-6 object-contain"
                             src={`./img/${social.icon}`}
@@ -68,7 +68,7 @@ export default function Index() {
 
               {/* Contact Buttons */}
               <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <div className="flex items-center bg-gray-800 hover:bg-gray-700 px-5 py-2.5 rounded-lg text-white text-sm transition-all border border-gray-700 hover:border-purple-500">
+                <div className="flex items-center bg-gray-800 hover:bg-gray-700 px-5 py-2.5 rounded-lg text-white text-sm transition-all border border-gray-700 hover:border-blue-500">
                   <img className="h-5 w-5 mr-2 brightness-0 invert opacity-80" src="./img/phone.svg" alt="phone" />
                   +639553713233
                 </div>
@@ -96,7 +96,7 @@ export default function Index() {
                   <Link
                     key={index}
                     to={item.path}
-                    className="flex items-center justify-center px-5 py-3 rounded-xl hover:bg-gray-700 hover:text-purple-300 transition-all duration-200 text-white font-medium text-sm"
+                    className="flex items-center justify-center px-5 py-3 rounded-xl hover:bg-gray-700 hover:text-blue-300 transition-all duration-200 text-white font-medium text-sm"
                   >
                     <img
                       className="h-5 w-5 mr-2 brightness-0 invert opacity-80"
@@ -110,7 +110,7 @@ export default function Index() {
             </div>
 
             {/* Content Outlet */}
-            <div className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 min-h-[400px] transition-all hover:border-purple-500 duration-300">
+            <div className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 min-h-[400px] transition-all hover:border-blue-500 duration-300">
               <Outlet />
             </div>
           </div>
