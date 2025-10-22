@@ -110,7 +110,7 @@ export default function Index() {
             </div>
 
             {/* Content Outlet */}
-            <div className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 min-h-[400px] transition-all hover:border-blue-500 duration-300">
+            <div className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 min-h-[400px] transition-all duration-300">
               <Outlet />
             </div>
           </div>
@@ -142,7 +142,8 @@ export default function Index() {
                   { icon: "figma.svg", name: "Figma", url: "https://www.figma.com/" },
                   { icon: "html5.svg", name: "HTML", url: "" },
                   { icon: "css3.svg", name: "CSS", url: "" },
-                  { icon: "firebase.svg", name: "Firebase", url: "https://firebase.google.com/" }
+                  { icon: "firebase.svg", name: "Firebase", url: "https://firebase.google.com/" },
+                  { icon: "woocommerce.svg", name: "Woocommerce", url: "https://woocommerce.com/" }
                 ]
               },
               {

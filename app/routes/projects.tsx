@@ -5,9 +5,9 @@ export default function Projects() {
         {
             title: "Full Inventory System",
             year: "2025",
-            description: "A comprehensive inventory management solution with real-time tracking capabilities",
+            description: "A comprehensive inventory management solution for efficient stock monitoring.",
             features: [
-                "Real-time stock level monitoring",
+                "Stock level monitoring",
                 "SKU (Stock Keeping Unit) management",
                 "Role-based access control",
                 "Inventory valuation reports",
@@ -27,21 +27,153 @@ export default function Projects() {
                 { name: "Github", icon: "github.svg", url: "https://github.com/" },
                 { name: "HTML", icon: "html5.svg", url: "" }
             ],
-            image: "inventory-beta.png",
+            image: "full-inventory.png",
             type: "Website (Self Made)",
+            link: "#"
+        },
+        {
+            title: "Budget Tracker",
+            year: "2025",
+            description: "Helps users monitor their income, expenses, and savings.",
+            features: [
+                "Income and Expense Tracking",
+                "Budget Planning",
+                "Visual Reports and Charts",
+                "Savings Goals",
+                "Mobile and Web Access",
+                "Category Management"
+            ],
+            techStack: [
+                { name: "React", icon: "react.svg", url: "https://react.dev/" },
+                { name: "Remix", icon: "remix.svg", url: "https://remix.run/" },
+                { name: "Tailwind", icon: "tailwind.svg", url: "https://tailwindcss.com/" },
+                { name: "Ant Design", icon: "antd.svg", url: "https://ant.design/" },
+                { name: "Vite", icon: "vite.svg", url: "https://vite.dev/" },
+                { name: "NPM", icon: "npm.svg", url: "https://www.npmjs.com/" },
+                { name: "ESLint", icon: "eslint.svg", url: "https://eslint.org/" },
+                { name: "Prettier", icon: "prettier.svg", url: "https://prettier.io/" },
+                { name: "Supabase", icon: "supabase.svg", url: "https://supabase.com/" },
+                { name: "Github", icon: "github.svg", url: "https://github.com/" },
+                { name: "HTML", icon: "html5.svg", url: "" }
+            ],
+            image: "budget.png",
+            type: "Website (Self Made)",
+            link: "#"
+        },
+        {
+            title: "Workflow Tracker",
+            year: "2025",
+            description: "Helps users track progress, deadlines, and responsibilities to ensure smooth project execution.",
+            features: [
+                "Task Management",
+                "Progress Tracking",
+                "Workflow Stages",
+                "Dashboard Overview",
+                "Reports & Analytics"
+            ],
+            techStack: [
+                { name: "React", icon: "react.svg", url: "https://react.dev/" },
+                { name: "Remix", icon: "remix.svg", url: "https://remix.run/" },
+                { name: "Tailwind", icon: "tailwind.svg", url: "https://tailwindcss.com/" },
+                { name: "Ant Design", icon: "antd.svg", url: "https://ant.design/" },
+                { name: "Vite", icon: "vite.svg", url: "https://vite.dev/" },
+                { name: "NPM", icon: "npm.svg", url: "https://www.npmjs.com/" },
+                { name: "ESLint", icon: "eslint.svg", url: "https://eslint.org/" },
+                { name: "Prettier", icon: "prettier.svg", url: "https://prettier.io/" },
+                { name: "Supabase", icon: "supabase.svg", url: "https://supabase.com/" },
+                { name: "Github", icon: "github.svg", url: "https://github.com/" },
+                { name: "HTML", icon: "html5.svg", url: "" }
+            ],
+            image: "workflow.png",
+            type: "Website (Self Made)",
+            link: "#"
+        },
+        {
+            title: "Admin Panel",
+            year: "2025",
+            description: "Helps users track progress, deadlines, and responsibilities to ensure smooth project execution.",
+            features: [
+                "Dashboard Overview",
+                "User Management",
+                "Role-Based Access Control",
+                "System Configuration",
+                "Data Management"
+            ],
+            techStack: [
+                { name: "React", icon: "react.svg", url: "https://react.dev/" },
+                { name: "Remix", icon: "remix.svg", url: "https://remix.run/" },
+                { name: "Tailwind", icon: "tailwind.svg", url: "https://tailwindcss.com/" },
+                { name: "Ant Design", icon: "antd.svg", url: "https://ant.design/" },
+                { name: "Vite", icon: "vite.svg", url: "https://vite.dev/" },
+                { name: "NPM", icon: "npm.svg", url: "https://www.npmjs.com/" },
+                { name: "ESLint", icon: "eslint.svg", url: "https://eslint.org/" },
+                { name: "Prettier", icon: "prettier.svg", url: "https://prettier.io/" },
+                { name: "Supabase", icon: "supabase.svg", url: "https://supabase.com/" },
+                { name: "Github", icon: "github.svg", url: "https://github.com/" },
+                { name: "HTML", icon: "html5.svg", url: "" }
+            ],
+            image: "admin.png",
+            type: "Website (Self Made)",
+            link: "#"
+        },
+        {
+            title: "Elf Station Inc.",
+            year: "2021",
+            description: "Provides Web Design, System Development, ERP Systems and Government Systems.",
+            features: [
+                "Platform Flexibility",
+                "User-Friendly / Responsive Design",
+                "Custom Development",
+                "Service Variety"
+            ],
+            techStack: [
+                { name: "Wordpress", icon: "wordpress.svg", url: "https://wordpress.com/" },
+                { name: "HTML", icon: "html5.svg", url: "" },
+                { name: "CSS", icon: "css3.svg", url: "" },
+                { name: "cPanel", icon: "cpanel.svg", url: "https://cpanel.net/" },
+                { name: "Xampp", icon: "xampp.svg", url: "https://www.apachefriends.org/" },
+                { name: "phpMyAdmin", icon: "phpmyadmin.svg", url: "https://phpmyadmin.net/" }
+            ],
+            image: "elfstation.png",
+            type: "Website/Mobile (Self Made)",
+            link: "#"
+        },
+        {
+            title: "The Mango Mall Online",
+            year: "2020",
+            description: "It allows businesses to sell products or services online, manage orders, accept payments, and track inventory — all from a single dashboard.",
+            features: [
+                "Online Storefront",
+                "Secure Payments",
+                "Shopping Cart & Checkout",
+                "Inventory Management",
+                "Customizable Design",
+                "Shipping & Tax Control",
+                "Mobile Responsive"
+            ],
+            techStack: [
+                { name: "Wordpress", icon: "wordpress.svg", url: "https://wordpress.com/" },
+                { name: "Woocommerce", icon: "woocommerce.svg", url: "https://woocommerce.com/" },
+                { name: "HTML", icon: "html5.svg", url: "" },
+                { name: "CSS", icon: "css3.svg", url: "" },
+                { name: "cPanel", icon: "cpanel.svg", url: "https://cpanel.net/" },
+                { name: "Xampp", icon: "xampp.svg", url: "https://www.apachefriends.org/" },
+                { name: "phpMyAdmin", icon: "phpmyadmin.svg", url: "https://phpmyadmin.net/" }
+            ],
+            image: "themangomall.png",
+            type: "Website/Mobile (Self Made)",
             link: "#"
         },
         {
             title: "Clevermasters",
             year: "2019",
-            description: "E-commerce platform with inventory management features",
+            description: "Management consultancy, corporate support, outsourcing, project management, and regulatory assistance to help businesses improve operations and ensure compliance.",
             features: [
-                "Online product catalog",
-                "Shopping cart functionality",
-                "Payment gateway integration",
-                "Order management system",
-                "Customer account management",
-                "Responsive mobile design"
+                "Local expertise in Cebu / Philippines",
+                "One-stop service for corporate management tasks",
+                "Reliability / trustworthiness",
+                "Customizable solutions",
+                "Support in administrative / back-office tasks"
             ],
             techStack: [
                 { name: "Wordpress", icon: "wordpress.svg", url: "https://wordpress.com/" },
@@ -152,7 +284,7 @@ export default function Projects() {
                                     src={`./img/${project.image}`}
                                     alt={`${project.title} screenshot`}
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                                     <Link
                                         to={project.link}
                                         className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-medium transition-all"
@@ -162,7 +294,7 @@ export default function Projects() {
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                         </svg>
                                     </Link>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
