@@ -117,6 +117,62 @@ export default function Projects() {
             link: "#"
         },
         {
+            title: "SICE",
+            year: "2025",
+            description: "Designed to engage audiences, attract new members, and provide updates on upcoming events or concerts.",
+            features: [
+                "Showcase Performances",
+                "Events and Schedules",
+                "Meet the Choir Members",
+                "About the Choir",
+                "Photo and Video Gallery",
+                "News and Announcements",
+                "Contact and Join Us",
+                "Support or Donate Page",
+                "Social Media Links"
+            ],
+            techStack: [
+                { name: "React", icon: "react.svg", url: "https://react.dev/" },
+                { name: "Remix", icon: "remix.svg", url: "https://remix.run/" },
+                { name: "Tailwind", icon: "tailwind.svg", url: "https://tailwindcss.com/" },
+                { name: "Ant Design", icon: "antd.svg", url: "https://ant.design/" },
+                { name: "Vite", icon: "vite.svg", url: "https://vite.dev/" },
+                { name: "NPM", icon: "npm.svg", url: "https://www.npmjs.com/" },
+                { name: "ESLint", icon: "eslint.svg", url: "https://eslint.org/" },
+                { name: "Prettier", icon: "prettier.svg", url: "https://prettier.io/" },
+                { name: "Github", icon: "github.svg", url: "https://github.com/" },
+                { name: "HTML", icon: "html5.svg", url: "" }
+            ],
+            image: "sice.png",
+            type: "Website (Self Made)",
+            link: "#"
+        },
+        {
+            title: "Prosperidad (LGU)",
+            year: "2022",
+            description: "Manage records, services, transactions, and communication between the local government and its constituents",
+            features: [
+                "Citizen Management",
+                "Business Permit and Licensing",
+                "Financial Management",
+                "Document and Records Management",
+                "Barangay / Department Modules",
+                "Report Generation and Analytics",
+                "User Roles and Access Control"
+            ],
+            techStack: [
+                { name: "Wordpress", icon: "wordpress.svg", url: "https://wordpress.com/" },
+                { name: "HTML", icon: "html5.svg", url: "" },
+                { name: "CSS", icon: "css3.svg", url: "" },
+                { name: "cPanel", icon: "cpanel.svg", url: "https://cpanel.net/" },
+                { name: "Xampp", icon: "xampp.svg", url: "https://www.apachefriends.org/" },
+                { name: "phpMyAdmin", icon: "phpmyadmin.svg", url: "https://phpmyadmin.net/" }
+            ],
+            image: "lgu.jpg",
+            type: "Website (With Team)",
+            link: "#"
+        },
+        {
             title: "Elf Station Inc.",
             year: "2021",
             description: "Provides Web Design, System Development, ERP Systems and Government Systems.",
