@@ -14,7 +14,7 @@ export default function About() {
                     </h1>
                 </div>
                 <blockquote className="text-gray-200 text-lg italic pl-4 border-l-4 border-blue-500 mb-6 leading-relaxed">
-                    "Hi, I'm Charls Dave Erana, a Software Developer/IT Personnel passionate about Web Development and designs. I help clients achieve their needs and expectations through my skills and knowledge."
+                    "Hi, I'm Charls Dave Erana — a Software Developer and IT Personnel with a passion for web development and design. I help clients achieve their goals by delivering solutions that meet their needs and exceed expectations through my skills and expertise."
                 </blockquote>
             </section>
 
@@ -66,7 +66,7 @@ export default function About() {
                 <ul className="text-gray-300 space-y-3 pl-2">
                     {[
                         "Designing WordPress websites for small businesses or personal projects",
-                        "Troubleshooting and setting up computers, laptops, and printers",
+                        "Troubleshooting and setting up computers, laptops, printers, networks and servers",
                         "CCTV installation and configuration",
                         "Developing web applications to meet client needs (UI/UX) using Angular, WordPress, React, and other technologies",
                         "Application testing for optimal performance and quality assurance"

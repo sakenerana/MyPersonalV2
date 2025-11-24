@@ -10,7 +10,7 @@ export default function Index() {
       </div>
 
       {/* Main Container */}
-      <div className="container mx-auto px-4 py-8 relative z-10">
+      <div className="container mx-auto px-16 py-8 relative z-10">
         {/* Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
@@ -35,7 +35,7 @@ export default function Index() {
                     CHARLS DAVE M. ERANA
                   </h1>
                   <p className="text-white text-opacity-80 mt-3 text-lg italic font-light">
-                    "Web Designer | IT Personnel | Software/Web Developer | Travel Lover | Music Lover"
+                    "IT Personnel | Software/Web Developer | Travel Lover | Music Lover"
                   </p>
 
                   {/* Social Links */}
@@ -74,7 +74,7 @@ export default function Index() {
                 </div>
 
                 <Link
-                  to="https://docs.google.com/document/d/1Izh0zT_kFA8zF3xgnbGq9Sy0a7Bt7vWDaAxyayhXp7I/edit?tab=t.0"
+                  to="https://docs.google.com/document/d/1Izh0zT_kFA8zF3xgnbGq9Sy0a7Bt7vWDaAxyayhXp7I/export?format=pdf"
                   target="_blank"
                   className="flex items-center bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 px-5 py-2.5 rounded-lg text-white text-sm font-medium transition-all hover:shadow-lg"
                 >
