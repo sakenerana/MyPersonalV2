@@ -74,7 +74,7 @@ export default function Index() {
                 </div>
 
                 <Link
-                  to="https://docs.google.com/document/d/1Izh0zT_kFA8zF3xgnbGq9Sy0a7Bt7vWDaAxyayhXp7I/export?format=pdf"
+                  to="/img/resume.pdf"
                   target="_blank"
                   className="flex items-center bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 px-5 py-2.5 rounded-lg text-white text-sm font-medium transition-all hover:shadow-lg"
                 >
