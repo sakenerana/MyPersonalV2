@@ -70,10 +70,10 @@ export default function Skills() {
     ];
 
     const proficiencyLabels = [
-        { level: 90, label: "Expert", color: "bg-blue-600" },
-        { level: 80, label: "Advanced", color: "bg-blue-500" },
-        { level: 70, label: "Proficient", color: "bg-blue-400" },
-        { level: 60, label: "Intermediate", color: "bg-gray-400" }
+        { level: 90, label: "Expert", color: "bg-green-300" },
+        { level: 80, label: "Advanced", color: "bg-blue-300" },
+        { level: 70, label: "Proficient", color: "bg-yellow-300" },
+        { level: 60, label: "Intermediate", color: "bg-gray-300" }
     ];
 
     return (
@@ -93,7 +93,7 @@ export default function Skills() {
                 </p>
             </div>
 
-            {/* Main Skills Grid */}
+            {/* Main Skills Grid - Badge Design */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                 {skillCategories.map((category, index) => (
                     <div
@@ -109,22 +109,19 @@ export default function Skills() {
                             </h2>
                         </div>
 
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                             {category.skills.map((skill, i) => (
-                                <div key={i} className="space-y-1.5">
-                                    <div className="flex items-center justify-between">
-                                        <span className="text-sm font-medium text-gray-800">{skill.name}</span>
-                                        <span className="text-xs text-gray-500">{skill.level}%</span>
-                                    </div>
-                                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-                                        <div
-                                            className={`h-full rounded-full ${skill.level >= 90 ? 'bg-blue-600' :
-                                                    skill.level >= 80 ? 'bg-blue-500' :
-                                                        skill.level >= 70 ? 'bg-blue-400' : 'bg-gray-400'
-                                                }`}
-                                            style={{ width: `${skill.level}%` }}
-                                        />
-                                    </div>
+                                <div key={i} className="flex items-center justify-between">
+                                    <span className="text-sm font-medium text-gray-800">{skill.name}</span>
+                                    <span className={`text-xs px-2.5 py-1 rounded ${skill.level >= 90 ? 'bg-green-100 text-green-800' :
+                                        skill.level >= 80 ? 'bg-blue-100 text-blue-800' :
+                                            skill.level >= 70 ? 'bg-yellow-100 text-yellow-800' :
+                                                'bg-gray-100 text-gray-800'
+                                        }`}>
+                                        {skill.level >= 90 ? 'Expert' :
+                                            skill.level >= 80 ? 'Advanced' :
+                                                skill.level >= 70 ? 'Proficient' : 'Intermediate'}
+                                    </span>
                                 </div>
                             ))}
                         </div>
