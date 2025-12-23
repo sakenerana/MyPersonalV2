@@ -1,92 +1,108 @@
 import { Link, Outlet } from "@remix-run/react";
+import { useState } from "react";
 
 export default function Index() {
+
+  const [formData, setFormData] = useState({
+    email: '',
+    message: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [status, setStatus] = useState('');
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-      {/* Animated Background */}
-      <div className="fixed inset-0 overflow-hidden opacity-20">
-        <div className="absolute inset-0 bg-[url(/app/img/dot-grid.png)] bg-[length:40px_40px] opacity-30"></div>
-        <div className="absolute inset-0 bg-gradient-radial from-transparent to-black"></div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Subtle Background Pattern */}
+      <div className="fixed inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,#e5e7eb_1px,transparent_1px)] bg-[size:32px_32px]"></div>
       </div>
 
       {/* Main Container */}
-      <div className="container mx-auto px-16 py-8 relative z-10">
+      <div className="container mx-auto px-4 py-8 md:px-8 lg:px-16 relative z-10">
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
-          {/* Left Column - Profile Section */}
-          <div className="lg:col-span-2 space-y-8">
+          {/* Left Column - Profile & Navigation */}
+          <div className="lg:col-span-1 space-y-8">
             {/* Profile Card */}
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-2xl border border-gray-700 hover:border-blue-500 transition-all duration-300 group">
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-                {/* Profile Image with Glow Effect */}
-                <div className="shrink-0 relative">
-                  <div className="absolute inset-0 rounded-full bg-blue-500 blur-md opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+            <div className="relative bg-white rounded-xl p-6 shadow-sm border border-gray-200">
+              {/* Ribbon at Top Left */}
+              <div className="absolute -top-2 -left-2">
+                <div className="relative">
+                  {/* Ribbon Shape */}
+                  <div className="h-7 bg-gradient-to-r from-gray-600 to-gray-500 flex items-center px-3 shadow-sm">
+                    <span className="text-white text-xs font-bold uppercase tracking-wide">
+                      Portfolio
+                    </span>
+                  </div>
+                  {/* Ribbon Tail */}
+                  <div className="absolute -bottom-1 left-0 w-0 h-0 
+        border-l-[6px] border-l-transparent
+        border-t-[6px] border-t-gray-700
+        border-r-[6px] border-r-transparent"></div>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center">
+                {/* Profile Image */}
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-100 to-gray-100"></div>
                   <img
-                    className="relative rounded-full h-36 w-36 border-4 border-white border-opacity-20 object-cover shadow-xl group-hover:border-opacity-40 transition-all duration-300"
+                    className="relative rounded-full h-32 w-32 object-cover shadow-md"
                     src="./img/myself.jpg"
                     alt="Charls Dave Erana"
                   />
                 </div>
 
                 {/* Profile Info */}
-                <div className="text-center md:text-left">
-                  <h1 className="text-3xl font-bold text-white bg-clip-text bg-gradient-to-r from-blue-400 to-blue-300">
-                    CHARLS DAVE M. ERANA
+                <div className="space-y-3">
+                  <h1 className="text-2xl font-semibold text-gray-900">
+                    Charls Dave M. Erana
                   </h1>
-                  <p className="text-white text-opacity-80 mt-3 text-lg italic font-light">
-                    "IT Personnel | Software/Web Developer | Travel Lover | Music Lover"
+                  <p className="text-gray-600 text-sm font-medium">
+                    Full Stack Developer
                   </p>
+                  <p className="text-gray-500 text-sm italic">
+                    Building digital experiences with modern technologies
+                  </p>
+                </div>
 
-                  {/* Social Links */}
-                  <div className="flex justify-center md:justify-start gap-4 mt-6">
-                    {[
-                      { icon: "facebook.svg", url: "https://www.facebook.com/sakenerana" },
-                      { icon: "instagram.svg", url: "https://www.instagram.com/charlsdaveerana/" },
-                      { icon: "tiktok.svg", url: "https://www.tiktok.com/@charlsdaveerana" },
-                      { icon: "linkedin.svg", url: "https://www.linkedin.com/in/charls-dave-erana-39b8b6180/" },
-                      { icon: "gmail.svg", url: "mailto:sakenerana@gmail.com" }
-                    ].map((social, index) => (
-                      <Link
-                        key={index}
-                        to={social.url}
-                        target="_blank"
-                        className="transition-all hover:scale-110 hover:brightness-125"
-                      >
-                        <div className="bg-gray-800 p-2 rounded-lg hover:bg-blue-900 transition-colors">
-                          <img
-                            className="h-6 w-6 object-contain"
-                            src={`./img/${social.icon}`}
-                            alt={social.icon.split('.')[0]}
-                          />
-                        </div>
-                      </Link>
-                    ))}
+                {/* Contact Info */}
+                <div className="w-full mt-6 space-y-3">
+                  <div className="flex text-gray-600 text-sm">
+                    <img className="h-4 w-4 mr-2 opacity-60" src="./img/phone.svg" alt="phone" />
+                    +63 955 371 3233
                   </div>
-                </div>
-              </div>
 
-              {/* Contact Buttons */}
-              <div className="flex flex-wrap justify-center gap-4 mt-8">
-                <div className="flex items-center bg-gray-800 hover:bg-gray-700 px-5 py-2.5 rounded-lg text-white text-sm transition-all border border-gray-700 hover:border-blue-500">
-                  <img className="h-5 w-5 mr-2 brightness-0 invert opacity-80" src="./img/phone.svg" alt="phone" />
-                  +639553713233
+                  <Link
+                    to="mailto:sakenerana@gmail.com"
+                    className="flex text-gray-600 text-sm hover:text-blue-600 transition-colors"
+                  >
+                    <img className="h-4 w-4 mr-2 opacity-60" src="./img/gmail.svg" alt="email" />
+                    sakenerana@gmail.com
+                  </Link>
                 </div>
 
+                {/* Resume Download - Border Style */}
                 <Link
-                  to="/img/resume.pdf"
+                  to="./img/resume.pdf"
                   target="_blank"
-                  className="flex items-center bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 px-5 py-2.5 rounded-lg text-white text-sm font-medium transition-all hover:shadow-lg"
+                  className="mt-6 w-full flex items-center justify-center 
+    bg-white border-2 border-gray-900 
+    hover:bg-gray-900 hover:text-white
+    text-gray-900 px-4 py-2.5 rounded-lg 
+    text-sm font-medium transition-all duration-200 
+    shadow-sm hover:shadow"
                 >
-                  <img className="h-5 w-5 mr-2" src="./img/download.svg" alt="download" />
-                  Download Resume
+                  <img className="h-4 w-4 mr-2" src="./img/preview.svg" alt="preview" />
+                  Check Resume
                 </Link>
               </div>
             </div>
 
             {/* Navigation */}
-            <div className="bg-gray-800 backdrop-blur-sm rounded-xl p-1 shadow-lg border border-gray-700 max-w-2xl mx-auto">
-              <div className="flex flex-wrap justify-center gap-1">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-2">
+              <div className="space-y-1">
                 {[
                   { icon: "person.svg", label: "About", path: "/" },
                   { icon: "skills.svg", label: "Skills", path: "/skills" },
@@ -96,10 +112,10 @@ export default function Index() {
                   <Link
                     key={index}
                     to={item.path}
-                    className="flex items-center justify-center px-5 py-3 rounded-xl hover:bg-gray-700 hover:text-blue-300 transition-all duration-200 text-white font-medium text-sm"
+                    className="flex items-center px-4 py-3 rounded-lg hover:bg-gray-50 text-gray-700 hover:text-gray-900 transition-all duration-150 font-medium text-sm"
                   >
                     <img
-                      className="h-5 w-5 mr-2 brightness-0 invert opacity-80"
+                      className="h-4 w-4 mr-3 opacity-70"
                       src={`./img/${item.icon}`}
                       alt={item.label}
                     />
@@ -109,124 +125,311 @@ export default function Index() {
               </div>
             </div>
 
+            {/* Availability */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-900">Availability</h3>
+                  <p className="text-xs text-gray-500 mt-1">Open to opportunities</p>
+                </div>
+                <div className="flex items-center">
+                  <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse mr-2"></div>
+                  <span className="text-xs font-medium text-green-600">Available</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Location */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+              <div className="flex items-center">
+                <img className="h-4 w-4 mr-2 opacity-60" src="./img/location.svg" alt="location" />
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-900">Location</h3>
+                  <p className="text-xs text-gray-500 mt-1">Philippines (GMT+8)</p>
+                  <p className="text-xs text-gray-500 mt-1">Upper Bacayan, Cebu City 6000</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Certifications */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+              <h3 className="text-sm font-semibold text-gray-900 mb-3">Certifications</h3>
+              <div className="space-y-2">
+                <div className="flex items-center">
+                  <img className="h-5 w-5 mr-2" src="./img/certificate.svg" alt="AWS" />
+                  <span className="text-xs font-medium text-gray-700"> UC BEEHIVE Accelerator (12-week program)</span>
+                </div>
+                <div className="flex items-center">
+                  <img className="h-5 w-5 mr-2" src="./img/certificate.svg" alt="React" />
+                  <span className="text-xs font-medium text-gray-700">Innovation Kickboxing, Brand Sprint, Design Sprint</span>
+                </div>
+                <div className="flex items-center">
+                  <img className="h-5 w-5 mr-2" src="./img/certificate.svg" alt="React" />
+                  <span className="text-xs font-medium text-gray-700">Startup Roadmapping & Pitching Workshop</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Interests & Hobbies */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+              <h3 className="text-sm font-semibold text-gray-900 mb-3">Interests & Hobbies</h3>
+              <div className="space-y-3">
+
+                {/* Music */}
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 p-1.5 bg-purple-50 rounded-lg">
+                    <img
+                      className="h-4 w-4"
+                      src="./img/music.svg"
+                      alt="Music"
+                    />
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-xs font-medium text-gray-800">Music Enthusiast</p>
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      Drummer in a band, proficient in guitar & bass
+                    </p>
+                  </div>
+                </div>
+
+                {/* Gaming */}
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 p-1.5 bg-blue-50 rounded-lg">
+                    <img
+                      className="h-4 w-4"
+                      src="./img/gaming.svg"
+                      alt="Gaming"
+                    />
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-xs font-medium text-gray-800">Gaming</p>
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      PS5 enthusiast, casual Mobile Legends player
+                    </p>
+                  </div>
+                </div>
+
+                {/* Coffee */}
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 p-1.5 bg-amber-50 rounded-lg">
+                    <img
+                      className="h-4 w-4"
+                      src="./img/coffee.svg"
+                      alt="Coffee"
+                    />
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-xs font-medium text-gray-800">Coffee Connoisseur</p>
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      Black coffee aficionado
+                    </p>
+                  </div>
+                </div>
+
+                {/* Travel */}
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 p-1.5 bg-emerald-50 rounded-lg">
+                    <img
+                      className="h-4 w-4"
+                      src="./img/travel.svg"
+                      alt="Travel"
+                    />
+                  </div>
+                  <div className="ml-3">
+                    <p className="text-xs font-medium text-gray-800">Travel Explorer</p>
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      Loves discovering new places & cultures
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Quick Contact */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+              <h3 className="text-sm font-semibold text-gray-900 mb-3">Quick Message</h3>
+              <form
+                action="https://formspree.io/f/xzdpkylk"
+                method="POST"
+              >
+                <div className="space-y-2">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your email"
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  />
+                  <textarea
+                    name="message"
+                    placeholder="Brief message..."
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  ></textarea>
+                  <button className="w-full bg-gray-600 hover:bg-gray -700 text-white text-sm font-medium py-2 rounded-lg transition-colors">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            {/* Social Links */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+              <h3 className="text-sm font-semibold text-gray-900 mb-3">Connect</h3>
+              <div className="flex justify-center gap-3">
+                {[
+                  { icon: "linkedin.svg", url: "https://www.linkedin.com/in/charls-dave-erana-39b8b6180/", label: "LinkedIn" },
+                  { icon: "github.svg", url: "https://github.com/", label: "GitHub" },
+                  { icon: "instagram.svg", url: "https://www.instagram.com/charlsdaveerana/", label: "Instagram" },
+                  { icon: "facebook.svg", url: "https://www.facebook.com/sakenerana", label: "Facebook" },
+                  { icon: "tiktok.svg", url: "https://www.tiktok.com/@charlsdaveerana", label: "Tiktok" },
+                ].map((social, index) => (
+                  <Link
+                    key={index}
+                    to={social.url}
+                    target="_blank"
+                    className="p-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
+                    title={social.label}
+                  >
+                    <img
+                      className="h-5 w-5 opacity-80"
+                      src={`./img/${social.icon}`}
+                      alt={social.label}
+                    />
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Main Content Area */}
+          <div className="lg:col-span-2">
             {/* Content Outlet */}
-            <div className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 min-h-[400px] transition-all duration-300">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 min-h-[600px] p-6 md:p-8">
               <Outlet />
             </div>
           </div>
 
-          {/* Right Column - Skills Section */}
-          <div className="space-y-8">
-            {/* Skills Categories */}
+          {/* Right Column - Skills */}
+          <div className="lg:col-span-1 space-y-6">
             {[
               {
-                title: "Web Development",
+                title: "Core Technologies",
                 skills: [
-                  { icon: "react.svg", name: "React", url: "https://react.dev/" },
-                  { icon: "angular.svg", name: "Angular", url: "https://angular.dev/" },
-                  { icon: "nodejs.svg", name: "Node JS", url: "https://nodejs.org/en" },
-                  { icon: "antd.svg", name: "Ant Design", url: "https://ant.design/" },
-                  { icon: "tailwind.svg", name: "Tailwind", url: "https://tailwindcss.com/" },
-                  { icon: "vite.svg", name: "Vite", url: "https://vite.dev/" },
-                  { icon: "shopify.svg", name: "Shopify", url: "https://www.shopify.com/" },
-                  { icon: "nextjs.svg", name: "NextJS", url: "https://nextjs.org/" },
-                  { icon: "nestjs.svg", name: "NestJS", url: "https://nestjs.com/" },
-                  { icon: "supabase.svg", name: "Supabase", url: "https://supabase.com/" },
-                  { icon: "remix.svg", name: "Remix", url: "https://remix.run/" },
-                  { icon: "jira.svg", name: "Jira", url: "https://www.atlassian.com/software/jira" },
-                  { icon: "vue.svg", name: "VueJS", url: "https://vuejs.org/" },
-                  { icon: "dotnet.svg", name: ".NET", url: "https://dotnet.microsoft.com/" },
-                  { icon: "prettier.svg", name: "Prettier", url: "https://prettier.io/" },
-                  { icon: "npm.svg", name: "NPM", url: "https://www.npmjs.com/" },
-                  { icon: "eslint.svg", name: "ESLint", url: "https://eslint.org/" },
-                  { icon: "figma.svg", name: "Figma", url: "https://www.figma.com/" },
-                  { icon: "html5.svg", name: "HTML", url: "" },
-                  { icon: "css3.svg", name: "CSS", url: "" },
-                  { icon: "firebase.svg", name: "Firebase", url: "https://firebase.google.com/" },
-                  { icon: "woocommerce.svg", name: "Woocommerce", url: "https://woocommerce.com/" }
+                  { icon: "react.svg", name: "React", level: 90 },
+                  { icon: "angular.svg", name: "Angular", level: 90 },
+                  { icon: "nodejs.svg", name: "Node.js", level: 85 },
+                  { icon: "nextjs.svg", name: "Next.js", level: 80 },
+                  { icon: "typescript.svg", name: "TypeScript", level: 85 },
+                  { icon: "tailwind.svg", name: "Tailwind", level: 90 },
+                  { icon: "vite.svg", name: "Vite", level: 85 },
+                  { icon: "antd.svg", name: "Ant Design", level: 90 },
+                  { icon: "docker.svg", name: "Docker", level: 75 },
+                  { icon: "shopify.svg", name: "Shopify", level: 85 },
+                  { icon: "remix.svg", name: "Remix", level: 90 },
+                  { icon: "prettier.svg", name: "Prettier", level: 90 },
+                  { icon: "npm.svg", name: "NPM", level: 90 },
+                  { icon: "html5.svg", name: "HTML", level: 90 },
+                  { icon: "css3.svg", name: "CSS", level: 90 }
+                ]
+              },
+              {
+                title: "Tools & Platforms",
+                skills: [
+                  { icon: "git.svg", name: "Git", level: 85 },
+                  { icon: "figma.svg", name: "Figma", level: 70 },
+                  { icon: "supabase.svg", name: "Supabase", level: 80 },
+                  { icon: "firebase.svg", name: "Firebase", level: 75 },
+                  { icon: "jira.svg", name: "Jira", level: 80 },
+                  { icon: "woocommerce.svg", name: "Woocommerce", level: 90 }
                 ]
               },
               {
                 title: "Operating System",
                 skills: [
-                  { icon: "windows.svg", name: "Windows", url: "https://www.microsoft.com/" },
-                  { icon: "ubuntu.svg", name: "Ubuntu", url: "https://ubuntu.com/" },
-                  { icon: "linux.svg", name: "Linux", url: "https://www.linux.org/" },
-                  { icon: "apple.svg", name: "Mac", url: "https://www.apple.com/ph/mac/" }
-                ]
-              },
-              {
-                title: "Version Control",
-                skills: [
-                  { icon: "github.svg", name: "Github", url: "https://github.com/" },
-                  { icon: "gitlab.svg", name: "Gitlab", url: "http://gitlab.com/" },
-                  { icon: "git.svg", name: "Git", url: "https://git-scm.com/" }
-                ]
-              },
-              {
-                title: "Open Source",
-                skills: [
-                  { icon: "snipeit.svg", name: "SnipeIT", url: "https://snipeitapp.com/" },
-                  { icon: "wazuh.svg", name: "Wazuh", url: "https://wazuh.com/" },
-                  { icon: "zabbix.svg", name: "Zabbix", url: "https://www.zabbix.com/" },
-                  { icon: "xampp.svg", name: "Xampp", url: "https://www.apachefriends.org/" },
-                  { icon: "phpmyadmin.svg", name: "phpMyAdmin", url: "https://phpmyadmin.net/" },
-                  { icon: "openvpn.svg", name: "openVPN", url: "https://openvpn.net/" },
-                  { icon: "docker.svg", name: "Docker", url: "https://www.docker.com/" },
-                  { icon: "cloudpanel.svg", name: "CloudPanel", url: "https://www.cloudpanel.io/" },
-                  { icon: "render.svg", name: "Render", url: "https://render.com/" },
-                  { icon: "cpanel.svg", name: "cPanel", url: "https://cpanel.net/" }
+                  { icon: "windows.svg", name: "Windows", level: 90 },
+                  { icon: "ubuntu.svg", name: "Ubuntu", level: 75 },
+                  { icon: "linux.svg", name: "Linux", level: 75 },
+                  { icon: "apple.svg", name: "Mac", level: 85 },
                 ]
               },
               {
                 title: "Vibe Coding",
                 skills: [
-                  { icon: "wordpress.svg", name: "Wordpress", url: "https://wordpress.com/" },
-                  { icon: "lovable.svg", name: "Lovable", url: "https://lovable.dev/" },
-                  { icon: "wix.svg", name: "Wix Studio", url: "https://wix.com/" },
-                  { icon: "webflow.svg", name: "Webflow", url: "https://webflow.com/" },
-                  { icon: "chatgpt.svg", name: "ChatGPT", url: "https://chatgpt.com/" },
-                  { icon: "deepseek.svg", name: "DeepSeek", url: "https://chatgpt.com/" },
-                  { icon: "firebasestudio.svg", name: "Firebase Studio", url: "https://studio.firebase.google.com/" }
+                  { icon: "wordpress.svg", name: "Wordpress", level: 90 },
+                  { icon: "lovable.svg", name: "Lovable", level: 90 },
+                  { icon: "wix.svg", name: "Wix Studio", level: 80 },
+                  { icon: "webflow.svg", name: "Webflow", level: 85 },
+                  { icon: "chatgpt.svg", name: "ChatGPT", level: 90 },
+                  { icon: "deepseek.svg", name: "DeepSeek", level: 85 },
+                  { icon: "cursor.svg", name: "Cursor", level: 90 },
                 ]
               }
             ].map((category, index) => (
               <div
                 key={index}
-                className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-700 hover:border-blue-500 transition-all duration-300"
+                className="bg-white rounded-xl shadow-sm border border-gray-200 p-5"
               >
-                <h2 className="text-xl font-bold text-white mb-5 flex items-center">
-                  <span className="bg-clip-text text-white">
-                    {category.title}
-                  </span>
+                <h2 className="text-base font-semibold text-gray-900 mb-4">
+                  {category.title}
                 </h2>
-                <div className="flex flex-wrap gap-3">
+                <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => (
-                    <Link
-                      key={skillIndex}
-                      to={skill.url}
-                      target="_blank"
-                      className="flex items-center bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded-lg text-white text-sm transition-all border border-gray-600 hover:border-blue-500 hover:shadow-md hover:-translate-y-0.5"
-                      title={skill.name}
-                    >
-                      <img
-                        className="h-5 w-5 mr-2 object-contain"
-                        src={`./img/${skill.icon}`}
-                        alt={skill.name}
-                      />
-                      <span>{skill.name}</span>
-                    </Link>
+                    <div key={skillIndex} className="space-y-1.5">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center">
+                          <img
+                            className="h-4 w-4 mr-2 opacity-80"
+                            src={`./img/${skill.icon}`}
+                            alt={skill.name}
+                          />
+                          <span className="text-sm font-medium text-gray-700">
+                            {skill.name}
+                          </span>
+                        </div>
+                        <span className="text-xs text-gray-500">
+                          {skill.level}%
+                        </span>
+                      </div>
+                      <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"
+                          style={{ width: `${skill.level}%` }}
+                        />
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>
             ))}
+
+            {/* Quick Stats */}
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
+              <h2 className="text-base font-semibold text-gray-900 mb-4">Experience</h2>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-900">7+</div>
+                  <div className="text-xs text-gray-600 mt-1">Years Experience</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-900">10+</div>
+                  <div className="text-xs text-gray-600 mt-1">Projects</div>
+                </div>
+                <div className="text-center col-span-2">
+                  <div className="text-sm font-medium text-gray-700 mt-2">Full Stack Focus</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Footer */}
-        <footer className="mt-12 text-center text-gray-400 text-sm">
-          <p>© {new Date().getFullYear()} Charls Dave Erana. All rights reserved.</p>
-          <p className="mt-1">Built with Remix and Tailwind CSS</p>
+        <footer className="mt-12 pt-6 border-t border-gray-200 text-center">
+          <p className="text-gray-500 text-sm">
+            © {new Date().getFullYear()} Charls Dave Erana
+          </p>
+          <p className="text-gray-400 text-xs mt-1">
+            Crafted with precision using Remix & Tailwind CSS
+          </p>
         </footer>
       </div>
     </div>

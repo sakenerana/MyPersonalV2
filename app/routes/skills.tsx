@@ -1,173 +1,192 @@
 export default function Skills() {
     const skillCategories = [
         {
-            title: "Office & Productivity",
-            icon: "office.svg",
-            skills: [
-                "MS Word, Excel, PowerPoint",
-                "WPS Office",
-                "Adobe Reader",
-                "Open Office",
-                "Microsoft 365 Copilot"
-            ],
-            color: "from-green-500 to-lime-500"
-        },
-        {
-            title: "Programming & Development",
+            title: "Frontend Development",
             icon: "code.svg",
             skills: [
-                "HTML, CSS, SCSS",
-                "JavaScript, TypeScript",
-                "PHP, C#",
-                "React, Angular",
-                "Node.js, Next.js, Nest.js",
-                "Tailwind, Ant Design",
-                "Vite, WordPress"
-            ],
-            color: "from-purple-500 to-indigo-500"
+                { name: "React", level: 90 },
+                { name: "TypeScript", level: 85 },
+                { name: "Angular", level: 80 },
+                { name: "HTML/CSS", level: 95 },
+                { name: "Tailwind CSS", level: 90 },
+                { name: "Next.js", level: 85 },
+                { name: "Vue.js", level: 75 }
+            ]
         },
         {
-            title: "Databases",
+            title: "Backend & Databases",
             icon: "database.svg",
             skills: [
-                "MySQL, PostgreSQL",
-                "Database Management",
-                "Serverless architectures",
-                "Traditional server-based systems"
-            ],
-            color: "from-purple-500 to-indigo-500"
+                { name: "Node.js", level: 85 },
+                { name: "NestJS", level: 80 },
+                { name: "PostgreSQL", level: 80 },
+                { name: "MySQL", level: 85 },
+                { name: "PHP", level: 75 },
+                { name: "C#/.NET", level: 70 },
+                { name: "REST APIs", level: 85 }
+            ]
         },
         {
             title: "DevOps & Tools",
             icon: "devops.svg",
             skills: [
-                "Git, GitHub, GitLab",
-                "Git commands",
-                "Jira, Bitbucket",
-                "Docker",
-                "VMWare ESXi",
-                "Virtual Machines"
-            ],
-            color: "from-blue-500 to-cyan-500"
+                { name: "Git", level: 90 },
+                { name: "Docker", level: 75 },
+                { name: "Jira", level: 85 },
+                { name: "VS Code", level: 95 },
+                { name: "GitHub/GitLab", level: 90 },
+                { name: "Figma", level: 70 },
+                { name: "Terminal", level: 85 }
+            ]
         },
         {
-            title: "Networking & Hardware",
+            title: "IT & Infrastructure",
             icon: "network.svg",
             skills: [
-                "Computer hardware servicing",
-                "CCTV installation (HikVision)",
-                "PoE Switch setup",
-                "Router network configuration",
-                "Biometrics setup (ZKTeco)",
-                "UTP cable crimping",
-                "RJ45 installation"
-            ],
-            color: "from-blue-500 to-cyan-500"
-        },
-        {
-            title: "Operating Systems",
-            icon: "os.svg",
-            skills: [
-                "Windows",
-                "Ubuntu",
-                "Linux",
-                "Mac OS"
-            ],
-            color: "from-blue-500 to-cyan-500"
-        },
-        {
-            title: "Other Technical Skills",
-            icon: "skills2.svg",
-            skills: [
-                "Android Studio",
-                "Rustdesk, Anydesk",
-                "Fortinet, Synology",
-                "Pritunl, Yeastar",
-                "Unifi Network Server",
-                "40+ WPM typing speed",
-                "Proficient internet/email use",
-                "Cloudfare management",
-                "Canva, Figma basics",
-                "SEO basics",
-                "Basic photo/video editing",
-                "Computer troubleshooting",
-                "Video conferencing setup (Zoom, Google Meet)",
-                "Knowledge of AI tools (ChatGPT, MidJourney)",
-                "Basic knowledge of IoT (Internet of Things)",
-                "Basic knowledge of Cybersecurity principles",
-                "Basic knowledge of Cloud Computing platforms (AWS, Azure, Google Cloud)",
-                "Knowledge of Agile and Scrum methodologies",
-                "Understanding of UI/UX design principles",
-                "Knowledge of API integration and development"
-            ],
-            color: "from-green-500 to-lime-500"
+                { name: "Network Setup", level: 85 },
+                { name: "Server Management", level: 80 },
+                { name: "CCTV Systems", level: 75 },
+                { name: "Hardware Troubleshooting", level: 90 },
+                { name: "Windows/Ubuntu", level: 85 },
+                { name: "Virtual Machines", level: 75 },
+                { name: "Security Systems", level: 70 }
+            ]
         }
     ];
 
+    const additionalSkills = [
+        {
+            category: "Productivity",
+            skills: ["Microsoft 365", "WPS Office", "Google Workspace", "Jira", "Notion"]
+        },
+        {
+            category: "Design & Editing",
+            skills: ["Figma", "Canva", "Photoshop Basics", "Video Editing", "UI/UX Principles"]
+        },
+        {
+            category: "Methodologies",
+            skills: ["Agile/Scrum", "CI/CD", "Responsive Design", "SEO Basics", "API Integration"]
+        }
+    ];
+
+    const proficiencyLabels = [
+        { level: 90, label: "Expert", color: "bg-blue-600" },
+        { level: 80, label: "Advanced", color: "bg-blue-500" },
+        { level: 70, label: "Proficient", color: "bg-blue-400" },
+        { level: 60, label: "Intermediate", color: "bg-gray-400" }
+    ];
+
     return (
-        <div className="bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-xl border border-gray-700 p-8">
+        <div className="bg-white rounded-xl shadow-sm">
             {/* Header */}
-            <div className="flex items-center mb-8">
-                <div className="bg-gradient-to-r from-blue-600 to-blue-500 p-3 rounded-xl mr-4">
-                    <img className="h-7 w-7" src="./img/skills2.svg" alt="skills" />
+            <div className="mb-10">
+                <div className="flex items-center mb-3">
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-2.5 rounded-lg">
+                        <img className="h-5 w-5" src="./img/skills2.svg" alt="skills" />
+                    </div>
+                    <h1 className="text-2xl font-semibold text-gray-900 ml-3">
+                        Technical Skills
+                    </h1>
                 </div>
-                <div>
-                    <h1 className="text-3xl font-bold text-white">Technical Capabilities</h1>
-                    <p className="text-gray-300 mt-1">My comprehensive skill set across multiple domains</p>
-                </div>
+                <p className="text-gray-600">
+                    A comprehensive overview of my technical expertise across development, operations, and infrastructure.
+                </p>
             </div>
 
-            {/* Skills Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Main Skills Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                 {skillCategories.map((category, index) => (
                     <div
                         key={index}
-                        className={`bg-gradient-to-br ${category.color} rounded-xl p-0.5 hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
+                        className="bg-white rounded-lg border border-gray-200 p-5 hover:border-blue-300 transition-colors"
                     >
-                        <div className="bg-gray-800 rounded-[11px] h-full p-5">
-                            <div className="flex items-center mb-4">
-                                <div className="bg-white bg-opacity-10 p-2 rounded-lg mr-3">
-                                    <img className="h-5 w-5" src={`./img/${category.icon}`} alt={category.title} />
-                                </div>
-                                <h2 className="text-xl font-semibold text-white">{category.title}</h2>
+                        <div className="flex items-center mb-5">
+                            <div className="p-2 rounded-lg bg-blue-50 mr-3">
+                                <img className="h-4 w-4" src={`./img/${category.icon}`} alt={category.title} />
                             </div>
-                            <ul className="space-y-3">
-                                {category.skills.map((skill, i) => (
-                                    <li key={i} className="flex items-start">
-                                        <div className="bg-white rounded-full w-2 h-2 mt-2 mr-3 flex-shrink-0"></div>
-                                        <span className="text-gray-200">{skill}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                            <h2 className="text-lg font-semibold text-gray-900">
+                                {category.title}
+                            </h2>
+                        </div>
+
+                        <div className="space-y-4">
+                            {category.skills.map((skill, i) => (
+                                <div key={i} className="space-y-1.5">
+                                    <div className="flex items-center justify-between">
+                                        <span className="text-sm font-medium text-gray-800">{skill.name}</span>
+                                        <span className="text-xs text-gray-500">{skill.level}%</span>
+                                    </div>
+                                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
+                                        <div
+                                            className={`h-full rounded-full ${skill.level >= 90 ? 'bg-blue-600' :
+                                                    skill.level >= 80 ? 'bg-blue-500' :
+                                                        skill.level >= 70 ? 'bg-blue-400' : 'bg-gray-400'
+                                                }`}
+                                            style={{ width: `${skill.level}%` }}
+                                        />
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 ))}
             </div>
 
-            {/* Proficiency Legend */}
-            <div className="mt-10 bg-gray-700 bg-opacity-50 rounded-xl p-5 border border-gray-600">
-                <h3 className="text-lg font-semibold text-white mb-3 flex items-center">
-                    <svg className="w-5 h-5 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                    Skill Proficiency Levels
-                </h3>
+            {/* Additional Skills */}
+            <div className="mb-10">
+                <h2 className="text-lg font-semibold text-gray-900 mb-5">Additional Competencies</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {additionalSkills.map((category, index) => (
+                        <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-100">
+                            <h3 className="font-medium text-gray-900 mb-3 text-sm uppercase tracking-wide text-gray-600">
+                                {category.category}
+                            </h3>
+                            <div className="flex flex-wrap gap-2">
+                                {category.skills.map((skill, i) => (
+                                    <span key={i} className="px-3 py-1.5 bg-white text-gray-700 text-sm rounded-lg border border-gray-200">
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Proficiency Guide */}
+            <div className="border-t border-gray-100 pt-8">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Proficiency Guide</h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div className="flex items-center">
-                        <div className="w-3 h-3 rounded-full bg-purple-500 mr-2"></div>
-                        <span className="text-gray-300 text-sm">Expert</span>
+                    {proficiencyLabels.map((item, index) => (
+                        <div key={index} className="flex items-center">
+                            <div className={`w-3 h-3 rounded-full ${item.color} mr-3`}></div>
+                            <div>
+                                <div className="text-sm font-medium text-gray-900">{item.label}</div>
+                                <div className="text-xs text-gray-500">{item.level}+% mastery</div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Skills Summary */}
+            <div className="mt-10 bg-gradient-to-br from-blue-50 to-gray-50 rounded-lg p-5 border border-gray-100">
+                <div className="flex flex-col md:flex-row md:items-center justify-between">
+                    <div>
+                        <h3 className="font-semibold text-gray-900 mb-2">Continuous Learning</h3>
+                        <p className="text-gray-600 text-sm">
+                            Committed to staying current with emerging technologies and best practices in software development and IT operations.
+                        </p>
                     </div>
-                    <div className="flex items-center">
-                        <div className="w-3 h-3 rounded-full bg-blue-500 mr-2"></div>
-                        <span className="text-gray-300 text-sm">Advanced</span>
-                    </div>
-                    <div className="flex items-center">
-                        <div className="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
-                        <span className="text-gray-300 text-sm">Proficient</span>
-                    </div>
-                    <div className="flex items-center">
-                        <div className="w-3 h-3 rounded-full bg-gray-500 mr-2"></div>
-                        <span className="text-gray-300 text-sm">Familiar</span>
+                    <div className="mt-4 md:mt-0">
+                        <div className="flex space-x-2">
+                            <span className="px-3 py-1.5 bg-white text-gray-700 text-sm rounded-lg border border-gray-200">
+                                Always Learning
+                            </span>
+                            <span className="px-3 py-1.5 bg-white text-gray-700 text-sm rounded-lg border border-gray-200">
+                                Detail-Oriented
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
