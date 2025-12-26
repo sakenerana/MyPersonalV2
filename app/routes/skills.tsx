@@ -10,7 +10,10 @@ export default function Skills() {
                 { name: "HTML/CSS", level: 95 },
                 { name: "Tailwind CSS", level: 90 },
                 { name: "Next.js", level: 85 },
-                { name: "Vue.js", level: 75 }
+                { name: "Vue.js", level: 75 },
+                { name: "AntDesign", level: 90 },
+                { name: "Wordpress", level: 90 },
+                { name: "Vite", level: 85 }
             ]
         },
         {
@@ -57,11 +60,11 @@ export default function Skills() {
     const additionalSkills = [
         {
             category: "Productivity",
-            skills: ["Microsoft 365", "WPS Office", "Google Workspace", "Jira", "Notion"]
+            skills: ["Microsoft 365", "WPS Office", "Google Workspace", "Jira", "Notion", "Adobe Reader", "Open Office"]
         },
         {
             category: "Design & Editing",
-            skills: ["Figma", "Canva", "Photoshop Basics", "Video Editing", "UI/UX Principles"]
+            skills: ["Figma", "Canva", "Photoshop Basics", "Video Editing", "UI/UX Principles", "Filmora", "Capcut"]
         },
         {
             category: "Methodologies",
@@ -74,6 +77,42 @@ export default function Skills() {
         { level: 80, label: "Advanced", color: "bg-blue-300" },
         { level: 70, label: "Proficient", color: "bg-yellow-300" },
         { level: 60, label: "Intermediate", color: "bg-gray-300" }
+    ];
+
+    const openSourcePlatforms = [
+        "GitHub",
+        "GitLab",
+        "Ubuntu",
+        "Debian",
+        "Docker",
+        "Kubernetes",
+        "WordPress",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "PostgreSQL",
+        "VS Code",
+        "Linux",
+        "Apache",
+        "Nginx",
+        "Redis",
+        "SnipeIT",
+        "Wazuh",
+        "Zabbix",
+        "Xampp",
+        "phpMyAdmin",
+        "openVPN",
+        "CloudPanel",
+        "Render",
+        "cPanel",
+        "Cloudflare",
+        "Vercel",
+        "Netlify",
+        "Heroku",
+        "DigitalOcean",
+        "AWS",
+        "GCP",
+        "Azure"
     ];
 
     return (
@@ -185,6 +224,31 @@ export default function Skills() {
                             </span>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            {/* Open Source Platforms */}
+            <div className="mt-10 border-t border-gray-100 pt-8">
+                <div className="flex items-center mb-5">
+                    <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-2 rounded-lg mr-3">
+                        <svg className="h-5 w-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h2 className="text-lg font-semibold text-gray-900">Open Source Platforms & Systems</h2>
+                </div>
+                <p className="text-gray-600 text-sm mb-5">
+                    Experience with open source technologies and platforms that power modern development and infrastructure.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                    {openSourcePlatforms.map((platform, index) => (
+                        <span
+                            key={index}
+                            className="px-4 py-2 bg-white text-gray-700 text-sm rounded-lg border border-gray-200 hover:border-purple-300 hover:bg-purple-50 transition-colors font-medium"
+                        >
+                            {platform}
+                        </span>
+                    ))}
                 </div>
             </div>
         </div>

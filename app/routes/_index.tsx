@@ -95,7 +95,7 @@ export default function Index() {
     shadow-sm hover:shadow"
                 >
                   <img className="h-4 w-4 mr-2" src="./img/preview.svg" alt="preview" />
-                  Check Resume
+                  Preview Resume
                 </Link>
               </div>
             </div>
@@ -247,7 +247,7 @@ export default function Index() {
             </div>
 
             {/* Quick Contact */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sticky top-8 z-20">
               <h3 className="text-sm font-semibold text-gray-900 mb-3">Quick Message</h3>
               <form
                 action="https://formspree.io/f/xzdpkylk"
@@ -273,7 +273,7 @@ export default function Index() {
             </div>
 
             {/* Social Links */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sticky top-[284px] z-20">
               <h3 className="text-sm font-semibold text-gray-900 mb-3">Connect</h3>
               <div className="flex justify-center gap-3">
                 {[
@@ -403,7 +403,7 @@ export default function Index() {
             ))}
 
             {/* Quick Stats */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 sticky top-8 z-20">
               <h2 className="text-base font-semibold text-gray-900 mb-4">Experience</h2>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">

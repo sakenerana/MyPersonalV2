@@ -1,6 +1,109 @@
 import { Link } from "@remix-run/react";
+import { useState, useEffect } from "react";
 
 export default function Projects() {
+    const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
+    const [confidentialModalOpen, setConfidentialModalOpen] = useState<boolean>(false);
+
+    // Projects that are NOT confidential (exceptions)
+    const publicProjects = [
+        "SICE Choir Website",
+        "Elf Station Inc.",
+        "The Mango Mall Online",
+        "Clevermasters"
+    ];
+
+    // Check if project is confidential
+    const isConfidential = (projectTitle: string) => {
+        return !publicProjects.includes(projectTitle);
+    };
+
+    // Handle ESC key to close fullscreen and modal
+    useEffect(() => {
+        const handleEscape = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                if (fullscreenImage) {
+                    setFullscreenImage(null);
+                }
+                if (confidentialModalOpen) {
+                    setConfidentialModalOpen(false);
+                }
+            }
+        };
+
+        if (fullscreenImage || confidentialModalOpen) {
+            document.addEventListener("keydown", handleEscape);
+            document.body.style.overflow = "hidden";
+        }
+
+        return () => {
+            document.removeEventListener("keydown", handleEscape);
+        };
+    }, [fullscreenImage, confidentialModalOpen]);
+
+    // Restore body overflow when modals are closed
+    useEffect(() => {
+        if (!fullscreenImage && !confidentialModalOpen) {
+            document.body.style.overflow = "unset";
+        }
+    }, [fullscreenImage, confidentialModalOpen]);
+
+    // Map technology names to their SVG icon paths
+    const getTechIcon = (tech: string): string | null => {
+        const techIcons: { [key: string]: string } = {
+            "React": "react.svg",
+            "Remix": "remix.svg",
+            "Supabase": "supabase.svg",
+            "Tailwind CSS": "tailwind.svg",
+            "Ant Design": "antd.svg",
+            "Vite": "vite.svg",
+            "WordPress": "wordpress.svg",
+            "WooCommerce": "woocommerce.svg",
+            "MySQL": "mysql.svg",
+            "cPanel": "cpanel.svg",
+            "PHP": "php.svg",
+            "Node.js": "nodejs.svg",
+            "NestJS": "nestjs.svg",
+            "Next.js": "nextjs.svg",
+            "Vue.js": "vue.svg",
+            "Angular": "angular.svg",
+            "TypeScript": "typescript.svg",
+            "HTML/CSS": "html5.svg",
+            "Git": "git.svg",
+            "GitHub": "github.svg",
+            "GitLab": "gitlab.svg",
+            "Docker": "docker.svg",
+            "Jira": "jira.svg",
+            "Figma": "figma.svg",
+            "Ubuntu": "ubuntu.svg",
+            "Linux": "linux.svg",
+            "Windows": "windows.svg",
+            "C#/.NET": "dotnet.svg",
+            "CloudPanel": "cloudpanel.svg",
+            "Render": "render.svg",
+            "OpenVPN": "openvpn.svg",
+            "phpMyAdmin": "phpmyadmin.svg",
+            "XAMPP": "xampp.svg",
+            "Zabbix": "zabbix.svg",
+            "Wazuh": "wazuh.svg",
+            "SnipeIT": "snipeit.svg"
+        };
+
+        // Try exact match first
+        if (techIcons[tech]) {
+            return `./img/${techIcons[tech]}`;
+        }
+
+        // Try case-insensitive match
+        const lowerTech = tech.toLowerCase();
+        for (const [key, value] of Object.entries(techIcons)) {
+            if (key.toLowerCase() === lowerTech) {
+                return `./img/${value}`;
+            }
+        }
+
+        return null;
+    };
     const projects = [
         {
             title: "Full Inventory System",
@@ -15,7 +118,7 @@ export default function Projects() {
                 "Multi-location tracking",
                 "Inventory valuation reports"
             ],
-            techStack: ["React", "Remix", "Supabase", "Tailwind CSS", "Ant Design"],
+            techStack: ["React", "Remix", "Supabase", "Tailwind CSS", "Ant Design", "Vite", "NPM", "Prettier", "HTML/CSS", "GitHub"],
             image: "full-inventory.png",
             link: "#",
             type: "solo"
@@ -32,8 +135,25 @@ export default function Projects() {
                 "Savings goal management",
                 "Multi-device synchronization"
             ],
-            techStack: ["React", "Remix", "Supabase", "Tailwind CSS", "Chart.js"],
+            techStack: ["React", "Remix", "Supabase", "Tailwind CSS", "Ant Design", "Vite", "NPM", "Prettier", "HTML/CSS", "GitHub"],
             image: "budget.png",
+            link: "#",
+            type: "solo"
+        },
+        {
+            title: "Workflow Tracker",
+            year: "2025",
+            category: "Full Stack Application",
+            description: "Helps users track progress, deadlines, and responsibilities to ensure smooth project execution.",
+            features: [
+                "Task Management",
+                "Workflow Stages",
+                "Reports & Analytics",
+                "Progress Tracking",
+                "Dashboard Overview"
+            ],
+            techStack: ["React", "Remix", "Supabase", "Tailwind CSS", "Ant Design", "Vite", "NPM", "Prettier", "HTML/CSS", "GitHub"],
+            image: "workflow.png",
             link: "#",
             type: "solo"
         },
@@ -49,7 +169,7 @@ export default function Projects() {
                 "Data management tools",
                 "Activity monitoring"
             ],
-            techStack: ["React", "Remix", "Supabase", "Ant Design", "Vite"],
+            techStack: ["React", "Remix", "Supabase", "Tailwind CSS", "Ant Design", "Vite", "NPM", "Prettier", "HTML/CSS", "GitHub"],
             image: "admin.png",
             link: "#",
             type: "solo"
@@ -66,7 +186,7 @@ export default function Projects() {
                 "Photo/video gallery",
                 "News & announcements"
             ],
-            techStack: ["React", "Remix", "Tailwind CSS", "Ant Design"],
+            techStack: ["React", "Remix", "Tailwind CSS", "Vite", "NPM", "Prettier", "HTML/CSS", "GitHub"],
             image: "sice.png",
             link: "#",
             type: "solo"
@@ -83,10 +203,26 @@ export default function Projects() {
                 "Document management",
                 "Report generation"
             ],
-            techStack: ["WordPress", "MySQL", "cPanel", "Custom PHP"],
+            techStack: ["Angular", "Node.JS", "Tailwind CSS", "Ant Design", "Vite", "NPM", "Prettier", "HTML/CSS", "GitHub"],
             image: "lgu.jpg",
             link: "#",
             type: "team"
+        },
+        {
+            title: "Elf Station Inc.",
+            year: "2021",
+            category: "Content Management System",
+            description: "Provides Web Design, System Development, ERP Systems and Government Systems.",
+            features: [
+                "Platform Flexibility",
+                "Custom Development",
+                "User-Friendly / Responsive Design",
+                "Service Variety"
+            ],
+            techStack: ["WordPress", "HTML/CSS", "Xampp", "cPanel", "phpMyAdmin"],
+            image: "elfstation.png",
+            link: "#",
+            type: "solo"
         },
         {
             title: "The Mango Mall Online",
@@ -100,8 +236,25 @@ export default function Projects() {
                 "Payment integration",
                 "Mobile responsive design"
             ],
-            techStack: ["WordPress", "WooCommerce", "MySQL", "cPanel"],
+            techStack: ["WordPress", "HTML/CSS", "Xampp", "cPanel", "phpMyAdmin", "WooCommerce"],
             image: "themangomall.png",
+            link: "#",
+            type: "solo"
+        },
+        {
+            title: "Clevermasters",
+            year: "2019",
+            category: "Content Management System",
+            description: "Management consultancy, corporate support, outsourcing, project management, and regulatory assistance to help businesses improve operations and ensure compliance.",
+            features: [
+                "Local expertise in Cebu / Philippines",
+                "Reliability / trustworthiness",
+                "Support in administrative / back-office tasks",
+                "One-stop service for corporate management tasks",
+                "Customizable solutions"
+            ],
+            techStack: ["WordPress", "HTML/CSS", "Xampp", "cPanel", "phpMyAdmin"],
+            image: "clevermasters.png",
             link: "#",
             type: "solo"
         }
@@ -125,7 +278,7 @@ export default function Projects() {
             </div>
 
             {/* Projects Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-8">
                 {projects.map((project, index) => (
                     <div
                         key={index}
@@ -153,8 +306,8 @@ export default function Projects() {
                                     </div>
                                 </div>
                                 <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${project.type === "solo"
-                                        ? "bg-green-100 text-green-800"
-                                        : "bg-blue-100 text-blue-800"
+                                    ? "bg-green-100 text-green-800"
+                                    : "bg-blue-100 text-blue-800"
                                     }`}>
                                     {project.type === "solo" ? "Solo" : "Team"}
                                 </span>
@@ -166,12 +319,24 @@ export default function Projects() {
                         </div>
 
                         {/* Project Image */}
-                        <div className="relative overflow-hidden bg-gray-50">
-                            <img
-                                className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                                src={`./img/${project.image}`}
-                                alt={`${project.title} screenshot`}
-                            />
+                        <div
+                            className="relative overflow-hidden bg-gray-50 cursor-pointer"
+                            onClick={() => setFullscreenImage(`./img/${project.image}`)}
+                        >
+                            <div className="relative group/image">
+                                <img
+                                    className="w-full h-96 object-contain transition-transform duration-300 group-hover/image:scale-105"
+                                    src={`./img/${project.image}`}
+                                    alt={`${project.title} screenshot`}
+                                />
+                                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover/image:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
+                                    <div className="opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 bg-white bg-opacity-90 rounded-full p-3">
+                                        <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Features */}
@@ -200,28 +365,54 @@ export default function Projects() {
                                 <h4 className="text-sm font-medium text-gray-900">Technology Stack</h4>
                             </div>
                             <div className="flex flex-wrap gap-2">
-                                {project.techStack.map((tech, i) => (
-                                    <span
-                                        key={i}
-                                        className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full border border-gray-200"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
+                                {project.techStack.map((tech, i) => {
+                                    const iconPath = getTechIcon(tech);
+                                    return (
+                                        <span
+                                            key={i}
+                                            className="inline-flex items-center gap-1.5 px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full border border-gray-200"
+                                        >
+                                            {iconPath && (
+                                                <img
+                                                    src={iconPath}
+                                                    alt={`${tech} icon`}
+                                                    className="w-4 h-4 object-contain"
+                                                    onError={(e) => {
+                                                        // Hide icon if it fails to load
+                                                        e.currentTarget.style.display = 'none';
+                                                    }}
+                                                />
+                                            )}
+                                            {tech}
+                                        </span>
+                                    );
+                                })}
                             </div>
                         </div>
 
                         {/* Action Button */}
                         <div className="p-5 pt-4 border-t border-gray-100">
-                            <Link
-                                to={project.link}
-                                className="inline-flex items-center justify-center w-full bg-gray-50 hover:bg-gray-100 text-gray-700 hover:text-gray-900 text-sm font-medium py-2.5 rounded-lg border border-gray-200 transition-colors"
-                            >
-                                <span>View Project Details</span>
-                                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                </svg>
-                            </Link>
+                            {isConfidential(project.title) ? (
+                                <button
+                                    onClick={() => setConfidentialModalOpen(true)}
+                                    className="inline-flex items-center justify-center w-full bg-gray-50 hover:bg-gray-100 text-gray-700 hover:text-gray-900 text-sm font-medium py-2.5 rounded-lg border border-gray-200 transition-colors"
+                                >
+                                    <span>View Project Details</span>
+                                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </button>
+                            ) : (
+                                <Link
+                                    to={project.link}
+                                    className="inline-flex items-center justify-center w-full bg-gray-50 hover:bg-gray-100 text-gray-700 hover:text-gray-900 text-sm font-medium py-2.5 rounded-lg border border-gray-200 transition-colors"
+                                >
+                                    <span>View Project Details</span>
+                                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </Link>
+                            )}
                         </div>
                     </div>
                 ))}
@@ -263,6 +454,87 @@ export default function Projects() {
                     </div>
                 </div>
             </div>
+
+            {/* Fullscreen Image Modal */}
+            {fullscreenImage && (
+                <div
+                    className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center p-4"
+                    onClick={() => setFullscreenImage(null)}
+                >
+                    <div className="relative max-w-7xl max-h-full w-full h-full flex items-center justify-center">
+                        <img
+                            className="max-w-full max-h-full object-contain"
+                            src={fullscreenImage}
+                            alt="Fullscreen project view"
+                            onClick={(e) => e.stopPropagation()}
+                        />
+                        <button
+                            onClick={() => setFullscreenImage(null)}
+                            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors bg-black bg-opacity-50 rounded-full p-3 hover:bg-opacity-70"
+                            aria-label="Close fullscreen"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black bg-opacity-50 px-4 py-2 rounded-lg">
+                            Click outside or press ESC to close
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Confidentiality Modal */}
+            {confidentialModalOpen && (
+                <div
+                    className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4"
+                    onClick={() => setConfidentialModalOpen(false)}
+                >
+                    <div
+                        className="bg-white rounded-xl shadow-2xl max-w-md w-full p-6 relative"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            onClick={() => setConfidentialModalOpen(false)}
+                            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                            aria-label="Close modal"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                        <div className="flex items-center mb-4">
+                            <div className="bg-red-100 p-3 rounded-full mr-4">
+                                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                </svg>
+                            </div>
+                            <h3 className="text-xl font-semibold text-gray-900">
+                                Confidential Project
+                            </h3>
+                        </div>
+                        <div className="mb-6">
+                            <p className="text-gray-700 mb-3">
+                                This project is <span className="font-semibold text-gray-900">confidential and exclusive</span> to the company.
+                            </p>
+                            <p className="text-gray-600 text-sm">
+                                Detailed information, source code, and implementation details are restricted and available only to authorized personnel within the organization.
+                            </p>
+                        </div>
+                        <div className="bg-gray-50 rounded-lg p-4 mb-4">
+                            <p className="text-sm text-gray-600">
+                                <span className="font-medium text-gray-900">Note:</span> If you are an authorized representative of the company and need access to this project, please contact the project administrator directly.
+                            </p>
+                        </div>
+                        <button
+                            onClick={() => setConfidentialModalOpen(false)}
+                            className="w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-2.5 px-4 rounded-lg transition-colors"
+                        >
+                            Understood
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
