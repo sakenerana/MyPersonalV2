@@ -86,7 +86,10 @@ export default function Projects() {
             "XAMPP": "xampp.svg",
             "Zabbix": "zabbix.svg",
             "Wazuh": "wazuh.svg",
-            "SnipeIT": "snipeit.svg"
+            "SnipeIT": "snipeit.svg",
+            "Shopify": "shopify.svg",
+            "NPM": "npm.svg",
+            "Prettier": "prettier.svg"
         };
 
         // Try exact match first
@@ -236,7 +239,7 @@ export default function Projects() {
                 "Payment integration",
                 "Mobile responsive design"
             ],
-            techStack: ["WordPress", "HTML/CSS", "Xampp", "cPanel", "phpMyAdmin", "WooCommerce"],
+            techStack: ["Shopify", "HTML/CSS", "Xampp", "cPanel", "phpMyAdmin"],
             image: "themangomall.png",
             link: "#",
             type: "solo"
