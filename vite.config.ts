@@ -23,7 +23,7 @@ export default defineConfig({
           route("", "routes/_index.tsx", () => {
             route("", "routes/about.tsx", { index: true });
             route("skills", "routes/skills.tsx", { index: true });
-            route("work-and-education", "routes/work_and_educ.tsx", { index: true });
+            route("work-and-education", "routes/work-and-education.tsx", { index: true });
             route("projects", "routes/projects.tsx", { index: true });
           });
         })
