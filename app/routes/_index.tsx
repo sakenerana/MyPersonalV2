@@ -1,48 +1,6 @@
 import { Link, Outlet } from "@remix-run/react";
-import { useMemo, useState } from "react";
-
-type AiPrompt = {
-  id: string;
-  label: string;
-  question: string;
-  answer: string;
-  source: string;
-};
-
-const AI_PROMPTS: AiPrompt[] = [
-  {
-    id: "background",
-    label: "Summarize my background",
-    question: "Can you summarize your background in one short pitch?",
-    answer:
-      "I am a full-stack developer with 7+ years of experience delivering modern web solutions across React, Angular, Node.js, Remix, and e-commerce platforms. I focus on building reliable, user-friendly systems that improve day-to-day workflows.",
-    source: "About + Experience sections",
-  },
-  {
-    id: "project-fit",
-    label: "Find projects by tech",
-    question: "Which projects should I review for full-stack and inventory-related work?",
-    answer:
-      "Start with the inventory-focused projects that showcase front-end and back-end integration, workflow design, and practical business impact. They highlight real implementation work from interface design to operations support.",
-    source: "Projects section",
-  },
-  {
-    id: "interview",
-    label: "Generate interview questions",
-    question: "Give me a few interview questions based on your stack.",
-    answer:
-      "1) How do you structure Remix routes for maintainability? 2) When would you choose Angular over React for enterprise work? 3) How do you secure API keys and secrets in production? 4) How do you optimize Tailwind-heavy UIs for performance? 5) How do you containerize and deploy Node-based applications with Docker?",
-    source: "Skills + Projects sections",
-  },
-];
 
 export default function Index() {
-  const [selectedPromptId, setSelectedPromptId] = useState(AI_PROMPTS[0].id);
-
-  const selectedPrompt = useMemo(
-    () => AI_PROMPTS.find((prompt) => prompt.id === selectedPromptId) ?? AI_PROMPTS[0],
-    [selectedPromptId]
-  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -132,46 +90,6 @@ export default function Index() {
                   <img className="h-4 w-4 mr-2" src="./img/preview.svg" alt="preview" />
                   Preview Resume
                 </Link>
-
-                <div className="mt-6 w-full rounded-lg border border-gray-200 bg-gray-50 p-4">
-                  <div className="flex items-center justify-between gap-2 mb-3">
-                    <h2 className="text-sm font-semibold text-gray-900">Ask AI About My Work</h2>
-                    <span className="text-[10px] font-semibold uppercase tracking-wide text-blue-700 bg-blue-100 px-2 py-1 rounded-full">
-                      Beta
-                    </span>
-                  </div>
-
-                  <p className="text-xs text-gray-500 mb-3">
-                    Try recruiter-focused prompts for a quick overview.
-                  </p>
-
-                  <div className="space-y-2 mb-3">
-                    {AI_PROMPTS.map((prompt) => {
-                      const isActive = prompt.id === selectedPrompt.id;
-
-                      return (
-                        <button
-                          key={prompt.id}
-                          type="button"
-                          onClick={() => setSelectedPromptId(prompt.id)}
-                          className={`w-full text-left text-xs rounded-lg px-3 py-2 border transition-colors ${
-                            isActive
-                              ? "border-blue-200 bg-blue-50 text-blue-800"
-                              : "border-gray-200 bg-white text-gray-700 hover:bg-gray-100"
-                          }`}
-                        >
-                          {prompt.label}
-                        </button>
-                      );
-                    })}
-                  </div>
-
-                  <div className="rounded-lg border border-gray-200 bg-white p-3 space-y-2">
-                    <p className="text-[11px] font-medium text-gray-700">Q: {selectedPrompt.question}</p>
-                    <p className="text-xs text-gray-600 leading-relaxed">A: {selectedPrompt.answer}</p>
-                    <p className="text-[10px] text-gray-400">Source: {selectedPrompt.source}</p>
-                  </div>
-                </div>
               </div>
             </div>
 
