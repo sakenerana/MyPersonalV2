@@ -1,15 +1,6 @@
 import { Link, Outlet } from "@remix-run/react";
-import { useState } from "react";
 
 export default function Index() {
-
-  const [formData, setFormData] = useState({
-    email: '',
-    message: ''
-  });
-  const [isLoading, setIsLoading] = useState(false);
-  const [status, setStatus] = useState('');
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Subtle Background Pattern */}
@@ -87,6 +78,7 @@ export default function Index() {
                 <Link
                   to="./img/resume.pdf"
                   target="_blank"
+                  rel="noreferrer"
                   className="mt-6 w-full flex items-center justify-center 
     bg-white border-2 border-gray-900 
     hover:bg-gray-900 hover:text-white
@@ -265,7 +257,10 @@ export default function Index() {
                     placeholder="Brief message..."
                     className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500"
                   ></textarea>
-                  <button className="w-full bg-gray-600 hover:bg-gray -700 text-white text-sm font-medium py-2 rounded-lg transition-colors">
+                  <button
+                    type="submit"
+                    className="w-full bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium py-2 rounded-lg transition-colors"
+                  >
                     Send Message
                   </button>
                 </div>
@@ -287,6 +282,7 @@ export default function Index() {
                     key={index}
                     to={social.url}
                     target="_blank"
+                    rel="noreferrer"
                     className="p-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
                     title={social.label}
                   >
