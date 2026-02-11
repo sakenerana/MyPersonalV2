@@ -1,20 +1,9 @@
 import { Link, Outlet } from "@remix-run/react";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 type AiPrompt = {
   id: string;
   label: string;
-  question: string;
-};
-
-type AiKnowledge = {
-  id: string;
-  keywords: string[];
-  answer: string;
-  source: string;
-};
-
-type AiResult = {
   question: string;
   answer: string;
   source: string;
@@ -25,98 +14,35 @@ const AI_PROMPTS: AiPrompt[] = [
     id: "background",
     label: "Summarize my background",
     question: "Can you summarize your background in one short pitch?",
-  },
-  {
-    id: "project-fit",
-    label: "Find projects by tech",
-    question: "Which projects should I review for full-stack and inventory-related work?",
-  },
-  {
-    id: "interview",
-    label: "Generate interview questions",
-    question: "Give me a few interview questions based on your stack.",
-  },
-];
-
-const AI_KNOWLEDGE: AiKnowledge[] = [
-  {
-    id: "background",
-    keywords: ["background", "summary", "introduce", "experience", "about", "pitch"],
     answer:
       "I am a full-stack developer with 7+ years of experience delivering modern web solutions across React, Angular, Node.js, Remix, and e-commerce platforms. I focus on building reliable, user-friendly systems that improve day-to-day workflows.",
     source: "About + Experience sections",
   },
   {
-    id: "projects",
-    keywords: ["project", "projects", "inventory", "full-stack", "stack", "build", "work"],
+    id: "project-fit",
+    label: "Find projects by tech",
+    question: "Which projects should I review for full-stack and inventory-related work?",
     answer:
-      "For practical product work, start with my inventory-focused projects. They showcase UI implementation, API/data integration, and workflow improvements for real operations.",
+      "Start with the inventory-focused projects that showcase front-end and back-end integration, workflow design, and practical business impact. They highlight real implementation work from interface design to operations support.",
     source: "Projects section",
   },
   {
-    id: "skills",
-    keywords: ["skills", "tech", "technology", "react", "angular", "node", "remix", "docker"],
-    answer:
-      "My strongest stack includes React, Angular, Node.js, Remix, TypeScript, Tailwind, and Docker. I also work with e-commerce tools and deployment-focused workflows.",
-    source: "Skills section",
-  },
-  {
     id: "interview",
-    keywords: ["interview", "question", "questions", "hire", "evaluation"],
+    label: "Generate interview questions",
+    question: "Give me a few interview questions based on your stack.",
     answer:
-      "Try these interview prompts: 1) How do you structure Remix routes for maintainability? 2) When would you choose Angular over React? 3) How do you secure API keys in production? 4) How do you optimize Tailwind-heavy UIs? 5) How do you deploy Node apps with Docker?",
+      "1) How do you structure Remix routes for maintainability? 2) When would you choose Angular over React for enterprise work? 3) How do you secure API keys and secrets in production? 4) How do you optimize Tailwind-heavy UIs for performance? 5) How do you containerize and deploy Node-based applications with Docker?",
     source: "Skills + Projects sections",
   },
 ];
 
-const DEFAULT_AI_RESPONSE =
-  "Ask about my background, projects, skills, or interview readiness and I'll give you the fastest summary.";
-
-function getAiResult(question: string): AiResult {
-  const normalizedQuestion = question.toLowerCase();
-  const tokens = normalizedQuestion.split(/[^a-z0-9+#.-]+/).filter(Boolean);
-
-  let bestMatch = AI_KNOWLEDGE[0];
-  let bestScore = -1;
-
-  AI_KNOWLEDGE.forEach((entry) => {
-    const score = entry.keywords.reduce((total, keyword) => {
-      const keywordHit = normalizedQuestion.includes(keyword) ? 2 : 0;
-      const tokenHit = tokens.includes(keyword) ? 1 : 0;
-      return total + keywordHit + tokenHit;
-    }, 0);
-
-    if (score > bestScore) {
-      bestScore = score;
-      bestMatch = entry;
-    }
-  });
-
-  return {
-    question,
-    answer: bestScore <= 0 ? DEFAULT_AI_RESPONSE : bestMatch.answer,
-    source: bestScore <= 0 ? "Portfolio overview" : bestMatch.source,
-  };
-}
-
 export default function Index() {
-  const [aiQuestion, setAiQuestion] = useState(AI_PROMPTS[0].question);
-  const [isThinking, setIsThinking] = useState(false);
-  const [aiResult, setAiResult] = useState<AiResult>(() => getAiResult(AI_PROMPTS[0].question));
+  const [selectedPromptId, setSelectedPromptId] = useState(AI_PROMPTS[0].id);
 
-  const handleAsk = (question: string) => {
-    const trimmedQuestion = question.trim();
-
-    if (!trimmedQuestion) {
-      return;
-    }
-
-    setIsThinking(true);
-    setTimeout(() => {
-      setAiResult(getAiResult(trimmedQuestion));
-      setIsThinking(false);
-    }, 350);
-  };
+  const selectedPrompt = useMemo(
+    () => AI_PROMPTS.find((prompt) => prompt.id === selectedPromptId) ?? AI_PROMPTS[0],
+    [selectedPromptId]
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -216,50 +142,34 @@ export default function Index() {
                   </div>
 
                   <p className="text-xs text-gray-500 mb-3">
-                    Ask anything about my background, projects, or skills.
+                    Try recruiter-focused prompts for a quick overview.
                   </p>
 
                   <div className="space-y-2 mb-3">
-                    {AI_PROMPTS.map((prompt) => (
-                      <button
-                        key={prompt.id}
-                        type="button"
-                        onClick={() => {
-                          setAiQuestion(prompt.question);
-                          handleAsk(prompt.question);
-                        }}
-                        className="w-full text-left text-xs rounded-lg px-3 py-2 border border-gray-200 bg-white text-gray-700 hover:bg-gray-100 transition-colors"
-                      >
-                        {prompt.label}
-                      </button>
-                    ))}
-                  </div>
+                    {AI_PROMPTS.map((prompt) => {
+                      const isActive = prompt.id === selectedPrompt.id;
 
-                  <div className="space-y-2 mb-3">
-                    <label htmlFor="ai-question" className="text-[11px] font-medium text-gray-700">
-                      Ask your own question
-                    </label>
-                    <textarea
-                      id="ai-question"
-                      value={aiQuestion}
-                      onChange={(event) => setAiQuestion(event.target.value)}
-                      rows={3}
-                      className="w-full text-xs rounded-lg border border-gray-200 bg-white p-2.5 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                      placeholder="Example: What stack should I hire you for?"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => handleAsk(aiQuestion)}
-                      className="w-full rounded-lg bg-gray-900 hover:bg-gray-800 text-white text-xs font-medium py-2 transition-colors"
-                    >
-                      {isThinking ? "Thinking..." : "Ask AI"}
-                    </button>
+                      return (
+                        <button
+                          key={prompt.id}
+                          type="button"
+                          onClick={() => setSelectedPromptId(prompt.id)}
+                          className={`w-full text-left text-xs rounded-lg px-3 py-2 border transition-colors ${
+                            isActive
+                              ? "border-blue-200 bg-blue-50 text-blue-800"
+                              : "border-gray-200 bg-white text-gray-700 hover:bg-gray-100"
+                          }`}
+                        >
+                          {prompt.label}
+                        </button>
+                      );
+                    })}
                   </div>
 
                   <div className="rounded-lg border border-gray-200 bg-white p-3 space-y-2">
-                    <p className="text-[11px] font-medium text-gray-700">Q: {aiResult.question}</p>
-                    <p className="text-xs text-gray-600 leading-relaxed">A: {aiResult.answer}</p>
-                    <p className="text-[10px] text-gray-400">Source: {aiResult.source}</p>
+                    <p className="text-[11px] font-medium text-gray-700">Q: {selectedPrompt.question}</p>
+                    <p className="text-xs text-gray-600 leading-relaxed">A: {selectedPrompt.answer}</p>
+                    <p className="text-[10px] text-gray-400">Source: {selectedPrompt.source}</p>
                   </div>
                 </div>
               </div>
