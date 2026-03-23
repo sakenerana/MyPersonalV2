@@ -116,18 +116,18 @@ export default function Skills() {
     ];
 
     return (
-        <div className="bg-white rounded-xl shadow-sm">
+        <div className="bg-white rounded-xl shadow-sm transition-colors duration-200 dark:bg-gray-900">
             {/* Header */}
             <div className="mb-10">
                 <div className="flex items-center mb-3">
                     <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-2.5 rounded-lg">
                         <img className="h-5 w-5" src="./img/skills2.svg" alt="skills" />
                     </div>
-                    <h1 className="text-2xl font-semibold text-gray-900 ml-3">
+                    <h1 className="text-2xl font-semibold text-gray-900 ml-3 dark:text-gray-100">
                         Technical Skills
                     </h1>
                 </div>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                     A comprehensive overview of my technical expertise across development, operations, and infrastructure.
                 </p>
             </div>
@@ -137,13 +137,13 @@ export default function Skills() {
                 {skillCategories.map((category, index) => (
                     <div
                         key={index}
-                        className="bg-white rounded-lg border border-gray-200 p-5 hover:border-blue-300 transition-colors"
+                        className="bg-white rounded-lg border border-gray-200 p-5 hover:border-blue-300 transition-colors dark:border-gray-800 dark:bg-gray-800 dark:hover:border-blue-500"
                     >
                         <div className="flex items-center mb-5">
                             <div className="p-2 rounded-lg bg-blue-50 mr-3">
                                 <img className="h-4 w-4" src={`./img/${category.icon}`} alt={category.title} />
                             </div>
-                            <h2 className="text-lg font-semibold text-gray-900">
+                            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                                 {category.title}
                             </h2>
                         </div>
@@ -151,7 +151,7 @@ export default function Skills() {
                         <div className="space-y-3">
                             {category.skills.map((skill, i) => (
                                 <div key={i} className="flex items-center justify-between">
-                                    <span className="text-sm font-medium text-gray-800">{skill.name}</span>
+                                    <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{skill.name}</span>
                                     <span className={`text-xs px-2.5 py-1 rounded ${skill.level >= 90 ? 'bg-green-100 text-green-800' :
                                         skill.level >= 80 ? 'bg-blue-100 text-blue-800' :
                                             skill.level >= 70 ? 'bg-yellow-100 text-yellow-800' :
@@ -170,16 +170,16 @@ export default function Skills() {
 
             {/* Additional Skills */}
             <div className="mb-10">
-                <h2 className="text-lg font-semibold text-gray-900 mb-5">Additional Competencies</h2>
+                <h2 className="text-lg font-semibold text-gray-900 mb-5 dark:text-gray-100">Additional Competencies</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     {additionalSkills.map((category, index) => (
-                        <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-100">
-                            <h3 className="font-medium text-gray-900 mb-3 text-sm uppercase tracking-wide text-gray-600">
+                        <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-100 dark:border-gray-800 dark:bg-gray-800">
+                            <h3 className="font-medium text-gray-900 mb-3 text-sm uppercase tracking-wide text-gray-600 dark:text-gray-300">
                                 {category.category}
                             </h3>
                             <div className="flex flex-wrap gap-2">
                                 {category.skills.map((skill, i) => (
-                                    <span key={i} className="px-3 py-1.5 bg-white text-gray-700 text-sm rounded-lg border border-gray-200">
+                                    <span key={i} className="px-3 py-1.5 bg-white text-gray-700 text-sm rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">
                                         {skill}
                                     </span>
                                 ))}
@@ -190,15 +190,15 @@ export default function Skills() {
             </div>
 
             {/* Proficiency Guide */}
-            <div className="border-t border-gray-100 pt-8">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Proficiency Guide</h3>
+            <div className="border-t border-gray-100 pt-8 dark:border-gray-800">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4 dark:text-gray-100">Proficiency Guide</h3>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {proficiencyLabels.map((item, index) => (
                         <div key={index} className="flex items-center">
                             <div className={`w-3 h-3 rounded-full ${item.color} mr-3`}></div>
                             <div>
-                                <div className="text-sm font-medium text-gray-900">{item.label}</div>
-                                <div className="text-xs text-gray-500">{item.level}+% mastery</div>
+                                <div className="text-sm font-medium text-gray-900 dark:text-gray-100">{item.label}</div>
+                                <div className="text-xs text-gray-500 dark:text-gray-400">{item.level}+% mastery</div>
                             </div>
                         </div>
                     ))}
@@ -206,20 +206,20 @@ export default function Skills() {
             </div>
 
             {/* Skills Summary */}
-            <div className="mt-10 bg-gradient-to-br from-blue-50 to-gray-50 rounded-lg p-5 border border-gray-100">
+            <div className="mt-10 bg-gradient-to-br from-blue-50 to-gray-50 rounded-lg p-5 border border-gray-100 dark:border-gray-800 dark:from-gray-800 dark:to-gray-900">
                 <div className="flex flex-col md:flex-row md:items-center justify-between">
                     <div>
-                        <h3 className="font-semibold text-gray-900 mb-2">Continuous Learning</h3>
-                        <p className="text-gray-600 text-sm">
+                        <h3 className="font-semibold text-gray-900 mb-2 dark:text-gray-100">Continuous Learning</h3>
+                        <p className="text-gray-600 text-sm dark:text-gray-300">
                             Committed to staying current with emerging technologies and best practices in software development and IT operations.
                         </p>
                     </div>
                     <div className="mt-4 md:mt-0">
                         <div className="flex space-x-2">
-                            <span className="px-3 py-1.5 bg-white text-gray-700 text-sm rounded-lg border border-gray-200">
+                            <span className="px-3 py-1.5 bg-white text-gray-700 text-sm rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">
                                 Always Learning
                             </span>
-                            <span className="px-3 py-1.5 bg-white text-gray-700 text-sm rounded-lg border border-gray-200">
+                            <span className="px-3 py-1.5 bg-white text-gray-700 text-sm rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">
                                 Detail-Oriented
                             </span>
                         </div>
@@ -228,23 +228,23 @@ export default function Skills() {
             </div>
 
             {/* Open Source Platforms */}
-            <div className="mt-10 border-t border-gray-100 pt-8">
+            <div className="mt-10 border-t border-gray-100 pt-8 dark:border-gray-800">
                 <div className="flex items-center mb-5">
                     <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-2 rounded-lg mr-3">
                         <svg className="h-5 w-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
                     </div>
-                    <h2 className="text-lg font-semibold text-gray-900">Open Source Platforms & Systems</h2>
+                    <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">Open Source Platforms & Systems</h2>
                 </div>
-                <p className="text-gray-600 text-sm mb-5">
+                <p className="text-gray-600 text-sm mb-5 dark:text-gray-300">
                     Experience with open source technologies and platforms that power modern development and infrastructure.
                 </p>
                 <div className="flex flex-wrap gap-2">
                     {openSourcePlatforms.map((platform, index) => (
                         <span
                             key={index}
-                            className="px-4 py-2 bg-white text-gray-700 text-sm rounded-lg border border-gray-200 hover:border-purple-300 hover:bg-purple-50 transition-colors font-medium"
+                            className="px-4 py-2 bg-white text-gray-700 text-sm rounded-lg border border-gray-200 hover:border-purple-300 hover:bg-purple-50 transition-colors font-medium dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:border-purple-500 dark:hover:bg-gray-700"
                         >
                             {platform}
                         </span>

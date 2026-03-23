@@ -80,18 +80,18 @@ export default function WorkAndEducation() {
     ];
 
     return (
-        <div className="bg-white rounded-xl shadow-sm">
+        <div className="bg-white rounded-xl shadow-sm transition-colors duration-200 dark:bg-gray-900">
             {/* Header */}
-            <div className="mb-10 pb-6 border-b border-gray-100">
+            <div className="mb-10 pb-6 border-b border-gray-100 dark:border-gray-800">
                 <div className="flex items-center mb-3">
                     <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-2.5 rounded-lg">
                         <img className="h-5 w-5" src="./img/work2.svg" alt="work" />
                     </div>
-                    <h1 className="text-2xl font-semibold text-gray-900 ml-3">
+                    <h1 className="text-2xl font-semibold text-gray-900 ml-3 dark:text-gray-100">
                         Experience & Education
                     </h1>
                 </div>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                     My professional journey and academic background that shaped my technical expertise.
                 </p>
             </div>
@@ -101,17 +101,17 @@ export default function WorkAndEducation() {
                 {experiences.map((section, sectionIndex) => (
                     <section key={sectionIndex}>
                         <div className="flex items-center mb-6">
-                            <h2 className="text-lg font-semibold text-gray-900">
+                            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                                 {section.title}
                             </h2>
-                            <div className="ml-4 h-px flex-1 bg-gray-200"></div>
+                            <div className="ml-4 h-px flex-1 bg-gray-200 dark:bg-gray-800"></div>
                         </div>
 
                         <div className="space-y-6">
                             {section.items.map((item, itemIndex) => (
                                 <div
                                     key={itemIndex}
-                                    className="group relative pl-8 md:pl-10 hover:bg-gray-50 rounded-lg p-4 transition-colors"
+                                    className="group relative pl-8 md:pl-10 hover:bg-gray-50 rounded-lg p-4 transition-colors dark:hover:bg-gray-800"
                                 >
                                     {/* Timeline dot */}
                                     <div className="absolute left-0 top-6">
@@ -123,7 +123,7 @@ export default function WorkAndEducation() {
                                     <div className="flex flex-col md:flex-row gap-4">
                                         {/* Logo */}
                                         <div className="flex-shrink-0">
-                                            <div className="w-16 h-16 flex items-center justify-center bg-white border border-gray-200 rounded-lg p-2">
+                                            <div className="w-16 h-16 flex items-center justify-center bg-white border border-gray-200 rounded-lg p-2 dark:border-gray-700 dark:bg-gray-900">
                                                 <img
                                                     className="max-h-12 max-w-12 object-contain"
                                                     src={`./img/${item.logo}`}
@@ -136,21 +136,21 @@ export default function WorkAndEducation() {
                                         <div className="flex-1">
                                             <div className="mb-3">
                                                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                                                    <h3 className="text-lg font-semibold text-gray-900">
+                                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
                                                         {item.company}
                                                     </h3>
-                                                    <span className="text-sm text-gray-500 mt-1 md:mt-0">
+                                                    <span className="text-sm text-gray-500 mt-1 md:mt-0 dark:text-gray-400">
                                                         {item.duration}
                                                     </span>
                                                 </div>
 
                                                 <div className="space-y-1">
                                                     {item.position && (
-                                                        <p className="text-gray-700 font-medium">
+                                                        <p className="text-gray-700 font-medium dark:text-gray-200">
                                                             {item.position}
                                                         </p>
                                                     )}
-                                                    <div className="flex items-center text-sm text-gray-500">
+                                                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
                                                         <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -161,7 +161,7 @@ export default function WorkAndEducation() {
                                             </div>
 
                                             {item.description && (
-                                                <p className="text-gray-600 mb-3">
+                                                <p className="text-gray-600 mb-3 dark:text-gray-300">
                                                     {item.description}
                                                 </p>
                                             )}
@@ -171,7 +171,7 @@ export default function WorkAndEducation() {
                                                     {item.highlights.map((highlight, highlightIndex) => (
                                                         <span
                                                             key={highlightIndex}
-                                                            className="px-3 py-1.5 bg-gray-100 text-gray-700 text-xs rounded-full border border-gray-200"
+                                                            className="px-3 py-1.5 bg-gray-100 text-gray-700 text-xs rounded-full border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300"
                                                         >
                                                             {highlight}
                                                         </span>
@@ -188,29 +188,29 @@ export default function WorkAndEducation() {
             </div>
 
             {/* Professional Summary */}
-            <div className="mt-12 pt-8 border-t border-gray-100">
+            <div className="mt-12 pt-8 border-t border-gray-100 dark:border-gray-800">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-900">6+</div>
-                        <div className="text-sm text-gray-600 mt-1">Years in Development</div>
+                        <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">6+</div>
+                        <div className="text-sm text-gray-600 mt-1 dark:text-gray-400">Years in Development</div>
                     </div>
                     <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-900">3+</div>
-                        <div className="text-sm text-gray-600 mt-1">Years in IT Operations</div>
+                        <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">3+</div>
+                        <div className="text-sm text-gray-600 mt-1 dark:text-gray-400">Years in IT Operations</div>
                     </div>
                     <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-900">Full Stack</div>
-                        <div className="text-sm text-gray-600 mt-1">Development & Operations</div>
+                        <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">Full Stack</div>
+                        <div className="text-sm text-gray-600 mt-1 dark:text-gray-400">Development & Operations</div>
                     </div>
                 </div>
 
                 {/* Career Path Note */}
-                <div className="mt-8 bg-gradient-to-br from-blue-50 to-gray-50 rounded-lg p-5 border border-gray-100">
+                <div className="mt-8 bg-gradient-to-br from-blue-50 to-gray-50 rounded-lg p-5 border border-gray-100 dark:border-gray-800 dark:from-gray-800 dark:to-gray-900">
                     <div className="flex items-start">
                         <svg className="w-5 h-5 text-blue-500 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
-                        <p className="text-gray-700">
+                        <p className="text-gray-700 dark:text-gray-300">
                             My journey demonstrates a unique combination of software development expertise and IT operational knowledge, allowing me to bridge the gap between code and infrastructure effectively.
                         </p>
                     </div>

@@ -6,9 +6,11 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./tailwind.css";
+
+type Theme = "light" | "dark";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -89,18 +91,18 @@ function GlobalAskAiWidget() {
   return (
     <div className="fixed bottom-4 right-4 z-50">
       {isOpen ? (
-        <div className="w-[320px] rounded-xl border border-gray-200 bg-white shadow-xl">
-          <div className="flex items-center justify-between border-b border-gray-100 px-3 py-2">
+        <div className="w-[320px] rounded-xl border border-gray-200 bg-white shadow-xl dark:border-gray-700 dark:bg-gray-900">
+          <div className="flex items-center justify-between border-b border-gray-100 px-3 py-2 dark:border-gray-800">
             <img
                       className="h-4 w-4"
                       src="./img/coffee.svg"
                       alt="Coffee"
                     />
-            <p className="text-sm font-semibold text-gray-900">Ask AI</p>
+            <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">Ask AI</p>
             <button
               type="button"
               onClick={() => setIsOpen(false)}
-              className="text-xs text-gray-500 hover:text-gray-800"
+              className="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-100"
             >
               Close
             </button>
@@ -111,7 +113,7 @@ function GlobalAskAiWidget() {
               value={question}
               onChange={(event) => setQuestion(event.target.value)}
               rows={3}
-              className="w-full rounded-lg border border-gray-200 p-2 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="w-full rounded-lg border border-gray-200 p-2 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
             />
             <button
               type="button"
@@ -120,9 +122,9 @@ function GlobalAskAiWidget() {
             >
               Ask AI
             </button>
-            <div className="rounded-lg border border-gray-200 bg-gray-50 p-2">
-              <p className="text-[11px] font-medium text-gray-700">Answer</p>
-              <p className="text-xs text-gray-600 mt-1 leading-relaxed">{answer}</p>
+            <div className="rounded-lg border border-gray-200 bg-gray-50 p-2 dark:border-gray-700 dark:bg-gray-800">
+              <p className="text-[11px] font-medium text-gray-700 dark:text-gray-200">Answer</p>
+              <p className="text-xs text-gray-600 mt-1 leading-relaxed dark:text-gray-300">{answer}</p>
             </div>
           </div>
         </div>
@@ -140,15 +142,31 @@ function GlobalAskAiWidget() {
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const [theme, setTheme] = useState<Theme>("light");
+
+  useEffect(() => {
+    const savedTheme = window.localStorage.getItem("theme") as Theme | null;
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    const nextTheme = savedTheme ?? systemTheme;
+
+    setTheme(nextTheme);
+    document.documentElement.classList.toggle("dark", nextTheme === "dark");
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    window.localStorage.setItem("theme", theme);
+  }, [theme]);
+
   return (
-    <html lang="en">
+    <html lang="en" className={theme}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-white text-gray-900 transition-colors duration-200 dark:bg-gray-950 dark:text-gray-100">
         {children}
         <GlobalAskAiWidget />
         <ScrollRestoration />

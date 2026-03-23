@@ -2,18 +2,18 @@ import { Link } from "@remix-run/react";
 
 export default function About() {
     return (
-        <div className="bg-white rounded-xl shadow-sm">
+        <div className="bg-white rounded-xl shadow-sm transition-colors duration-200 dark:bg-gray-900">
             {/* Header */}
-            <div className="mb-10 pb-6 border-b border-gray-100">
+            <div className="mb-10 pb-6 border-b border-gray-100 dark:border-gray-800">
                 <div className="flex items-center mb-4">
                     <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-2 rounded-lg">
                         <img className="h-5 w-5 text-blue-600" src="./img/person2.svg" alt="person" />
                     </div>
-                    <h1 className="text-xl font-semibold text-gray-900 ml-3">
+                    <h1 className="text-xl font-semibold text-gray-900 ml-3 dark:text-gray-100">
                         About Me
                     </h1>
                 </div>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed dark:text-gray-300">
                     I'm Charls Dave Erana — a Full Stack Developer and IT Professional passionate about creating digital solutions that solve real-world problems. With expertise in both development and technical operations, I bridge the gap between code and infrastructure.
                 </p>
             </div>
@@ -24,16 +24,16 @@ export default function About() {
                     <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-2 rounded-lg">
                         <img className="h-5 w-5" src="./img/magnify.svg" alt="journey" />
                     </div>
-                    <h2 className="text-lg font-semibold text-gray-900 ml-3">
+                    <h2 className="text-lg font-semibold text-gray-900 ml-3 dark:text-gray-100">
                         Professional Journey
                     </h2>
                 </div>
                 <div className="space-y-4">
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed dark:text-gray-300">
                         My career began at the University of Cebu – Banilad, where I developed a strong foundation in software development. I spent four years as a Junior Software Developer, focusing on web applications and user experience before transitioning into IT operations to broaden my technical expertise.
                     </p>
-                    <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
-                        <p className="text-gray-700 italic text-sm">
+                    <div className="bg-gray-50 rounded-lg p-4 border border-gray-100 dark:border-gray-800 dark:bg-gray-800">
+                        <p className="text-gray-700 italic text-sm dark:text-gray-300">
                             "It does not matter how slowly you go as long as you do not stop."
                         </p>
                     </div>
@@ -46,7 +46,7 @@ export default function About() {
                     <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-2 rounded-lg">
                         <img className="h-5 w-5" src="./img/files.svg" alt="values" />
                     </div>
-                    <h2 className="text-lg font-semibold text-gray-900 ml-3">
+                    <h2 className="text-lg font-semibold text-gray-900 ml-3 dark:text-gray-100">
                         Core Values
                     </h2>
                 </div>
@@ -56,9 +56,9 @@ export default function About() {
                         { title: "Honesty", desc: "Transparent communication and integrity" },
                         { title: "Sustainability", desc: "Build to last and evolve" }
                     ].map((value, index) => (
-                        <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-100">
-                            <h3 className="font-medium text-gray-900 mb-1">{value.title}</h3>
-                            <p className="text-gray-600 text-sm">{value.desc}</p>
+                        <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-100 dark:border-gray-800 dark:bg-gray-800">
+                            <h3 className="font-medium text-gray-900 mb-1 dark:text-gray-100">{value.title}</h3>
+                            <p className="text-gray-600 text-sm dark:text-gray-300">{value.desc}</p>
                         </div>
                     ))}
                 </div>
@@ -70,13 +70,13 @@ export default function About() {
                     <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-2 rounded-lg">
                         <img className="h-5 w-5" src="./img/setting.svg" alt="expertise" />
                     </div>
-                    <h2 className="text-lg font-semibold text-gray-900 ml-3">
+                    <h2 className="text-lg font-semibold text-gray-900 ml-3 dark:text-gray-100">
                         Areas of Expertise
                     </h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-3">
-                        <h3 className="font-medium text-gray-900 text-sm uppercase tracking-wide text-gray-500">Development</h3>
+                        <h3 className="font-medium text-gray-900 text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">Development</h3>
                         <ul className="space-y-2">
                             {[
                                 "Full Stack Web Applications",
@@ -86,13 +86,13 @@ export default function About() {
                             ].map((item, index) => (
                                 <li key={index} className="flex items-start">
                                     <div className="h-1.5 w-1.5 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                    <span className="text-gray-700 text-sm">{item}</span>
+                                    <span className="text-gray-700 text-sm dark:text-gray-300">{item}</span>
                                 </li>
                             ))}
                         </ul>
                     </div>
                     <div className="space-y-3">
-                        <h3 className="font-medium text-gray-900 text-sm uppercase tracking-wide text-gray-500">IT Operations</h3>
+                        <h3 className="font-medium text-gray-900 text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">IT Operations</h3>
                         <ul className="space-y-2">
                             {[
                                 "System & Server Management",
@@ -102,7 +102,7 @@ export default function About() {
                             ].map((item, index) => (
                                 <li key={index} className="flex items-start">
                                     <div className="h-1.5 w-1.5 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                                    <span className="text-gray-700 text-sm">{item}</span>
+                                    <span className="text-gray-700 text-sm dark:text-gray-300">{item}</span>
                                 </li>
                             ))}
                         </ul>
@@ -116,17 +116,17 @@ export default function About() {
                     <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-2 rounded-lg">
                         <img className="h-5 w-5" src="./img/funfact.svg" alt="personal" />
                     </div>
-                    <h2 className="text-lg font-semibold text-gray-900 ml-3">
+                    <h2 className="text-lg font-semibold text-gray-900 ml-3 dark:text-gray-100">
                         Beyond Code
                     </h2>
                 </div>
-                <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-lg p-5 border border-gray-100">
-                    <p className="text-gray-700 mb-4">
+                <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-lg p-5 border border-gray-100 dark:border-gray-800 dark:from-gray-800 dark:to-gray-900">
+                    <p className="text-gray-700 mb-4 dark:text-gray-300">
                         When I'm not developing software, you'll find me playing drums in bands, exploring new destinations, or gaming on my PS5. My passion for music began with guitar and bass, and continues to influence my creative approach to problem-solving.
                     </p>
                     <div className="flex flex-wrap gap-2">
                         {["Music", "Travel", "Gaming", "Coffee", "Photography"].map((interest, index) => (
-                            <span key={index} className="px-3 py-1.5 bg-white text-gray-700 text-sm rounded-full border border-gray-200">
+                            <span key={index} className="px-3 py-1.5 bg-white text-gray-700 text-sm rounded-full border border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">
                                 {interest}
                             </span>
                         ))}
@@ -140,7 +140,7 @@ export default function About() {
                     <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-2 rounded-lg">
                         <img className="h-5 w-5" src="./img/mail-at.svg" alt="contact" />
                     </div>
-                    <h2 className="text-lg font-semibold text-gray-900 ml-3">
+                    <h2 className="text-lg font-semibold text-gray-900 ml-3 dark:text-gray-100">
                         Let's Connect
                     </h2>
                 </div>
@@ -181,9 +181,9 @@ export default function About() {
                             target="_blank"
                             className="group block"
                         >
-                            <div className={`flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors ${contact.color} hover:bg-white`}>
+                            <div className={`flex items-center justify-between p-4 rounded-lg border border-gray-200 hover:border-blue-300 transition-colors dark:border-gray-700 dark:hover:border-blue-500 ${contact.color} hover:bg-white dark:bg-gray-800`}>
                                 <div className="flex items-center">
-                                    <div className="p-2 rounded-lg bg-white mr-3 border border-gray-100">
+                                    <div className="p-2 rounded-lg bg-white mr-3 border border-gray-100 dark:border-gray-700 dark:bg-gray-900">
                                         <img
                                             className="h-4 w-4"
                                             src={`./img/${contact.icon}`}
@@ -191,8 +191,8 @@ export default function About() {
                                         />
                                     </div>
                                     <div>
-                                        <div className="font-medium text-gray-900 text-sm">{contact.text}</div>
-                                        <div className="text-gray-600 text-xs">{contact.handle}</div>
+                                        <div className="font-medium text-gray-900 text-sm dark:text-gray-100">{contact.text}</div>
+                                        <div className="text-gray-600 text-xs dark:text-gray-400">{contact.handle}</div>
                                     </div>
                                 </div>
                                 <svg className="w-4 h-4 text-gray-400 group-hover:text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -205,8 +205,8 @@ export default function About() {
             </section>
 
             {/* Call to Action */}
-            <div className="mt-10 pt-6 pb-6 border-t border-gray-100 text-center">
-                <p className="text-gray-600 mb-4 text-sm">
+            <div className="mt-10 pt-6 pb-6 border-t border-gray-100 text-center dark:border-gray-800">
+                <p className="text-gray-600 mb-4 text-sm dark:text-gray-300">
                     Interested in working together or discussing a project?
                 </p>
                 <Link
