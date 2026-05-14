@@ -3,22 +3,25 @@ export default function Skills() {
         {
             title: "Frontend Development",
             icon: "code.svg",
+            summary: "Delivered production UIs for business workflows with React/Angular, strong TypeScript patterns, and performance-focused implementation.",
             skills: [
                 { name: "React", level: 90 },
                 { name: "TypeScript", level: 85 },
+                { name: "Remix", level: 85 },
                 { name: "Angular", level: 80 },
                 { name: "HTML/CSS", level: 95 },
                 { name: "Tailwind CSS", level: 90 },
                 { name: "Next.js", level: 85 },
                 { name: "Vue.js", level: 75 },
-                { name: "AntDesign", level: 90 },
-                { name: "Wordpress", level: 90 },
+                { name: "Ant Design", level: 90 },
+                { name: "WordPress", level: 90 },
                 { name: "Vite", level: 85 }
             ]
         },
         {
             title: "Backend & Databases",
             icon: "database.svg",
+            summary: "Built and integrated APIs powering internal tools and web apps, with practical relational database design and support.",
             skills: [
                 { name: "Node.js", level: 85 },
                 { name: "NestJS", level: 80 },
@@ -32,6 +35,7 @@ export default function Skills() {
         {
             title: "DevOps & Tools",
             icon: "devops.svg",
+            summary: "Shipped features with Git-based workflows, containerized setups, and team tooling that improves delivery speed.",
             skills: [
                 { name: "Git", level: 90 },
                 { name: "Docker", level: 75 },
@@ -45,6 +49,7 @@ export default function Skills() {
         {
             title: "IT & Infrastructure",
             icon: "network.svg",
+            summary: "Supported production environments through system maintenance, troubleshooting, and day-to-day infrastructure operations.",
             skills: [
                 { name: "Network Setup", level: 85 },
                 { name: "Server Management", level: 80 },
@@ -59,24 +64,25 @@ export default function Skills() {
 
     const additionalSkills = [
         {
+            category: "Currently Using",
+            skills: ["Remix", "React", "TypeScript", "Node.js", "PostgreSQL", "Docker", "Supabase", "GitHub"]
+        },
+        {
+            category: "Previously Used",
+            skills: ["Angular", "Next.js", "Vue.js", "PHP", "C#/.NET", "WordPress", "WooCommerce", "Firebase"]
+        },
+        {
             category: "Productivity",
             skills: ["Microsoft 365", "WPS Office", "Google Workspace", "Jira", "Notion", "Adobe Reader", "Open Office"]
         },
         {
             category: "Design & Editing",
-            skills: ["Figma", "Canva", "Photoshop Basics", "Video Editing", "UI/UX Principles", "Filmora", "Capcut"]
+            skills: ["Figma", "Canva", "Photoshop Basics", "Video Editing", "UI/UX Principles", "Filmora", "CapCut"]
         },
         {
             category: "Methodologies",
             skills: ["Agile/Scrum", "CI/CD", "Responsive Design", "SEO Basics", "API Integration"]
         }
-    ];
-
-    const proficiencyLabels = [
-        { level: 90, label: "Expert", color: "bg-green-300" },
-        { level: 80, label: "Advanced", color: "bg-blue-300" },
-        { level: 70, label: "Proficient", color: "bg-yellow-300" },
-        { level: 60, label: "Intermediate", color: "bg-gray-300" }
     ];
 
     const openSourcePlatforms = [
@@ -128,7 +134,14 @@ export default function Skills() {
                     </h1>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300">
-                    A comprehensive overview of my technical expertise across development, operations, and infrastructure.
+                    A focused view of the tools I use to build, deploy, and support production-ready web applications.
+                </p>
+            </div>
+
+            <div className="mb-6 bg-gradient-to-br from-blue-50 to-gray-50 rounded-lg p-4 border border-gray-100 dark:border-gray-800 dark:from-gray-800 dark:to-gray-900">
+                <h2 className="text-sm font-semibold text-gray-900 mb-2 dark:text-gray-100">Target Role Stack</h2>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Remix, React, TypeScript, Node.js, PostgreSQL, Docker, and API integrations.
                 </p>
             </div>
 
@@ -147,6 +160,9 @@ export default function Skills() {
                                 {category.title}
                             </h2>
                         </div>
+                        <p className="text-sm text-gray-600 mb-4 dark:text-gray-300">
+                            {category.summary}
+                        </p>
 
                         <div className="space-y-3">
                             {category.skills.map((skill, i) => (
@@ -189,29 +205,13 @@ export default function Skills() {
                 </div>
             </div>
 
-            {/* Proficiency Guide */}
-            <div className="border-t border-gray-100 pt-8 dark:border-gray-800">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4 dark:text-gray-100">Proficiency Guide</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {proficiencyLabels.map((item, index) => (
-                        <div key={index} className="flex items-center">
-                            <div className={`w-3 h-3 rounded-full ${item.color} mr-3`}></div>
-                            <div>
-                                <div className="text-sm font-medium text-gray-900 dark:text-gray-100">{item.label}</div>
-                                <div className="text-xs text-gray-500 dark:text-gray-400">{item.level}+% mastery</div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
             {/* Skills Summary */}
             <div className="mt-10 bg-gradient-to-br from-blue-50 to-gray-50 rounded-lg p-5 border border-gray-100 dark:border-gray-800 dark:from-gray-800 dark:to-gray-900">
                 <div className="flex flex-col md:flex-row md:items-center justify-between">
                     <div>
                         <h3 className="font-semibold text-gray-900 mb-2 dark:text-gray-100">Continuous Learning</h3>
                         <p className="text-gray-600 text-sm dark:text-gray-300">
-                            Committed to staying current with emerging technologies and best practices in software development and IT operations.
+                            I keep refining my core stack while applying new tools where they create practical value for product delivery.
                         </p>
                     </div>
                     <div className="mt-4 md:mt-0">

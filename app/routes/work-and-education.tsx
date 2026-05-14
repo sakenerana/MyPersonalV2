@@ -9,28 +9,28 @@ export default function WorkAndEducation() {
                 {
                     company: "Cebu CFI Community Cooperative",
                     logo: "cficoop.svg",
-                    position: "IT Personnel/Full Stack Developer",
+                    position: "Full Stack Developer (IT Operations)",
                     location: "Capitol Compound, Cebu City",
-                    duration: "Jan 2023 – Present",
-                    description: "IT infrastructure management including server maintenance, hardware troubleshooting, and CCTV installations across branches and building ERP Systems.",
-                    highlights: ["Server Maintenance", "Hardware Troubleshooting", "Network Setup", "CCTV Installation", "System Development"]
+                    duration: "Jan 2023 - Present",
+                    description: "Led infrastructure reliability and full stack delivery for branch operations, supporting business continuity while building internal ERP capabilities.",
+                    highlights: ["React", "Node.js", "ERP Systems", "Server Maintenance", "Network Setup", "CCTV Deployment"]
                 },
                 {
                     company: "Elf Station Inc.",
                     logo: "elfstation.svg",
-                    position: "Software/Full Stack Web Developer",
+                    position: "Full Stack Web Developer",
                     location: "General Maxilom Avenue, Cebu City",
-                    duration: "Oct 2019 – Jan 2023",
-                    description: "Full stack web development for various clients using modern technologies including Angular, React, and WordPress.",
-                    highlights: ["Angular Development", "React Applications", "WordPress", "Client Projects"]
+                    duration: "Oct 2019 - Jan 2023",
+                    description: "Built and shipped client web applications across multiple industries, delivering responsive interfaces and scalable backend integrations.",
+                    highlights: ["Angular", "React", "WordPress", "Client Delivery", "API Integration"]
                 },
                 {
                     company: "Avega Bros. Shipping Corp.",
                     logo: "avega.svg",
                     position: "Software Tester (Internship)",
                     location: "J. De Veyra, Cebu City",
-                    duration: "Oct 2018 – Feb 2019",
-                    description: "Quality assurance and performance testing of existing software applications.",
+                    duration: "Oct 2018 - Feb 2019",
+                    description: "Improved software quality through structured QA execution, performance checks, and actionable defect reporting to development teams.",
                     highlights: ["Quality Assurance", "Performance Testing", "Bug Reporting"]
                 },
                 {
@@ -38,8 +38,8 @@ export default function WorkAndEducation() {
                     logo: "jollibee.svg",
                     position: "Service Crew (Working Student)",
                     location: "Banilad, Cebu City",
-                    duration: "Jun 2017 – Dec 2017",
-                    description: "Customer service and kitchen operations while pursuing academic studies.",
+                    duration: "Jun 2017 - Dec 2017",
+                    description: "Balanced customer service responsibilities with academic commitments, strengthening communication, discipline, and teamwork under pressure.",
                     highlights: ["Customer Service", "Team Coordination", "Time Management"]
                 }
             ]
@@ -53,12 +53,12 @@ export default function WorkAndEducation() {
                     logo: "uc.svg",
                     position: "Bachelor's Degree",
                     location: "Banilad, Cebu City",
-                    duration: "2016 – 2019",
-                    description: "Focused on Programming, Multimedia, and Computer Hardware Servicing.",
+                    duration: "2016 - 2019",
+                    description: "Focused on programming, multimedia, and computer hardware servicing with project-based technical training.",
                     highlights: [
                         "Part of UC BEEHIVE Accelerator Batch Genesis",
                         "Smart Sweep Competition Representative",
-                        "Major: Programming & Multimedia"
+                        "Major: Programming and Multimedia"
                     ]
                 },
                 {
@@ -66,14 +66,14 @@ export default function WorkAndEducation() {
                     logo: "pitos.svg",
                     position: "High School Diploma",
                     location: "Pit-os, Cebu City",
-                    duration: "2011 – 2015"
+                    duration: "2011 - 2015"
                 },
                 {
                     company: "Bacayan Elementary School",
                     logo: "bacayan.svg",
                     position: "Elementary Education",
                     location: "Upper Bacayan, Cebu City",
-                    duration: "2004 – 2010"
+                    duration: "2004 - 2010"
                 }
             ]
         }
@@ -92,8 +92,25 @@ export default function WorkAndEducation() {
                     </h1>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300">
-                    My professional journey and academic background that shaped my technical expertise.
+                    Professional experience and academic background focused on delivering reliable software and stable operations.
                 </p>
+            </div>
+
+            {/* Key Achievements */}
+            <div className="mb-10 bg-gradient-to-br from-blue-50 to-gray-50 rounded-lg p-5 border border-gray-100 dark:border-gray-800 dark:from-gray-800 dark:to-gray-900">
+                <h2 className="text-lg font-semibold text-gray-900 mb-3 dark:text-gray-100">Key Achievements</h2>
+                <ul className="space-y-2">
+                    {[
+                        "Combined product engineering and IT operations to support both feature delivery and production reliability.",
+                        "Delivered full stack solutions for internal teams and client projects using modern web technologies.",
+                        "Contributed across infrastructure, troubleshooting, and system development in multi-branch operations."
+                    ].map((item, index) => (
+                        <li key={index} className="flex items-start">
+                            <div className="h-1.5 w-1.5 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span className="text-sm text-gray-700 dark:text-gray-300">{item}</span>
+                        </li>
+                    ))}
+                </ul>
             </div>
 
             {/* Timeline Sections */}
@@ -211,7 +228,7 @@ export default function WorkAndEducation() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                         <p className="text-gray-700 dark:text-gray-300">
-                            My journey demonstrates a unique combination of software development expertise and IT operational knowledge, allowing me to bridge the gap between code and infrastructure effectively.
+                            My career combines product engineering and IT operations, enabling me to deliver features with stronger reliability, supportability, and real-world execution.
                         </p>
                     </div>
                 </div>

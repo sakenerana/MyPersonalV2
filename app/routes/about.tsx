@@ -14,7 +14,7 @@ export default function About() {
                     </h1>
                 </div>
                 <p className="text-gray-700 leading-relaxed dark:text-gray-300">
-                    I'm Charls Dave Erana — a Full Stack Developer and IT Professional passionate about creating digital solutions that solve real-world problems. With expertise in both development and technical operations, I bridge the gap between code and infrastructure.
+                    I'm Charls Dave Erana, a Full Stack Developer with hands-on IT operations experience. I build web applications that are fast, maintainable, and production-ready, from clean UI and APIs to deployment and infrastructure support.
                 </p>
             </div>
 
@@ -30,11 +30,11 @@ export default function About() {
                 </div>
                 <div className="space-y-4">
                     <p className="text-gray-600 leading-relaxed dark:text-gray-300">
-                        My career began at the University of Cebu – Banilad, where I developed a strong foundation in software development. I spent four years as a Junior Software Developer, focusing on web applications and user experience before transitioning into IT operations to broaden my technical expertise.
+                        I started my career at the University of Cebu - Banilad and spent four years as a Junior Software Developer building business-focused web applications. Over time, I expanded into IT operations, which strengthened how I design systems that are not only feature-complete but also stable, secure, and easier to support in real environments.
                     </p>
                     <div className="bg-gray-50 rounded-lg p-4 border border-gray-100 dark:border-gray-800 dark:bg-gray-800">
                         <p className="text-gray-700 italic text-sm dark:text-gray-300">
-                            "It does not matter how slowly you go as long as you do not stop."
+                            "I focus on shipping practical solutions, improving continuously, and delivering work teams can rely on."
                         </p>
                     </div>
                 </div>
@@ -52,9 +52,9 @@ export default function About() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                     {[
-                        { title: "Simplicity", desc: "Clean, efficient solutions over complexity" },
-                        { title: "Honesty", desc: "Transparent communication and integrity" },
-                        { title: "Sustainability", desc: "Build to last and evolve" }
+                        { title: "Clarity", desc: "Simple architecture, readable code, and clear decisions" },
+                        { title: "Ownership", desc: "Accountable delivery from planning through production" },
+                        { title: "Reliability", desc: "Build solutions that perform well and scale with growth" }
                     ].map((value, index) => (
                         <div key={index} className="bg-gray-50 rounded-lg p-4 border border-gray-100 dark:border-gray-800 dark:bg-gray-800">
                             <h3 className="font-medium text-gray-900 mb-1 dark:text-gray-100">{value.title}</h3>
@@ -79,10 +79,10 @@ export default function About() {
                         <h3 className="font-medium text-gray-900 text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">Development</h3>
                         <ul className="space-y-2">
                             {[
-                                "Full Stack Web Applications",
-                                "React & Angular Development",
-                                "UI/UX Design Implementation",
-                                "API Development & Integration"
+                                "Full Stack Product Development",
+                                "React, Angular, and Remix Applications",
+                                "API Design and Third-Party Integrations",
+                                "Performance and UX Improvements"
                             ].map((item, index) => (
                                 <li key={index} className="flex items-start">
                                     <div className="h-1.5 w-1.5 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -95,10 +95,10 @@ export default function About() {
                         <h3 className="font-medium text-gray-900 text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">IT Operations</h3>
                         <ul className="space-y-2">
                             {[
-                                "System & Server Management",
-                                "Network Configuration",
-                                "Security & CCTV Systems",
-                                "Technical Troubleshooting"
+                                "System and Server Administration",
+                                "Deployment and Environment Setup",
+                                "Network and Security Fundamentals",
+                                "Production Support and Troubleshooting"
                             ].map((item, index) => (
                                 <li key={index} className="flex items-start">
                                     <div className="h-1.5 w-1.5 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
@@ -122,7 +122,7 @@ export default function About() {
                 </div>
                 <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-lg p-5 border border-gray-100 dark:border-gray-800 dark:from-gray-800 dark:to-gray-900">
                     <p className="text-gray-700 mb-4 dark:text-gray-300">
-                        When I'm not developing software, you'll find me playing drums in bands, exploring new destinations, or gaming on my PS5. My passion for music began with guitar and bass, and continues to influence my creative approach to problem-solving.
+                        Outside of work, I stay creative through music and stay curious through travel and learning. Those habits help me bring better collaboration, focus, and fresh thinking to product and engineering challenges.
                     </p>
                     <div className="flex flex-wrap gap-2">
                         {["Music", "Travel", "Gaming", "Coffee", "Photography"].map((interest, index) => (
@@ -207,14 +207,14 @@ export default function About() {
             {/* Call to Action */}
             <div className="mt-10 pt-6 pb-6 border-t border-gray-100 text-center dark:border-gray-800">
                 <p className="text-gray-600 mb-4 text-sm dark:text-gray-300">
-                    Interested in working together or discussing a project?
+                    Looking for a developer who can contribute across both product engineering and technical operations?
                 </p>
                 <Link
                     to="mailto:sakenerana@gmail.com"
                     className="inline-flex items-center bg-gradient-to-r from-gray-600 to-gray-700 text-white px-6 py-3 rounded-lg font-medium text-sm hover:shadow-md transition-shadow"
                 >
                     <img className="h-4 w-4 mr-2 mt-1" src="./img/mail.svg" alt="email" />
-                    Start a Conversation
+                    Schedule a Conversation
                 </Link>
             </div>
         </div>

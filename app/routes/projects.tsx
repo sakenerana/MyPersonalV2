@@ -112,7 +112,10 @@ export default function Projects() {
             title: "Management System",
             year: "2026",
             category: "Business Management System",
-            description: "Centralized management platform for handling operational records, workflows, and day-to-day administrative tasks.",
+            description: "Built a centralized operations platform to reduce manual admin work and standardize records, workflows, and branch-level visibility.",
+            outcome: "Improved reporting consistency and reduced repetitive manual coordination across daily operations.",
+            role: "Full Stack Developer",
+            scope: "Frontend, API integration, data modeling, deployment support",
             features: [
                 "Operational record management",
                 "Workflow and task coordination",
@@ -129,7 +132,10 @@ export default function Projects() {
             title: "Poultry Manager",
             year: "2026",
             category: "Operations Dashboard",
-            description: "Poultry operations management system for monitoring buildings, mortality, harvesting, accounts, and daily production metrics.",
+            description: "Developed an operations dashboard for poultry management to centralize harvest, mortality, and production monitoring by building.",
+            outcome: "Enabled faster daily decision-making by consolidating operational metrics into a single dashboard.",
+            role: "Full Stack Developer",
+            scope: "Frontend dashboards, data workflows, reporting views",
             features: [
                 "Preharvest and harvest workflow tracking",
                 "Building-level bird population monitoring",
@@ -147,7 +153,10 @@ export default function Projects() {
             title: "Full Inventory System",
             year: "2025",
             category: "Full Stack Application",
-            description: "Comprehensive inventory management solution with real-time stock monitoring and reporting.",
+            description: "Built an inventory platform for real-time stock visibility, SKU tracking, and multi-location monitoring.",
+            outcome: "Improved stock accuracy and reduced delays in identifying low-stock items.",
+            role: "Full Stack Developer",
+            scope: "Inventory modules, access control, reporting",
             features: [
                 "Stock level monitoring & alerts",
                 "SKU management system",
@@ -165,7 +174,10 @@ export default function Projects() {
             title: "Budget Tracker",
             year: "2025",
             category: "Financial Application",
-            description: "Personal finance management tool for tracking income, expenses, and savings goals.",
+            description: "Created a finance tracker for monitoring income, expenses, and savings goals with clear trend visibility.",
+            outcome: "Made financial planning easier through centralized tracking and visual reports.",
+            role: "Full Stack Developer",
+            scope: "UI, data structure, analytics widgets",
             features: [
                 "Income & expense tracking",
                 "Budget planning tools",
@@ -182,7 +194,10 @@ export default function Projects() {
             title: "Workflow Tracker",
             year: "2025",
             category: "Full Stack Application",
-            description: "Helps users track progress, deadlines, and responsibilities to ensure smooth project execution.",
+            description: "Built a workflow management app to track ownership, deadlines, and project progress in one place.",
+            outcome: "Improved team coordination by clarifying responsibilities and stage visibility.",
+            role: "Full Stack Developer",
+            scope: "Task management flows, progress views, reporting",
             features: [
                 "Task Management",
                 "Workflow Stages",
@@ -199,7 +214,10 @@ export default function Projects() {
             title: "Admin Dashboard",
             year: "2025",
             category: "Administrative System",
-            description: "Comprehensive admin panel for user management and system configuration.",
+            description: "Developed an administrative control panel for user roles, system settings, and activity oversight.",
+            outcome: "Reduced administrative friction by centralizing core platform controls.",
+            role: "Full Stack Developer",
+            scope: "Role management, configuration modules, monitoring UI",
             features: [
                 "Dashboard analytics",
                 "User & role management",
@@ -216,7 +234,10 @@ export default function Projects() {
             title: "SICE Choir Website",
             year: "2025",
             category: "Community Website",
-            description: "Showcase website for a choir group featuring events, galleries, and member information.",
+            description: "Designed and developed a community-facing website for events, media, and member visibility.",
+            outcome: "Improved online presence and made updates easier for non-technical organizers.",
+            role: "Frontend Developer",
+            scope: "Responsive UI, content structure, media pages",
             features: [
                 "Performance showcase",
                 "Event calendar",
@@ -233,7 +254,10 @@ export default function Projects() {
             title: "Prosperidad LGU System",
             year: "2022",
             category: "Government System",
-            description: "Local government unit management system for citizen services and record management.",
+            description: "Contributed to an LGU system supporting citizen services, records, and internal government workflows.",
+            outcome: "Helped digitize manual service processes and improve access to operational records.",
+            role: "Full Stack Developer (Team)",
+            scope: "Feature implementation, module support, integration",
             features: [
                 "Citizen management",
                 "Business licensing",
@@ -250,7 +274,10 @@ export default function Projects() {
             title: "Elf Station Inc.",
             year: "2021",
             category: "Content Management System",
-            description: "Provides Web Design, System Development, ERP Systems and Government Systems.",
+            description: "Built and maintained a company website presenting services in web design, ERP, and system development.",
+            outcome: "Strengthened service visibility and improved communication of offerings to clients.",
+            role: "Web Developer",
+            scope: "Website setup, content architecture, maintenance",
             features: [
                 "Platform Flexibility",
                 "Custom Development",
@@ -266,7 +293,10 @@ export default function Projects() {
             title: "The Mango Mall Online",
             year: "2020",
             category: "E-commerce Platform",
-            description: "Full-featured e-commerce platform with product management and secure payments.",
+            description: "Implemented an online store experience with product catalog, checkout flow, and responsive shopping UX.",
+            outcome: "Expanded digital sales capability with a complete e-commerce customer journey.",
+            role: "Web Developer",
+            scope: "Storefront setup, product workflows, platform configuration",
             features: [
                 "Online storefront",
                 "Shopping cart & checkout",
@@ -283,7 +313,10 @@ export default function Projects() {
             title: "Clevermasters",
             year: "2019",
             category: "Content Management System",
-            description: "Management consultancy, corporate support, outsourcing, project management, and regulatory assistance to help businesses improve operations and ensure compliance.",
+            description: "Developed a business website for consultancy and compliance support services with clear service navigation.",
+            outcome: "Improved brand credibility and made service discovery easier for prospective clients.",
+            role: "Web Developer",
+            scope: "CMS implementation, page structure, content delivery",
             features: [
                 "Local expertise in Cebu / Philippines",
                 "Reliability / trustworthiness",
@@ -311,7 +344,7 @@ export default function Projects() {
                     </h1>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300">
-                    A selection of my recent work showcasing full-stack development and problem-solving skills.
+                    Outcome-focused projects showing how I build practical solutions across product, operations, and business workflows.
                 </p>
             </div>
 
@@ -353,6 +386,17 @@ export default function Projects() {
 
                             <p className="text-gray-600 text-sm mb-4 dark:text-gray-300">
                                 {project.description}
+                            </p>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+                                <p className="text-xs text-gray-600 dark:text-gray-300">
+                                    <span className="font-semibold text-gray-800 dark:text-gray-100">Role:</span> {project.role}
+                                </p>
+                                <p className="text-xs text-gray-600 dark:text-gray-300">
+                                    <span className="font-semibold text-gray-800 dark:text-gray-100">Scope:</span> {project.scope}
+                                </p>
+                            </div>
+                            <p className="text-xs text-gray-600 dark:text-gray-300">
+                                <span className="font-semibold text-gray-800 dark:text-gray-100">Outcome:</span> {project.outcome}
                             </p>
                         </div>
 
@@ -456,7 +500,7 @@ export default function Projects() {
                                     onClick={() => setConfidentialModalOpen(true)}
                                     className="inline-flex items-center justify-center w-full bg-gray-50 hover:bg-gray-100 text-gray-700 hover:text-gray-900 text-sm font-medium py-2.5 rounded-lg border border-gray-200 transition-colors dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white"
                                 >
-                                    <span>View Project Details</span>
+                                    <span>Private Project - Details on Request</span>
                                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                     </svg>
@@ -485,11 +529,11 @@ export default function Projects() {
                         <div className="text-sm text-gray-600 mt-1 dark:text-gray-400">Projects Showcased</div>
                     </div>
                     <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">6+</div>
-                        <div className="text-sm text-gray-600 mt-1 dark:text-gray-400">Full Stack Apps</div>
+                        <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">{projects.filter((p) => p.techStack.includes("React") || p.techStack.includes("Angular")).length}</div>
+                        <div className="text-sm text-gray-600 mt-1 dark:text-gray-400">Modern Web Projects</div>
                     </div>
                     <div className="text-center">
-                        <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">4</div>
+                        <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">{projects.filter((p) => p.type === "solo").length}</div>
                         <div className="text-sm text-gray-600 mt-1 dark:text-gray-400">Solo Projects</div>
                     </div>
                     <div className="text-center">

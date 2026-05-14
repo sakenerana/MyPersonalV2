@@ -91,7 +91,7 @@ export default function Index() {
                     Full Stack Developer
                   </p>
                   <p className="text-gray-500 text-sm italic dark:text-gray-400">
-                    Building digital experiences with modern technologies
+                    Building reliable products from frontend to infrastructure
                   </p>
                 </div>
 
@@ -165,7 +165,7 @@ export default function Index() {
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Availability</h3>
-                  <p className="text-xs text-gray-500 mt-1 dark:text-gray-400">Open to opportunities</p>
+                  <p className="text-xs text-gray-500 mt-1 dark:text-gray-400">Open to full-time and contract roles</p>
                 </div>
                 <div className="flex items-center">
                   <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse mr-2"></div>
@@ -304,7 +304,7 @@ export default function Index() {
                     type="submit"
                     className="w-full bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium py-2 rounded-lg transition-colors"
                   >
-                    Send Message
+                    Contact Me
                   </button>
                 </div>
               </form>
@@ -352,34 +352,28 @@ export default function Index() {
           <div className="lg:col-span-1 space-y-6">
             {[
               {
-                title: "Core Technologies",
+                title: "Target Role Stack",
                 skills: [
-                  { icon: "react.svg", name: "React", level: 90 },
-                  { icon: "angular.svg", name: "Angular", level: 90 },
-                  { icon: "nodejs.svg", name: "Node.js", level: 85 },
-                  { icon: "nextjs.svg", name: "Next.js", level: 80 },
-                  { icon: "typescript.svg", name: "TypeScript", level: 85 },
-                  { icon: "tailwind.svg", name: "Tailwind", level: 90 },
-                  { icon: "vite.svg", name: "Vite", level: 85 },
-                  { icon: "antd.svg", name: "Ant Design", level: 90 },
-                  { icon: "docker.svg", name: "Docker", level: 75 },
-                  { icon: "shopify.svg", name: "Shopify", level: 85 },
                   { icon: "remix.svg", name: "Remix", level: 90 },
-                  { icon: "prettier.svg", name: "Prettier", level: 90 },
-                  { icon: "npm.svg", name: "NPM", level: 90 },
-                  { icon: "html5.svg", name: "HTML", level: 90 },
-                  { icon: "css3.svg", name: "CSS", level: 90 }
+                  { icon: "react.svg", name: "React", level: 90 },
+                  { icon: "typescript.svg", name: "TypeScript", level: 85 },
+                  { icon: "nodejs.svg", name: "Node.js", level: 85 },
+                  { icon: "supabase.svg", name: "Supabase", level: 80 },
+                  { icon: "docker.svg", name: "Docker", level: 75 },
+                  { icon: "tailwind.svg", name: "Tailwind", level: 90 },
+                  { icon: "antd.svg", name: "Ant Design", level: 90 }
                 ]
               },
               {
                 title: "Tools & Platforms",
                 skills: [
                   { icon: "git.svg", name: "Git", level: 85 },
-                  { icon: "figma.svg", name: "Figma", level: 70 },
-                  { icon: "supabase.svg", name: "Supabase", level: 80 },
-                  { icon: "firebase.svg", name: "Firebase", level: 75 },
                   { icon: "jira.svg", name: "Jira", level: 80 },
-                  { icon: "woocommerce.svg", name: "Woocommerce", level: 90 }
+                  { icon: "figma.svg", name: "Figma", level: 70 },
+                  { icon: "nextjs.svg", name: "Next.js", level: 80 },
+                  { icon: "angular.svg", name: "Angular", level: 80 },
+                  { icon: "firebase.svg", name: "Firebase", level: 75 },
+                  { icon: "vite.svg", name: "Vite", level: 85 }
                 ]
               },
               {
@@ -392,9 +386,11 @@ export default function Index() {
                 ]
               },
               {
-                title: "Vibe Coding",
+                title: "Additional Platforms",
                 skills: [
-                  { icon: "wordpress.svg", name: "Wordpress", level: 90 },
+                  { icon: "wordpress.svg", name: "WordPress", level: 90 },
+                  { icon: "woocommerce.svg", name: "WooCommerce", level: 85 },
+                  { icon: "shopify.svg", name: "Shopify", level: 85 },
                   { icon: "lovable.svg", name: "Lovable", level: 90 },
                   { icon: "wix.svg", name: "Wix Studio", level: 80 },
                   { icon: "webflow.svg", name: "Webflow", level: 85 },
@@ -425,8 +421,8 @@ export default function Index() {
                             {skill.name}
                           </span>
                         </div>
-                        <span className="text-xs text-gray-500 dark:text-gray-400">
-                          {skill.level}%
+                        <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
+                          {skill.level >= 90 ? "Expert" : skill.level >= 80 ? "Advanced" : "Proficient"}
                         </span>
                       </div>
                       <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden dark:bg-gray-800">
