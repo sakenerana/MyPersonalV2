@@ -24,12 +24,34 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 transition-colors duration-200 dark:from-gray-950 dark:to-slate-900">
       {/* Subtle Background Pattern */}
-      <div className="fixed inset-0 opacity-5">
+      <div className="fixed inset-0 z-0 opacity-5">
         <div className="absolute inset-0 bg-[linear-gradient(90deg,#e5e7eb_1px,transparent_1px)] bg-[size:32px_32px] dark:bg-[linear-gradient(90deg,#1f2937_1px,transparent_1px)]"></div>
+      </div>
+      {/* Light Mode Atmosphere - Moving Clouds */}
+      <div className="pointer-events-none fixed inset-0 z-[1] overflow-hidden dark:hidden">
+        <div className="light-sky-haze"></div>
+        <div className="cloud cloud-one"></div>
+        <div className="cloud cloud-two"></div>
+        <div className="cloud cloud-three"></div>
+        <div className="cloud cloud-four"></div>
+        <div className="cloud cloud-five"></div>
+        <div className="cloud cloud-six"></div>
+        <div className="cloud cloud-seven"></div>
+        <div className="cloud cloud-eight"></div>
+        <div className="cloud cloud-nine"></div>
+        <div className="cloud cloud-ten"></div>
+      </div>
+
+      {/* Dark Mode Atmosphere - Stars and Moon */}
+      <div className="pointer-events-none fixed inset-0 z-[1] hidden overflow-hidden dark:block">
+        <div className="stars-layer">
+          <div className="micro-stars"></div>
+        </div>
+        <div className="moon-glow"></div>
       </div>
 
       {/* Main Container */}
-      <div className="container mx-auto px-4 py-8 md:px-8 lg:px-16 relative z-10">
+      <div className="dark-cards container mx-auto px-4 py-8 md:px-8 lg:px-16 relative z-10">
         {/* Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
